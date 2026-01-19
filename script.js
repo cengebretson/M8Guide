@@ -16,21 +16,16 @@ var pages = [
 		{name:"Clear All Mute",secondary:" and solos",description:"hold OPTION + hold SHIFT + PLAY", command:"optionhold shifthold play", page:11}]}
 
 	]},{sections: [
-	{name:"Song Screen",actions:[
-		{name:"Cue Row",secondary:"while playing",description:"hold LEFT + PLAY", command:"lefthold play", page:11},
-		{name:"Create",secondary:"new chain",description:"double-tap EDIT", command:"edit double", page: 11},
-		{name:"Clone and Paste",secondary:"chain alone",description:"hold SHIFT + OPTION then EDIT", command:"shifthold option1st edit2nd", page: 11},
-		{name:"Clone and Paste",secondary:"chain & phrases",description:"hold SHIFT + OPTION then double-tap EDIT", command:"shifthold option1st edit2nd double", page: 11},
-		{name:"Solo Tracks",secondary:"left or right",description:"hold OPTION + [ LEFT or RIGHT ] ", command:"optionhold left right", page:11},
-		{name:"Jump 16 Rows",secondary:"up or down",description:"hold OPTION + [ UP or DOWN ] ", command:"optionhold up down", page:11},
-		{name:"Move Selection", description:"in selection mode, hold EDIT + [ UP or DOWN ]",command:"edithold up down", page: 11},
-		{name:"Render Selection", description:"in selection mode, double-tap EDIT", command:"edit double", page: 11}]},
-	{name:"Chain Screen",actions:[
-		{name:"Create",secondary:"new phrase",description:"double-tap EDIT", command:"edit double"},
-		{name:"Clone and Paste",secondary:"phrase",description:"hold SHIFT + OPTION then EDIT", command:"shifthold option1st edit2nd", page: 13},
-		{name:"Jump to Track",secondary:"left or right",description:"hold OPTION + [ LEFT or RIGHT ] ", command:"optionhold left right", page: 13},
-		{name:"Jump to Chain",secondary:"previous or next",description:"hold OPTION + [ UP or DOWN ]", command:"optionhold up down", page: 13}]}
-
+	{name:"Mixer Screen", actions:[
+		{name:"Create Snapshot",description:"hold SHIFT + OPTION", command:"shifthold option"},
+		{name:"Recall Snapshot",description:"hold SHIFT + EDIT", command:"shifthold edit"}]},
+	{name:"Global", actions:[
+		{name:"Cycle Themes",description:"hold SHIFT + OPTION then tap UP", command:"shifthold option1st up2nd"},
+		{name:"Toggle Display Mode",secondary:"Oscilloscope",description:"hold SHIFT + OPTION then tap DOWN", command:"shifthold option1st down2nd"}]},
+	{name:"File Browser",actions:[
+		{name:"Preview Sample",description:"PLAY", command:"play"},
+		{name:"Sort Directory",description:"SHIFT + OPTION", command:"shift option", page:9},
+		{name:"Delete Selected File",description:"EDIT + OPTION", command:"edit option", page:9}]}
 	]},{sections: [
 	{name:"Phrase Screen",actions:[
 		{name:"Create",secondary:"new instrument",description:"on instrument column, EDIT (double-tap)", command:"edit double", page: 15},
@@ -60,47 +55,58 @@ var pages = [
 	{name:"Table Screen",actions:[
 		{name:"Interpolate Values",description:"while in selection mode, hold SHIFT + EDIT", command:"shifthold edit", page: 21},
 		{name:"Jump to Table",secondary:"previous or next",description:"OPTION + [ LEFT or RIGHT ] ", command:"option left right", page: 21}]},
-	{name:"File Browser",actions:[
-		{name:"Sort Directory",description:"SHIFT + OPTION", command:"shift option", page:9},
-		{name:"Delete Selected File",description:"EDIT + OPTION", command:"edit option", page:9}]},
-	{name:"Mixer Screen", actions:[
-		{name:"Create Snapshot",description:"hold SHIFT + OPTION", command:"shifthold option", page:27},
-		{name:"Recall Snapshot",description:"hold SHIFT + EDIT", command:"shifthold edit", page:27}]}
+	{name:"Song Screen",actions:[
+		{name:"Cue Row",secondary:"while playing",description:"hold LEFT + PLAY", command:"lefthold play", page:11},
+		{name:"Create",secondary:"new chain",description:"double-tap EDIT", command:"edit double", page: 11},
+		{name:"Clone and Paste",secondary:"chain alone",description:"hold SHIFT + OPTION then EDIT", command:"shifthold option1st edit2nd", page: 11},
+		{name:"Clone and Paste",secondary:"chain & phrases",description:"hold SHIFT + OPTION then double-tap EDIT", command:"shifthold option1st edit2nd double", page: 11},
+		{name:"Solo Tracks",secondary:"left or right",description:"hold OPTION + [ LEFT or RIGHT ] ", command:"optionhold left right", page:11},
+		{name:"Solo Row",secondary:"Live Mode",description:"hold OPTION + PLAY", command:"optionhold play"},
+		{name:"Jump 16 Rows",secondary:"up or down",description:"hold OPTION + [ UP or DOWN ] ", command:"optionhold up down", page:11},
+
+		{name:"Move Selection", description:"in selection mode, hold EDIT + [ UP or DOWN ]",command:"edithold up down", page: 11},
+		{name:"Render Selection", description:"in selection mode, double-tap EDIT", command:"edit double", page: 11}]},
+	{name:"Chain Screen",actions:[
+		{name:"Create",secondary:"new phrase",description:"double-tap EDIT", command:"edit double"},
+		{name:"Clone and Paste",secondary:"phrase",description:"hold SHIFT + OPTION then EDIT", command:"shifthold option1st edit2nd", page: 13},
+		{name:"Jump to Track",secondary:"left or right",description:"hold OPTION + [ LEFT or RIGHT ] ", command:"optionhold left right", page: 13},
+		{name:"Jump to Chain",secondary:"previous or next",description:"hold OPTION + [ UP or DOWN ]", command:"optionhold up down", page: 13}]},
+	{name:"Scale Screen",actions:[
+		{name:"Change Scale",description:"EDIT + [ LEFT or RIGHT ]", command:"edithold left right"},
+		{name:"Change Root",description:"OPTION + [ UP or DOWN ]", command:"optionhold up down"}]}
+
 		
 	]}]
 	
 $( document ).ready(function() {
 		
-	$("#recto").append(render_page(pages[0]));
-	$("#recto").append(render_page(pages[3]));
-
-	$("#verso").append(render_page(pages[1]));
-	$("#verso").append(render_page(pages[2]));
+	$.each(pages, function(_, page) {
+		$.each(page.sections, function(_, section) {
+			render_section(section).appendTo("#content");
+		});
+	});
 
 	$(".to_hide").remove();
 });
 
-function render_page(page)
+function render_section(section)
 {
-	new_page = $("<div class='page'>");
+	var section_container = $("<div class='section_container'>");
+	section_container.append("<div class='section_header'>" + section.name + "</div>");
 
-	$.each(page.sections, function(_index, section)
+	$.each(section.actions, function(_index, action)
 	{
-		new_section = $("<div class='section'>" + section.name + '</div>');
-		$(new_page).append(new_section);
-		$.each(section.actions, function(_index, action)
-		{
-			var cloned = new $("#template").clone();
-			$(cloned).removeAttr('id');
-			$(".name", cloned).text(action.name);
-			$(".secondary", cloned).text(action.secondary);
-			$(".description", cloned).text(action.description);
-			$(".extra", cloned).text(action.extra);
-			
-			$(".buttons", cloned).removeClass().addClass("buttons");
-			$(".buttons", cloned).addClass("buttons " + action.command);
-			$(new_page).append(cloned);
-		});
+		var cloned = $("#template").clone();
+		$(cloned).removeAttr('id');
+		$(".name", cloned).text(action.name);
+		$(".secondary", cloned).text(action.secondary);
+		$(".description", cloned).text(action.description);
+		$(".extra", cloned).text(action.extra);
+		
+		$(".buttons", cloned).removeClass().addClass("buttons");
+		$(".buttons", cloned).addClass("buttons " + action.command);
+		section_container.append(cloned);
 	});
-	return new_page;
+	return section_container;
 }
+
