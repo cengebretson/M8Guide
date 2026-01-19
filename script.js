@@ -84,11 +84,11 @@ function render_page(page)
 {
 	new_page = $("<div class='page'>");
 
-	$.each(page.sections, function(index, section)
+	$.each(page.sections, function(_index, section)
 	{
 		new_section = $("<div class='section'>" + section.name + '</div>');
 		$(new_page).append(new_section);
-		$.each(section.actions, function(index, action)
+		$.each(section.actions, function(_index, action)
 		{
 			var cloned = new $("#template").clone();
 			$(cloned).removeAttr('id');
