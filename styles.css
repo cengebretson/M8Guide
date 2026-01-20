@@ -7,153 +7,14 @@ body {
   line-height: 1;
 }
 
-#content {
-  column-count: 5;
-  column-gap: 3mm;
-  width: 100%;
-}
-
-.section_container {
-  margin-bottom: 2mm;
-  border: 1px solid #ddd;
-  border-radius: 1mm;
-  overflow: hidden;
-  break-inside: avoid;
-  padding-bottom: 0.5mm;
-}
-
-.section_header {
-  font-family: "SofiaSans";
-  font-weight: 800;
-  font-size: 1.1em;
-  text-transform: uppercase;
-  margin-bottom: 1mm;
-  background-color: #d1e9ff;
-  padding: 0.4mm 0.8mm;
-  border-bottom: 1px solid #a0c4ff;
-}
-
-.action {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 0.4mm;
-  padding: 0 0.8mm;
-  break-inside: avoid;
-}
-
-.action_text {
-  flex: 1;
-  margin-left: 1.2mm;
-  min-width: 0;
-}
-
-.action .name {
-  font-family: "SofiaSans";
-  font-weight: 700;
-  display: inline;
-  font-size: 1.05em;
-}
-
-.action .secondary {
-  font-family: "SofiaSans";
-  font-weight: 400;
-  font-size: 0.95em;
-}
-
-.action .description {
-  font-family: "SofiaSansCond";
-  font-weight: 500;
-  color: #444;
-  font-size: 1em;
-  font-style: italic;
-  display: inline;
-}
-
-.action .description:before {
-  content: " - ";
-  font-style: normal;
-}
-
-.action .extra {
-  font-family: "SofiaSansCond";
-  font-weight: 400;
-  color: #666;
-  font-size: 0.95em;
-  font-style: italic;
-  display: block;
-  line-height: 1.1;
-}
-
-.action .secondary {
-  font-family: "SofiaSans";
-  font-weight: 400;
-  font-size: 0.85em;
-}
-
-.action .description {
-  font-family: "SofiaSansCond";
-  font-weight: 500;
-  color: #444;
-  font-size: 0.95em;
-  font-style: italic;
-  display: inline;
-}
-
-.action .description:before {
-  content: " - ";
-  font-style: normal;
-}
-
-.action .extra {
-  font-family: "SofiaSansCond";
-  font-weight: 400;
-  color: #666;
-  font-size: 0.9em;
-  font-style: italic;
-  display: block;
-  line-height: 1;
-}
-
-.buttons {
-  width: 7.7mm;
-  height: 5.8mm;
-  flex-shrink: 0;
-  margin-top: 0.2mm;
-}
-
-.version {
-  font-family: "SofiaSans";
-  font-weight: 500;
-  font-size: 1em;
-  margin-bottom: 2mm;
-  text-align: center;
-  color: #444;
-}
-
-.action_text {
-  flex: 1;
-  margin-left: 2mm;
-  line-height: 1.1;
-  overflow-wrap: break-word;
-  min-width: 0;
-}
-
 .guide {
   width: 100%;
-}
-
-#content {
-  column-count: 4;
-  column-gap: 5mm;
-  width: 100%;
-  max-width: 287mm;
-  margin: 0 auto;
 }
 
 @media print {
   @page {
     size: A4 landscape;
-    margin: 5mm;
+    margin: 4mm;
   }
   body {
     margin: 0;
@@ -163,154 +24,93 @@ body {
   }
 }
 
-.page {
-  break-inside: avoid;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 0;
-}
-
-.section {
-  font-family: "SofiaSans";
-  font-weight: 800;
-  font-size: 1em;
-  text-transform: uppercase;
-  margin-bottom: 1mm;
-  background-color: #cccccc;
-  padding-top: 0.3mm;
-  padding-bottom: 0.3mm;
-  border: 1px solid #aaaaaa;
-  break-after: avoid;
-}
-
-.section:before {
-  content: "";
-  margin-right: 1mm;
-  padding-left: 1mm;
-}
-
-.section:not(:first-child) {
-  margin-top: 2mm;
-}
-
-.action {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.2mm;
-  break-inside: avoid;
-}
-
-.action_text {
-  flex: 1;
-  margin-left: 2mm;
-  line-height: 1.1;
-}
-
-.action .name {
-  font-family: "SofiaSans";
-  font-weight: 600;
-}
-
-.action .secondary {
-  font-family: "SofiaSans";
-  font-weight: 300;
-  font-size: 0.95em;
-}
-
-.action .description,
-.action .extra {
-  font-family: "SofiaSansCond";
-  font-weight: 500;
-  color: #666;
-  font-size: 0.9em;
-  font-style: italic;
-}
-
-.buttons {
-  width: 11.3mm;
-  height: 8.5mm;
-  flex-shrink: 0;
-}
-
-.version {
-  font-family: "SofiaSans";
-  font-weight: 500;
-  font-size: 1.1em;
-  margin-bottom: 4mm;
-  text-align: center;
-}
-
-.guide {
-  width: 100%;
-}
-
 #content {
+  column-fill: balance;
   column-count: 3;
-  column-gap: 5mm;
+  column-gap: 3mm;
   width: 100%;
-  max-width: 285mm;
-  margin: 0 auto;
 }
 
-.page {
+.section_container {
+  margin-bottom: 3mm;
+  border: 1px solid #ddd;
+  border-radius: 1mm;
+  overflow: hidden;
   break-inside: avoid;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 4mm;
+  padding-bottom: 0.5mm;
 }
 
-.section {
+/* Selects the first 5 elements with the class .my-item */
+.section_container:nth-child(-n + 5) {
+  margin-bottom: 2.5mm;
+}
+
+.section_header {
   font-family: "SofiaSans";
   font-weight: 800;
   font-size: 1.1em;
   text-transform: uppercase;
-  margin-bottom: 1.5mm;
-  background-color: #cccccc;
-  padding-top: 0.5mm;
-  padding-bottom: 0.5mm;
-  border: 1px solid #aaaaaa;
-  break-after: avoid;
-}
-
-.section:before {
-  content: "";
-  margin-right: 1mm;
-  padding-left: 1mm;
-}
-
-.section:not(:first-child) {
-  margin-top: 3mm;
+  margin-bottom: 2mm;
+  background-color: #d1e9ff;
+  padding: 1mm 1.8mm;
+  border-bottom: 1px solid #a0c4ff;
 }
 
 .action {
   display: flex;
   align-items: center;
-  margin-bottom: 1.5mm;
+  margin-bottom: 1.1mm;
+  padding: 0.4mm 2.9mm;
   break-inside: avoid;
 }
 
 .action_text {
   flex: 1;
   margin-left: 3mm;
+  line-height: 3.8mm;
 }
 
 .action .name {
   font-family: "SofiaSans";
-  font-weight: 600;
+  font-weight: 700;
+  display: inline;
+  font-size: 1.05em;
+}
+
+.action .description {
+  font-family: "SofiaSansCond";
+  font-weight: 500;
+  color: #444;
+  font-size: 1em;
+  font-style: italic;
+  display: inline;
+}
+
+.action .description:before {
+  content: " - ";
+  font-style: normal;
+}
+
+.action .extra {
+  font-family: "SofiaSansCond";
+  font-weight: 400;
+  color: #666;
+  font-size: 0.95em;
+  font-style: italic;
+  display: block;
+  line-height: 1.1;
 }
 
 .action .secondary {
   font-family: "SofiaSans";
+  font-size: 0.95em;
   font-weight: 300;
 }
 
-.action .description,
-.action .extra {
-  font-family: "SofiaSansCond";
-  font-weight: 500;
-  color: #666;
-  font-size: 0.9em;
-  font-style: italic;
+.buttons {
+  width: 10.3mm;
+  height: 7.7mm;
+  flex-shrink: 0;
 }
 
 .action_buttons {
