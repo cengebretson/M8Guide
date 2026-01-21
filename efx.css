@@ -10,7 +10,6 @@ body {
   padding: 2.5mm;
   display: flex;
   flex-direction: row;
-  height: 100vh;
   box-sizing: border-box;
   font-size: 0.76rem;
   line-height: 1;
@@ -59,7 +58,7 @@ body {
 }
 
 .section_container {
-  margin-bottom: 1.8mm;
+  margin-bottom: 1.5mm;
   break-inside: avoid;
   border: 1px solid #ddd;
   border-radius: 0.8mm;
@@ -71,7 +70,7 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 0.85em;
+  font-size: 0.8em;
   text-transform: uppercase;
   padding: 0.5mm 1.5mm;
 }
@@ -90,7 +89,7 @@ body {
 }
 
 .cmd-table td {
-  padding: 2px 4.5px;
+  padding: 1.5px 3.5px;
   vertical-align: middle;
 }
 
@@ -106,7 +105,7 @@ body {
 .col-desc {
   font-family: "SofiaSansCond";
   font-weight: 500;
-  font-size: 1.01em;
+  font-size: 0.9em;
   line-height: 1;
   padding-left: 6px !important;
 }
@@ -151,8 +150,8 @@ body {
 }
 
 .header-icon {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   margin-right: 4px;
   fill: currentColor;
 }
