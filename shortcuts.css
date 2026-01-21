@@ -1,19 +1,41 @@
+html,
 body {
+  height: 100%;
   margin: 0;
-  padding: 2mm;
+  padding: 0;
+}
+
+body {
+  padding: 5mm;
+  box-sizing: border-box;
   -webkit-print-color-adjust: exact !important;
   print-color-adjust: exact !important;
   font-size: 0.72em;
   line-height: 1;
+  overflow: hidden;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
 }
 
 .guide {
-  width: 100%;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.to_hide {
+  display: none;
 }
 
 @media print {
   @page {
-    size: A4 landscape;
+    size: letter landscape;
     margin: 4mm;
   }
   body {
@@ -27,12 +49,13 @@ body {
 #content {
   column-fill: balance;
   column-count: 3;
-  column-gap: 3mm;
+  column-gap: 6mm;
   width: 100%;
+  height: 100%;
 }
 
 .section_container {
-  margin-bottom: 3mm;
+  margin-bottom: 7mm;
   border: 1px solid #ddd;
   border-radius: 1mm;
   overflow: hidden;
@@ -42,25 +65,25 @@ body {
 
 /* Selects the first 5 elements with the class .my-item */
 .section_container:nth-child(-n + 5) {
-  margin-bottom: 2.5mm;
+  margin-bottom: 5.7mm;
 }
 
 .section_header {
   font-family: "SofiaSans";
   font-weight: 800;
-  font-size: 1.1em;
+  font-size: 1.5em;
   text-transform: uppercase;
-  margin-bottom: 2mm;
+  margin-bottom: 2.8mm;
   background-color: #d1e9ff;
-  padding: 1mm 1.8mm;
+  padding: 1.3mm 1.8mm;
   border-bottom: 1px solid #a0c4ff;
 }
 
 .action {
   display: flex;
   align-items: center;
-  margin-bottom: 1.1mm;
-  padding: 0.4mm 2.9mm;
+  margin-bottom: 1.9mm;
+  padding: 0.7mm 2.9mm;
   break-inside: avoid;
 }
 
@@ -74,14 +97,14 @@ body {
   font-family: "SofiaSans";
   font-weight: 700;
   display: inline;
-  font-size: 1.05em;
+  font-size: 1.55em;
 }
 
 .action .description {
   font-family: "SofiaSansCond";
   font-weight: 500;
   color: #444;
-  font-size: 1em;
+  font-size: 1.3em;
   font-style: italic;
   display: inline;
 }
@@ -95,7 +118,7 @@ body {
   font-family: "SofiaSansCond";
   font-weight: 400;
   color: #666;
-  font-size: 0.95em;
+  font-size: 1.2em;
   font-style: italic;
   display: block;
   line-height: 1.1;
@@ -103,13 +126,13 @@ body {
 
 .action .secondary {
   font-family: "SofiaSans";
-  font-size: 0.95em;
+  font-size: 1.2em;
   font-weight: 300;
 }
 
 .buttons {
-  width: 10.3mm;
-  height: 7.7mm;
+  width: 15.3mm;
+  height: 11.7mm;
   flex-shrink: 0;
 }
 
@@ -191,4 +214,29 @@ body {
 
 .double .double_tap {
   opacity: 1;
+}
+
+.side-header {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "SofiaSans";
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding-left: 1.2mm;
+  margin-left: 1.2mm;
+  padding-top: 2mm;
+  color: #000;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.side-header .fw-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 3mm;
+  color: #666;
 }
