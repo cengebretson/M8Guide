@@ -37,18 +37,6 @@ const data = [
         description: "EDIT + OPTION",
         command: "edit option",
       },
-      {
-        name: "YES",
-        secondary: "in dialog",
-        description: "EDIT",
-        command: "edit",
-      },
-      {
-        name: "NO",
-        secondary: "(or exit) in dialog",
-        description: "OPTION",
-        command: "option",
-      },
     ],
   },
   {
@@ -124,6 +112,32 @@ const data = [
         name: "Delete Selected File",
         description: "EDIT + OPTION",
         command: "edit option",
+      },
+    ],
+  },
+  {
+    column: 1,
+    section: "Legend",
+    actions: [
+      {
+        name: "EDIT",
+        description: "Select / Enter",
+        command: "edit",
+      },
+      {
+        name: "OPTION",
+        description: "Cancel / Back",
+        command: "option",
+      },
+      {
+        name: "SHIFT",
+        description: "Shift / Alt",
+        command: "shift",
+      },
+      {
+        name: "PLAY",
+        description: "Start / Stop",
+        command: "play",
       },
     ],
   },

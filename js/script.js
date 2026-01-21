@@ -22,6 +22,9 @@ $(document).ready(function () {
 
 function render_section(section) {
   var section_container = $("<div class='section_container'>");
+  if (section.section === "Legend") {
+    section_container.addClass("legend-section");
+  }
   section_container.append(
     "<div class='section_header'>" + section.section + "</div>",
   );
