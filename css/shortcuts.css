@@ -10,7 +10,7 @@ body {
   box-sizing: border-box;
   -webkit-print-color-adjust: exact !important;
   print-color-adjust: exact !important;
-  font-size: 0.72em;
+  font-size: 0.44em;
   line-height: 1;
   overflow: hidden;
 }
@@ -40,32 +40,40 @@ body {
   }
   body {
     margin: 0;
+    padding: 0;
   }
   #content {
-    width: 287mm;
+    width: 100%;
   }
 }
 
 #content {
-  column-fill: balance;
-  column-count: 3;
-  column-gap: 6mm;
+  display: flex;
+  flex-direction: row;
+  gap: 4mm;
   width: 100%;
   height: 100%;
 }
 
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute vertical space evenly */
+  height: 100%;
+}
+
 .section_container {
-  margin-bottom: 7mm;
+  margin-bottom: 0; /* Let flex gap or justify-content handle spacing */
   border: 1px solid #ddd;
   border-radius: 1mm;
   overflow: hidden;
-  break-inside: avoid;
   padding-bottom: 0.5mm;
 }
 
 /* Selects the first 5 elements with the class .my-item */
 .section_container:nth-child(-n + 5) {
-  margin-bottom: 5.7mm;
+  margin-bottom: 0;
 }
 
 .section_header {
@@ -73,17 +81,17 @@ body {
   font-weight: 800;
   font-size: 1.5em;
   text-transform: uppercase;
-  margin-bottom: 2.8mm;
+  margin-bottom: 0.8mm;
   background-color: #d1e9ff;
-  padding: 1.3mm 1.8mm;
+  padding: 0.9mm 0.8mm;
   border-bottom: 1px solid #a0c4ff;
 }
 
 .action {
   display: flex;
   align-items: center;
-  margin-bottom: 1.9mm;
-  padding: 0.7mm 2.9mm;
+  margin-bottom: 0.3mm;
+  padding: 0.2mm 1.4mm;
   break-inside: avoid;
 }
 
@@ -131,8 +139,8 @@ body {
 }
 
 .buttons {
-  width: 15.3mm;
-  height: 11.7mm;
+  width: 9.0mm;
+  height: 6.8mm;
   flex-shrink: 0;
 }
 

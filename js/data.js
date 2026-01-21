@@ -1,5 +1,6 @@
 const data = [
   {
+    column: 1,
     section: "Navigation",
     actions: [
       {
@@ -15,6 +16,7 @@ const data = [
     ],
   },
   {
+    column: 1,
     section: "Editing",
     actions: [
       {
@@ -50,6 +52,7 @@ const data = [
     ],
   },
   {
+    column: 1,
     section: "Play",
     actions: [
       {
@@ -81,56 +84,7 @@ const data = [
     ],
   },
   {
-    section: "Mixer Screen",
-    actions: [
-      {
-        name: "Create Snapshot",
-        description: "hold SHIFT + OPTION",
-        command: "shifthold option",
-      },
-      {
-        name: "Recall Snapshot",
-        description: "hold SHIFT + EDIT",
-        command: "shifthold edit",
-      },
-    ],
-  },
-  {
-    section: "Chain Screen",
-    actions: [
-      {
-        name: "Create",
-        secondary: "new phrase",
-        description: "double-tap EDIT",
-        command: "edit double",
-      },
-      {
-        name: "Clone and Paste",
-        secondary: "phrase",
-        description: "hold SHIFT + OPTION then EDIT",
-        command: "shifthold option1st edit2nd",
-      },
-      {
-        name: "Jump to Track",
-        secondary: "left or right",
-        description: "hold OPTION + [ LEFT or RIGHT ] ",
-        command: "optionhold left right",
-      },
-      {
-        name: "Jump to Chain",
-        secondary: "previous or next",
-        description: "hold OPTION + [ UP or DOWN ]",
-        command: "optionhold up down",
-      },
-      {
-        name: "Play All Tracks",
-        secondary: "continue song from cursor position",
-        description: "hold SHIFT + PLAY",
-        command: "shifthold play",
-      },
-    ],
-  },
-  {
+    column: 1,
     section: "Selection",
     actions: [
       {
@@ -153,43 +107,44 @@ const data = [
     ],
   },
   {
-    section: "Instrument Screen",
+    column: 1,
+    section: "File Browser",
     actions: [
       {
-        name: "Preview Instrument",
-        description: "hold EDIT + PLAY",
-        command: "edithold play",
+        name: "Preview Sample",
+        description: "PLAY",
+        command: "play",
       },
       {
-        name: "Copy Instrument",
-        description: "hold SHIFT + OPTION",
-        command: "shifthold option",
+        name: "Sort Directory",
+        description: "SHIFT + OPTION",
+        command: "shift option",
       },
       {
-        name: "Jump to Instrument",
-        secondary: "previous or next",
-        description: "OPTION + [ LEFT or RIGHT ] ",
-        command: "optionhold left right",
-      },
-      {
-        name: "Edit Parameter",
-        description: "EDIT + [ Touchscreen LEFT and RIGHT ]",
-        command: "edithold",
-      },
-      {
-        name: "Map Parameter",
-        description: "OPTION + [ Touchscreen LEFT and RIGHT or UP and DOWN ]",
-        command: "optionhold",
-      },
-      {
-        name: "Quick FX Jump",
-        secondary: "auto-assign FX",
-        description: "on parameter, hold SHIFT + [ LEFT or RIGHT ]",
-        command: "shifthold left right",
+        name: "Delete Selected File",
+        description: "EDIT + OPTION",
+        command: "edit option",
       },
     ],
   },
   {
+    column: 2,
+    section: "Mixer Screen",
+    actions: [
+      {
+        name: "Create Snapshot",
+        description: "hold SHIFT + OPTION",
+        command: "shifthold option",
+      },
+      {
+        name: "Recall Snapshot",
+        description: "hold SHIFT + EDIT",
+        command: "shifthold edit",
+      },
+    ],
+  },
+  {
+    column: 2,
     section: "Song Screen",
     actions: [
       {
@@ -264,26 +219,104 @@ const data = [
     ],
   },
   {
-    section: "File Browser",
+    column: 2,
+    section: "Chain Screen",
     actions: [
       {
-        name: "Preview Sample",
-        description: "PLAY",
-        command: "play",
+        name: "Create",
+        secondary: "new phrase",
+        description: "double-tap EDIT",
+        command: "edit double",
       },
       {
-        name: "Sort Directory",
-        description: "SHIFT + OPTION",
-        command: "shift option",
+        name: "Clone and Paste",
+        secondary: "phrase",
+        description: "hold SHIFT + OPTION then EDIT",
+        command: "shifthold option1st edit2nd",
       },
       {
-        name: "Delete Selected File",
-        description: "EDIT + OPTION",
-        command: "edit option",
+        name: "Jump to Track",
+        secondary: "left or right",
+        description: "hold OPTION + [ LEFT or RIGHT ] ",
+        command: "optionhold left right",
+      },
+      {
+        name: "Jump to Chain",
+        secondary: "previous or next",
+        description: "hold OPTION + [ UP or DOWN ]",
+        command: "optionhold up down",
+      },
+      {
+        name: "Play All Tracks",
+        secondary: "continue song from cursor position",
+        description: "hold SHIFT + PLAY",
+        command: "shifthold play",
       },
     ],
   },
   {
+    column: 2,
+    section: "Sample Editor",
+    actions: [
+      {
+        name: "Lazy Chop",
+        secondary: "add slice marker",
+        description: "during playback, hold PLAY then tap EDIT",
+        command: "playhold edit",
+      },
+      {
+        name: "Zoom / Fine Select",
+        description: "hold EDIT + [ LEFT or RIGHT ]",
+        command: "edithold left right",
+      },
+      {
+        name: "Snap Selection",
+        secondary: "to beat",
+        description: "hold OPTION + [ UP or DOWN ]",
+        command: "optionhold up down",
+      },
+    ],
+  },
+  {
+    column: 3,
+    section: "Instrument Screen",
+    actions: [
+      {
+        name: "Preview Instrument",
+        description: "hold EDIT + PLAY",
+        command: "edithold play",
+      },
+      {
+        name: "Copy Instrument",
+        description: "hold SHIFT + OPTION",
+        command: "shifthold option",
+      },
+      {
+        name: "Jump to Instrument",
+        secondary: "previous or next",
+        description: "OPTION + [ LEFT or RIGHT ] ",
+        command: "optionhold left right",
+      },
+      {
+        name: "Quick FX Jump",
+        secondary: "auto-assign FX",
+        description: "on parameter, hold SHIFT + [ LEFT or RIGHT ]",
+        command: "shifthold left right",
+      },
+      {
+        name: "Edit Parameter",
+        description: "EDIT + [ Touchscreen LEFT and RIGHT ]",
+        command: "edithold",
+      },
+      {
+        name: "Map Parameter",
+        description: "OPTION + [ Touchscreen LEFT and RIGHT or UP and DOWN ]",
+        command: "optionhold",
+      },
+    ],
+  },
+  {
+    column: 3,
     section: "Phrase Screen",
     actions: [
       {
@@ -351,6 +384,7 @@ const data = [
     ],
   },
   {
+    column: 3,
     section: "Instrument Pool",
     actions: [
       {
@@ -379,28 +413,6 @@ const data = [
         secondary: "to Instrument View",
         description: "hold SHIFT + RIGHT",
         command: "shifthold right",
-      },
-    ],
-  },
-  {
-    section: "Sample Editor",
-    actions: [
-      {
-        name: "Lazy Chop",
-        secondary: "add slice marker",
-        description: "during playback, hold PLAY then tap EDIT",
-        command: "playhold edit",
-      },
-      {
-        name: "Zoom / Fine Select",
-        description: "hold EDIT + [ LEFT or RIGHT ]",
-        command: "edithold left right",
-      },
-      {
-        name: "Snap Selection",
-        secondary: "to beat",
-        description: "hold OPTION + [ UP or DOWN ]",
-        command: "optionhold up down",
       },
     ],
   },

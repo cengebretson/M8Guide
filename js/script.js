@@ -1,6 +1,20 @@
 $(document).ready(function () {
+  // Create column containers
+  var col1 = $("<div class='column' id='col1'></div>");
+  var col2 = $("<div class='column' id='col2'></div>");
+  var col3 = $("<div class='column' id='col3'></div>");
+
+  $("#content").append(col1, col2, col3);
+
   $.each(data, function (_, section) {
-    render_section(section).appendTo("#content");
+    var rendered = render_section(section);
+    if (section.column === 1) {
+      col1.append(rendered);
+    } else if (section.column === 2) {
+      col2.append(rendered);
+    } else {
+      col3.append(rendered);
+    }
   });
 
   $(".to_hide").remove();
