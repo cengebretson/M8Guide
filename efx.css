@@ -72,7 +72,7 @@ body {
   font-weight: 800;
   font-size: 0.8em;
   text-transform: uppercase;
-  padding: 0.5mm 1.5mm;
+  padding: 0.8mm 1.5mm;
 }
 
 .cmd-table {
@@ -105,7 +105,7 @@ body {
 .col-desc {
   font-family: "SofiaSansCond";
   font-weight: 500;
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 1;
   padding-left: 6px !important;
 }
@@ -124,7 +124,7 @@ body {
 .note {
   display: block;
   color: #666;
-  font-size: 0.82em;
+  font-size: 0.92em;
   font-style: italic;
   font-weight: 400;
 }
