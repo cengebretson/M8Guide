@@ -176,6 +176,21 @@
                 </table>
             </div>
 
+            <div class="section_container">
+                <div class="section_header h-teal">
+                    <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.71L11 12.41V7h2v4.59l3.71 3.71-1.42 1.41z"/></svg>
+                    TIC Modes (Table Tick)
+                </div>
+                <table class="cmd-table">
+                    <tr><td class="col-cmd">00</td><td class="col-desc">Inc. row on instrument trigger</td></tr>
+                    <tr><td class="col-cmd">01-FB</td><td class="col-desc">Number of ticks per row (XX)</td></tr>
+                    <tr><td class="col-cmd">FC</td><td class="col-desc">Octave Map <span class="note">Octave to row</span></td></tr>
+                    <tr><td class="col-cmd">FD</td><td class="col-desc">Velocity Map <span class="note">Vel to row</span></td></tr>
+                    <tr><td class="col-cmd">FE</td><td class="col-desc">Note Map <span class="note">Note to row (HOP 0C)</span></td></tr>
+                    <tr><td class="col-cmd">FF</td><td class="col-desc">Inc. row at 200 Hz</td></tr>
+                </table>
+            </div>
+
         </div>
     </div>
 
