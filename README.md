@@ -12,7 +12,6 @@ these guides is based off (especially the well designed template for having the 
 A single-page guide containing navigation, common actions, and context-sensitive shortcuts.
 
 - **Design:** Optimized for US Letter or A4 paper.
-- **Portability:** Designed to be folded and stored inside the official M8 case.
 
 ### 2. M8 EFX & Synthesis Reference (`efx.html`)
 
