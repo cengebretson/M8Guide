@@ -7,7 +7,7 @@
 body {
   font-family: "SofiaSans", sans-serif;
   margin: 0;
-  padding: 1.5mm;
+  padding: 2.5mm;
   display: flex;
   flex-direction: row;
   height: 100vh;
@@ -35,7 +35,7 @@ body {
   justify-content: flex-start;
   font-family: "SofiaSans";
   font-weight: 900;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   padding-left: 1.2mm;
   margin-left: 1.2mm;
@@ -45,21 +45,21 @@ body {
 }
 
 .side-header .fw-text {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  margin-top: 1mm;
+  margin-top: 3mm;
   color: #666;
 }
 
 #content {
   column-count: 3;
-  column-gap: 3mm;
+  column-gap: 4mm;
   margin-bottom: 1mm;
   width: 100%;
 }
 
 .section_container {
-  margin-bottom: 0.8mm;
+  margin-bottom: 1.8mm;
   break-inside: avoid;
   border: 1px solid #ddd;
   border-radius: 0.8mm;
@@ -73,7 +73,7 @@ body {
   font-weight: 800;
   font-size: 0.85em;
   text-transform: uppercase;
-  padding: 0.6mm 1.5mm;
+  padding: 0.5mm 1.5mm;
 }
 
 .cmd-table {
@@ -90,7 +90,7 @@ body {
 }
 
 .cmd-table td {
-  padding: 1px 2.5px;
+  padding: 2px 4.5px;
   vertical-align: middle;
 }
 
@@ -99,14 +99,16 @@ body {
   font-family: "SofiaSans", monospace;
   width: 28px;
   color: #000;
-  font-size: 1.05em;
-  padding-left: 5px;
+  font-size: 1.09em;
+  padding-left: 6px !important;
 }
 
 .col-desc {
   font-family: "SofiaSansCond";
   font-weight: 500;
-  line-height: 1.05;
+  font-size: 1.01em;
+  line-height: 1;
+  padding-left: 6px !important;
 }
 
 .col-eg {
@@ -117,7 +119,7 @@ body {
   text-align: right;
   white-space: nowrap;
   padding-left: 3px !important;
-  padding-right: 5px;
+  padding-right: 10px !important;
 }
 
 .note {
@@ -129,16 +131,28 @@ body {
 }
 
 /* Colors */
-.h-pink { background-color: #ffd1dc; }
-.h-orange { background-color: #ffe0b2; }
-.h-yellow { background-color: #fff9c4; }
-.h-teal { background-color: #b2dfdb; }
-.h-blue { background-color: #bbdefb; }
-.h-gray { background-color: #e0e0e0; }
+.h-pink {
+  background-color: #ffd1dc;
+}
+.h-orange {
+  background-color: #ffe0b2;
+}
+.h-yellow {
+  background-color: #fff9c4;
+}
+.h-teal {
+  background-color: #b2dfdb;
+}
+.h-blue {
+  background-color: #bbdefb;
+}
+.h-gray {
+  background-color: #e0e0e0;
+}
 
 .header-icon {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   margin-right: 4px;
   fill: currentColor;
 }
@@ -162,4 +176,3 @@ body {
     font-size: 1.2rem;
   }
 }
-
