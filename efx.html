@@ -42,19 +42,19 @@
                     Sequence Flow
                 </div>
                 <table class="cmd-table">
-                    <tr><td class="col-cmd">HOP</td><td class="col-desc">GOTO Row <span class="note">Jumps playhead to XX</span></td><td class="col-eg">HOP 00</td></tr>
-                    <tr><td class="col-cmd">KIL</td><td class="col-desc">Kill Note <span class="note">Stop audio after XX ticks</span></td><td class="col-eg">KIL 04</td></tr>
-                    <tr><td class="col-cmd">OFF</td><td class="col-desc">Note Off <span class="note">Trigger Release Stage</span></td><td class="col-eg">OFF 04</td></tr>
-                    <tr><td class="col-cmd">NXT</td><td class="col-desc">Next Track <span class="note">Trig Inst on Right Trk</span></td><td class="col-eg">NXT 01</td></tr>
-                    <tr><td class="col-cmd">RET</td><td class="col-desc">Retrigger <span class="note">Re-fire note every XX ticks</span></td><td class="col-eg">RET 02</td></tr>
-                    <tr><td class="col-cmd">REP</td><td class="col-desc">Repeat / Ramp <span class="note">Add/Sub value each step</span></td><td class="col-eg">REP 01</td></tr>
-                    <tr><td class="col-cmd">RTO</td><td class="col-desc">Repeat To <span class="note">Min/Max value for REP to stop</span></td><td class="col-eg">RTO 80</td></tr>
+                    <tr><td class="col-cmd">HOP</td><td class="col-desc">GOTO Row <span class="note">XX: Row (00-0F Phrase, 00-FF Table)</span></td><td class="col-eg">HOP 00</td></tr>
+                    <tr><td class="col-cmd">KIL</td><td class="col-desc">Kill Note <span class="note">XX: Ticks (00-FF) until hard cut</span></td><td class="col-eg">KIL 04</td></tr>
+                    <tr><td class="col-cmd">OFF</td><td class="col-desc">Note Off <span class="note">XX: Ticks (00-FF) until release begins</span></td><td class="col-eg">OFF 04</td></tr>
+                    <tr><td class="col-cmd">NXT</td><td class="col-desc">Next Track <span class="note">XX: Inst (00-7F) to trig on track to right</span></td><td class="col-eg">NXT 01</td></tr>
+                    <tr><td class="col-cmd">RET</td><td class="col-desc">Retrigger <span class="note">X: Vol Multi (0-7 Out, 8-F In), Y: Ticks</span></td><td class="col-eg">RET 82</td></tr>
+                    <tr><td class="col-cmd">REP</td><td class="col-desc">Repeat / Ramp <span class="note">X: Ticks, Y: Step Amt (8-F is neg)</span></td><td class="col-eg">REP 41</td></tr>
+                    <tr><td class="col-cmd">RTO</td><td class="col-desc">Repeat To <span class="note">XX: Target value (Stops the REP cmd)</span></td><td class="col-eg">RTO 80</td></tr>
                     <tr><td class="col-cmd">CHA</td><td class="col-desc">Chance <span class="note">Trigger probability (X:L, Y:R)</span></td><td class="col-eg">CHA 1F</td></tr>
-                    <tr><td class="col-cmd">NTH</td><td class="col-desc">Nth Trigger <span class="note">Conditional on loop count</span></td><td class="col-eg">NTH 02</td></tr>
-                    <tr><td class="col-cmd">RMX</td><td class="col-desc">Remix <span class="note">Randomize row values</span></td><td class="col-eg">RMX 04</td></tr>
+                    <tr><td class="col-cmd">NTH</td><td class="col-desc">Nth Trigger <span class="note">X: Mode (0:Every, 1:Not, 2:Once, 3:After), Y: Count</span></td><td class="col-eg">NTH 02</td></tr>
+                    <tr><td class="col-cmd">RMX</td><td class="col-desc">Remix <span class="note">X: Prob (0-F), Y: Random Range</span></td><td class="col-eg">RMX 04</td></tr>
                     <tr><td class="col-cmd">INS</td><td class="col-desc">Instrument <span class="note">Change Inst (00-7F)</span></td><td class="col-eg">INS 02</td></tr>
-                    <tr><td class="col-cmd">RND</td><td class="col-desc">Random <span class="note">Randomize prev active FX</span></td><td class="col-eg">RND 0F</td></tr>
-                    <tr><td class="col-cmd">RNL</td><td class="col-desc">Random Left <span class="note">Randomize FX to the left</span></td><td class="col-eg">RNL 44</td></tr>
+                    <tr><td class="col-cmd">RND</td><td class="col-desc">Random <span class="note">XX: Max val for FX column to the left</span></td><td class="col-eg">RND 0F</td></tr>
+                    <tr><td class="col-cmd">RNL</td><td class="col-desc">Random Left <span class="note">XX: Max val for FX column 2 slots left</span></td><td class="col-eg">RNL 44</td></tr>
                     <tr><td class="col-cmd">MTT</td><td class="col-desc">Micro Timing <span class="badge">NEW</span><span class="note">Sub-tick note shift</span></td><td class="col-eg">MTT 10</td></tr>
                 </table>
             </div>
@@ -149,19 +149,6 @@
             </div>
 
             <div class="section_container">
-                <div class="section_header h-teal">
-                    <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v2H3zM3 7h18v2H3zM3 11h18v2H3zM3 15h18v2H3zM3 19h18v2H3z"/></svg>
-                    Table Commands
-                </div>
-                <table class="cmd-table">
-                    <tr><td class="col-cmd">TIC</td><td class="col-desc">Table Tick <span class="note">Set table tick rate (XX)</span></td><td class="col-eg">TIC 02</td></tr>
-                    <tr><td class="col-cmd">TBL</td><td class="col-desc">Table Select <span class="note">Set Table number (XX)</span></td><td class="col-eg">TBL 01</td></tr>
-                    <tr><td class="col-cmd">THO</td><td class="col-desc">Table Hop <span class="note">Loop logic inside Table</span></td><td class="col-eg">THO 00</td></tr>
-                    <tr><td class="col-cmd">TBX</td><td class="col-desc">Aux Table <span class="note">Assign parallel Table</span></td><td class="col-eg">TBX 02</td></tr>
-                </table>
-            </div>
-
-            <div class="section_container">
                 <div class="section_header h-gray">
                     <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"/></svg>
                     Global
@@ -178,6 +165,19 @@
 
             <div class="section_container">
                 <div class="section_header h-teal">
+                    <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v2H3zM3 7h18v2H3zM3 11h18v2H3zM3 15h18v2H3zM3 19h18v2H3z"/></svg>
+                    Table Commands
+                </div>
+                <table class="cmd-table">
+                    <tr><td class="col-cmd">TIC</td><td class="col-desc">Table Tick <span class="note">Set table tick rate (XX)</span></td><td class="col-eg">TIC 02</td></tr>
+                    <tr><td class="col-cmd">TBL</td><td class="col-desc">Table Select <span class="note">Set Table number (XX)</span></td><td class="col-eg">TBL 01</td></tr>
+                    <tr><td class="col-cmd">THO</td><td class="col-desc">Table Hop <span class="note">Loop logic inside Table</span></td><td class="col-eg">THO 00</td></tr>
+                    <tr><td class="col-cmd">TBX</td><td class="col-desc">Aux Table <span class="note">Assign parallel Table</span></td><td class="col-eg">TBX 02</td></tr>
+                </table>
+            </div>
+
+            <div class="section_container">
+                <div class="section_header h-teal">
                     <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.71L11 12.41V7h2v4.59l3.71 3.71-1.42 1.41z"/></svg>
                     TIC Modes (Table Tick)
                 </div>
@@ -189,6 +189,12 @@
                     <tr><td class="col-cmd">FE</td><td class="col-desc">Note Map <span class="note">Note to row (HOP 0C)</span></td></tr>
                     <tr><td class="col-cmd">FF</td><td class="col-desc">Inc. row at 200 Hz</td></tr>
                 </table>
+                <div style="padding: 4px 6px; font-size: 0.75em; line-height: 1.2; border-top: 1px solid #ddd; background: #fcfcfc; font-family: 'SofiaSansCond';">
+                    <span style="color: #000; font-weight: 800;">New Note + Inst No:</span> Table resets to step 0 and starts playing.<br>
+                    <span style="color: #000; font-weight: 800;">New Note + No Inst No:</span> Note pitch changes; Table continues playing.<br>
+                    <span style="color: #000; font-weight: 800;">TIC 00 + New Note:</span> Table advances exactly one row.<br>
+                    <span style="color: #000; font-weight: 800;">OFF / KIL command:</span> Table stops running for that voice.
+                </div>
             </div>
 
         </div>
