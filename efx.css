@@ -1,194 +1,165 @@
+/* US Letter Landscape Optimization (11" x 8.5") */
+@page {
+  size: letter landscape;
+  margin: 2mm;
+}
+
 body {
+  font-family: "SofiaSans", sans-serif;
   margin: 0;
-  padding: 2mm;
+  padding: 1.5mm;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  box-sizing: border-box;
+  font-size: 0.76rem;
+  line-height: 1;
+  overflow: hidden;
+  background-color: #fff;
   -webkit-print-color-adjust: exact !important;
   print-color-adjust: exact !important;
-  font-size: 0.72em;
-  line-height: 1;
 }
 
-.guide {
-  width: 100%;
+.main-layout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-@media print {
-  @page {
-    size: A4 landscape;
-    margin: 4mm;
-  }
-  body {
-    margin: 0;
-  }
-  #content {
-    width: 287mm;
-  }
+.side-header {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "SofiaSans";
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding-left: 1.2mm;
+  margin-left: 1.2mm;
+  padding-top: 2mm;
+  color: #000;
+  white-space: nowrap;
+}
+
+.side-header .fw-text {
+  font-size: 0.7rem;
+  font-weight: 400;
+  margin-top: 1mm;
+  color: #666;
 }
 
 #content {
-  column-fill: balance;
   column-count: 3;
   column-gap: 3mm;
+  margin-bottom: 1mm;
   width: 100%;
 }
 
 .section_container {
-  margin-bottom: 3mm;
-  border: 1px solid #ddd;
-  border-radius: 1mm;
-  overflow: hidden;
+  margin-bottom: 0.8mm;
   break-inside: avoid;
-  padding-bottom: 0.5mm;
-}
-
-/* Selects the first 5 elements with the class .my-item */
-.section_container:nth-child(-n + 5) {
-  margin-bottom: 2.5mm;
+  border: 1px solid #ddd;
+  border-radius: 0.8mm;
+  overflow: hidden;
 }
 
 .section_header {
-  font-family: "SofiaSans";
-  font-weight: 800;
-  font-size: 1.1em;
-  text-transform: uppercase;
-  margin-bottom: 2mm;
-  background-color: #d1e9ff;
-  padding: 1mm 1.8mm;
-  border-bottom: 1px solid #a0c4ff;
-}
-
-.action {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.1mm;
-  padding: 0.4mm 2.9mm;
-  break-inside: avoid;
-}
-
-.action_text {
-  flex: 1;
-  margin-left: 3mm;
-  line-height: 3.8mm;
-}
-
-.action .name {
-  font-family: "SofiaSans";
-  font-weight: 700;
-  display: inline;
-  font-size: 1.05em;
-}
-
-.action .description {
-  font-family: "SofiaSansCond";
-  font-weight: 500;
-  color: #444;
-  font-size: 1em;
-  font-style: italic;
-  display: inline;
-}
-
-.action .description:before {
-  content: " - ";
-  font-style: normal;
-}
-
-.action .extra {
-  font-family: "SofiaSansCond";
-  font-weight: 400;
-  color: #666;
-  font-size: 0.95em;
-  font-style: italic;
-  display: block;
-  line-height: 1.1;
-}
-
-.action .secondary {
-  font-family: "SofiaSans";
-  font-size: 0.95em;
-  font-weight: 300;
-}
-
-.buttons {
-  width: 10.3mm;
-  height: 7.7mm;
-  flex-shrink: 0;
-}
-
-.action_buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 800;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  padding: 0.6mm 1.5mm;
 }
 
-.bkg,
-.hold,
-.first,
-.second,
-.double_tap {
-  opacity: 0;
+.cmd-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.left .left_button .bkg,
-.lefthold .left_button .hold,
-.left1st .left_button .first,
-.left1st .left_button .bkg,
-.left2nd .left_button .second,
-.left2nd .left_button .bkg,
-.right .right_button .bkg,
-.righthold .right_button .hold,
-.right1st .right_button .first,
-.right1st .right_button .bkg,
-.right2nd .right_button .second,
-.right2nd .right_button .bkg,
-.up .up_button .bkg,
-.uphold .up_button .hold,
-.up1st .up_button .first,
-.up1st .up_button .bkg,
-.up2nd .up_button .second,
-.up2nd .up_button .bkg,
-.down .down_button .bkg,
-.downhold .down_button .hold,
-.down1st .down_button .first,
-.down1st .down_button .bkg,
-.down2nd .down_button .second,
-.down2nd .down_button .bkg,
-.option .option_button .bkg,
-.optionhold .option_button .hold,
-.option1st .option_button .first,
-.option1st .option_button .bkg,
-.option2nd .option_button .second,
-.option2nd .option_button .bkg,
-.edit .edit_button .bkg,
-.edithold .edit_button .hold,
-.edit1st .edit_button .first,
-.edit1st .edit_button .bkg,
-.edit2nd .edit_button .second,
-.edit2nd .edit_button .bkg,
-.play .play_button .bkg,
-.playhold .play_button .hold,
-.play1st .play_button .first,
-.play1st .play_button .bkg,
-.play2nd .play_button .second,
-.play2nd .play_button .bkg,
-.shift .shift_button .bkg,
-.shifthold .shift_button .hold,
-.shift1st .shift_button .first,
-.shift1st .shift_button .bkg,
-.shift2nd .shift_button .second,
-.shift2nd .shift_button .bkg {
-  opacity: 1;
+.cmd-table tr {
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.lefthold .left_button .placeholder,
-.righthold .right_button .placeholder,
-.uphold .up_button .placeholder,
-.downhold .down_button .placeholder,
-.optionhold .option_button .placeholder,
-.edithold .edit_button .placeholder,
-.playhold .play_button .placeholder,
-.shifthold .shift_button .placeholder {
-  opacity: 0;
+.cmd-table tr:last-child {
+  border-bottom: none;
 }
 
-.double .double_tap {
-  opacity: 1;
+.cmd-table td {
+  padding: 1px 2.5px;
+  vertical-align: middle;
 }
+
+.col-cmd {
+  font-weight: 800;
+  font-family: "SofiaSans", monospace;
+  width: 28px;
+  color: #000;
+  font-size: 1.05em;
+  padding-left: 5px;
+}
+
+.col-desc {
+  font-family: "SofiaSansCond";
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.col-eg {
+  font-family: "SofiaSans";
+  font-weight: 800;
+  color: #d32f2f;
+  font-size: 0.85em;
+  text-align: right;
+  white-space: nowrap;
+  padding-left: 3px !important;
+  padding-right: 5px;
+}
+
+.note {
+  display: block;
+  color: #666;
+  font-size: 0.82em;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Colors */
+.h-pink { background-color: #ffd1dc; }
+.h-orange { background-color: #ffe0b2; }
+.h-yellow { background-color: #fff9c4; }
+.h-teal { background-color: #b2dfdb; }
+.h-blue { background-color: #bbdefb; }
+.h-gray { background-color: #e0e0e0; }
+
+.header-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  fill: currentColor;
+}
+
+.badge {
+  background: #000;
+  color: #fff;
+  font-size: 0.6em;
+  padding: 0 1.5px;
+  border-radius: 1.5px;
+  margin-left: 2px;
+  font-weight: 800;
+}
+
+@media print {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .side-header {
+    font-size: 1.2rem;
+  }
+}
+
