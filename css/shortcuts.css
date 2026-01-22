@@ -95,6 +95,16 @@ body {
   break-inside: avoid;
 }
 
+.action.selection-mode {
+  background-color: #f5f5f5;
+  border-top: 0.1mm solid #e0e0e0;
+  border-bottom: 0.1mm solid #e0e0e0;
+}
+
+.action.selection-mode + .action.selection-mode {
+  border-top: none;
+}
+
 .action_text {
   flex: 1;
   margin-left: 3mm;

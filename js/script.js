@@ -36,6 +36,9 @@ function render_section(section) {
     $(".secondary", cloned).text(action.secondary);
     $(".description", cloned).text(action.description);
     $(".extra", cloned).text(action.extra);
+    if (action.selection) {
+      $(cloned).addClass("selection-mode");
+    }
 
     $(".buttons", cloned).removeClass().addClass("buttons");
     $(".buttons", cloned).addClass("buttons " + action.command);
