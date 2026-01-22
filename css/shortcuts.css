@@ -90,8 +90,8 @@ body {
 .action {
   display: flex;
   align-items: center;
-  margin-bottom: 0.3mm;
-  padding: 0.2mm 1.4mm;
+  margin-bottom: 0.5mm;
+  padding: 0.3mm 1.4mm;
   break-inside: avoid;
 }
 
@@ -149,8 +149,8 @@ body {
 }
 
 .buttons {
-  width: 9mm;
-  height: 6.8mm;
+  width: 10mm;
+  height: 7.5mm;
   flex-shrink: 0;
 }
 
@@ -286,7 +286,7 @@ body {
   padding-left: 0;
   padding-right: 0;
   justify-content: flex-start;
-  margin-bottom: 1mm;
+  margin-bottom: 1.2mm;
 }
 
 .legend-section .action_text {
