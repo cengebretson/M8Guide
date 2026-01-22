@@ -257,6 +257,12 @@ const data = [
         command: "shifthold option1st edit2nd",
       },
       {
+        name: "Deep Clone",
+        secondary: "phrase & notes",
+        description: "hold SHIFT + OPTION then double-tap EDIT",
+        command: "shifthold option1st edit2nd double",
+      },
+      {
         name: "Jump to Track",
         secondary: "left or right",
         description: "hold OPTION + [ LEFT or RIGHT ] ",
