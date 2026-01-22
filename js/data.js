@@ -57,10 +57,17 @@ const data = [
       },
       {
         name: "Solo Current Track",
+        secondary: "or Row (Live Mode)",
         description: "hold OPTION + PLAY",
         extra: "(latch solo by releasing OPTION first)",
         command: "optionhold play",
         page: 11,
+      },
+      {
+        name: "Solo Tracks",
+        secondary: "left or right (Song Screen)",
+        description: "hold OPTION + [ LEFT or RIGHT ] ",
+        command: "optionhold left right",
       },
       {
         name: "Clear All Mute",
@@ -192,18 +199,6 @@ const data = [
         command: "shifthold option1st edit2nd double",
       },
       {
-        name: "Solo Tracks",
-        secondary: "left or right",
-        description: "hold OPTION + [ LEFT or RIGHT ] ",
-        command: "optionhold left right",
-      },
-      {
-        name: "Solo Row",
-        secondary: "Live Mode",
-        description: "hold OPTION + PLAY",
-        command: "optionhold play",
-      },
-      {
         name: "Toggle Live Mode",
         description: "hold SHIFT + LEFT",
         command: "shifthold left",
@@ -273,12 +268,6 @@ const data = [
         secondary: "previous or next",
         description: "hold OPTION + [ UP or DOWN ]",
         command: "optionhold up down",
-      },
-      {
-        name: "Play All Tracks",
-        secondary: "continue song from cursor position",
-        description: "hold SHIFT + PLAY",
-        command: "shifthold play",
       },
     ],
   },
