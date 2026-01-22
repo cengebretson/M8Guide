@@ -115,14 +115,14 @@ body {
   font-family: "SofiaSans";
   font-weight: 700;
   display: inline;
-  font-size: 1.55em;
+  font-size: 1.9em;
 }
 
 .action .description {
   font-family: "SofiaSansCond";
   font-weight: 500;
   color: #444;
-  font-size: 1.3em;
+  font-size: 1.6em;
   font-style: italic;
   display: inline;
 }
@@ -296,9 +296,9 @@ body {
 }
 
 .legend-section .name {
-  font-size: 1.8em;
+  font-size: 1.95em;
 }
 
 .legend-section .description {
-  font-size: 1.5em;
+  font-size: 1.65em;
 }
