@@ -1,2 +1,1 @@
 * make note of latch ability
-* is clone and paste on phrase screen redundant?

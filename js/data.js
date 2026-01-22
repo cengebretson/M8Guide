@@ -63,8 +63,8 @@ const data = [
     ],
   },
   {
-    column: 1,
-    section: "Selection",
+    column: 2,
+    section: "Copy / Paste / Clone",
     actions: [
       {
         name: "Enter Selection Mode",
@@ -82,6 +82,24 @@ const data = [
         name: "Paste Copy Buffer",
         description: "hold SHIFT + EDIT",
         command: "shifthold edit",
+      },
+      {
+        name: "Clone and Paste",
+        secondary: "Chain, Phrase, or Instrument",
+        description: "hold SHIFT + OPTION then EDIT",
+        command: "shifthold option1st edit2nd",
+      },
+      {
+        name: "Deep Clone",
+        secondary: "with all contents",
+        description: "hold SHIFT + OPTION then double-tap EDIT",
+        command: "shifthold option1st edit2nd double",
+      },
+      {
+        name: "Copy / Clone Instrument",
+        secondary: "in Inst Screen or Pool",
+        description: "hold SHIFT + OPTION",
+        command: "shifthold option",
       },
     ],
   },
@@ -103,6 +121,22 @@ const data = [
         name: "Delete Selected File",
         description: "EDIT + OPTION",
         command: "edit option",
+      },
+    ],
+  },
+  {
+    column: 1,
+    section: "Mixer Screen",
+    actions: [
+      {
+        name: "Create Snapshot",
+        description: "hold SHIFT + OPTION",
+        command: "shifthold option",
+      },
+      {
+        name: "Recall Snapshot",
+        description: "hold SHIFT + EDIT",
+        command: "shifthold edit",
       },
     ],
   },
@@ -145,22 +179,6 @@ const data = [
   },
   {
     column: 2,
-    section: "Mixer Screen",
-    actions: [
-      {
-        name: "Create Snapshot",
-        description: "hold SHIFT + OPTION",
-        command: "shifthold option",
-      },
-      {
-        name: "Recall Snapshot",
-        description: "hold SHIFT + EDIT",
-        command: "shifthold edit",
-      },
-    ],
-  },
-  {
-    column: 2,
     section: "Song Screen",
     actions: [
       {
@@ -174,18 +192,6 @@ const data = [
         secondary: "new chain",
         description: "double-tap EDIT",
         command: "edit double",
-      },
-      {
-        name: "Clone and Paste",
-        secondary: "chain alone",
-        description: "hold SHIFT + OPTION then EDIT",
-        command: "shifthold option1st edit2nd",
-      },
-      {
-        name: "Deep Clone",
-        secondary: "chain & phrases",
-        description: "hold SHIFT + OPTION then double-tap EDIT",
-        command: "shifthold option1st edit2nd double",
       },
       {
         name: "Toggle Live Mode",
@@ -235,18 +241,6 @@ const data = [
         command: "edit double",
       },
       {
-        name: "Clone and Paste",
-        secondary: "phrase",
-        description: "hold SHIFT + OPTION then EDIT",
-        command: "shifthold option1st edit2nd",
-      },
-      {
-        name: "Deep Clone",
-        secondary: "phrase & notes",
-        description: "hold SHIFT + OPTION then double-tap EDIT",
-        command: "shifthold option1st edit2nd double",
-      },
-      {
         name: "Jump to Track",
         secondary: "left or right",
         description: "hold OPTION + [ LEFT or RIGHT ] ",
@@ -293,11 +287,6 @@ const data = [
         command: "edithold play",
       },
       {
-        name: "Copy Instrument",
-        description: "hold SHIFT + OPTION",
-        command: "shifthold option",
-      },
-      {
         name: "Jump to Instrument",
         secondary: "previous or next",
         description: "OPTION + [ LEFT or RIGHT ] ",
@@ -330,12 +319,6 @@ const data = [
         secondary: "new instrument",
         description: "on instrument column, EDIT (double-tap)",
         command: "edit double",
-      },
-      {
-        name: "Clone and Paste",
-        secondary: "instrument",
-        description: "hold SHIFT + OPTION then EDIT",
-        command: "shifthold option1st edit2nd",
       },
       {
         name: "Jump to Track",
@@ -435,11 +418,6 @@ const data = [
         name: "Delete Instrument",
         description: "on name column, EDIT + OPTION",
         command: "edit option",
-      },
-      {
-        name: "Clone Instrument",
-        description: "on name column, hold SHIFT + OPTION",
-        command: "shifthold option",
       },
     ],
   },
