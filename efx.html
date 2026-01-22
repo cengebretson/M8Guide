@@ -42,19 +42,19 @@
                         Sequence Flow
                     </div>
                     <table class="cmd-table">
-                        <tr><td class="col-cmd">HOP</td><td class="col-desc">GOTO Row <span class="note">XX: Row (00-0F Phrase, 00-FF Table)</span></td><td class="col-eg">HOP 00</td></tr>
+                        <tr><td class="col-cmd">HOP</td><td class="col-desc">GOTO Row <span class="note">Phrase: XX=Row (0-F). Table: X=Count (0=∞), Y=Row</span></td><td class="col-eg">HOP 00</td></tr>
                         <tr><td class="col-cmd">KIL</td><td class="col-desc">Kill Note <span class="note">XX: Ticks (00-FF) until hard cut</span></td><td class="col-eg">KIL 04</td></tr>
                         <tr><td class="col-cmd">OFF</td><td class="col-desc">Note Off <span class="note">XX: Ticks (00-FF) until release begins</span></td><td class="col-eg">OFF 04</td></tr>
                         <tr><td class="col-cmd">NXT</td><td class="col-desc">Next Track <span class="note">XX: Inst (00-7F) to trig on track to right</span></td><td class="col-eg">NXT 01</td></tr>
                         <tr><td class="col-cmd">RET</td><td class="col-desc">Retrigger <span class="note">X: Vol Multi (0-7 Out, 8-F In), Y: Ticks</span></td><td class="col-eg">RET 82</td></tr>
-                        <tr><td class="col-cmd">REP</td><td class="col-desc">Repeat / Ramp <span class="note">X: Ticks, Y: Step Amt (8-F is neg)</span></td><td class="col-eg">REP 41</td></tr>
+                        <tr><td class="col-cmd">REP</td><td class="col-desc">Repeat / Ramp <span class="note">X: Ticks (00: Stop), Y: Step Amt (8-F is neg)</span></td><td class="col-eg">REP 41</td></tr>
                         <tr><td class="col-cmd">RTO</td><td class="col-desc">Repeat To <span class="note">XX: Target value (Stops the REP cmd)</span></td><td class="col-eg">RTO 80</td></tr>
-                        <tr><td class="col-cmd">CHA</td><td class="col-desc">Chance <span class="note">Trigger probability (X:L, Y:R)</span></td><td class="col-eg">CHA 1F</td></tr>
-                        <tr><td class="col-cmd">NTH</td><td class="col-desc">Nth Trigger <span class="note">X: Mode (0:Every, 1:Not, 2:Once, 3:After), Y: Count</span></td><td class="col-eg">NTH 02</td></tr>
-                        <tr><td class="col-cmd">RMX</td><td class="col-desc">Remix <span class="note">X: Prob (0-F), Y: Random Range</span></td><td class="col-eg">RMX 04</td></tr>
+                        <tr><td class="col-cmd">CHA</td><td class="col-desc">Chance <span class="note">Phrase: X=L, Y=R (0-F). Table: XX (00-FF)</span></td><td class="col-eg">CHA 1F</td></tr>
+                        <tr><td class="col-cmd">NTH</td><td class="col-desc">Nth Trigger <span class="note">Phrase: X=L, Y=R. Table: XX=L. (0:Ev, 1:! 2:On 3:Af)</span></td><td class="col-eg">NTH 02</td></tr>
+                        <tr><td class="col-cmd">RMX</td><td class="col-desc">Remix Tracks <span class="note">X: Track Mask, Y: Playhead Row</span></td><td class="col-eg">RMX 04</td></tr>
                         <tr><td class="col-cmd">INS</td><td class="col-desc">Instrument <span class="note">Change Inst (00-7F)</span></td><td class="col-eg">INS 02</td></tr>
-                        <tr><td class="col-cmd">RND</td><td class="col-desc">Random <span class="note">XX: Max val for FX column to the left</span></td><td class="col-eg">RND 0F</td></tr>
-                        <tr><td class="col-cmd">RNL</td><td class="col-desc">Random Left <span class="note">XX: Max val for FX column 2 slots left</span></td><td class="col-eg">RNL 44</td></tr>
+                        <tr><td class="col-cmd">RND</td><td class="col-desc">Rand Prev FX <span class="note">X/Y: L/R Digit Range (0-F)</span></td><td class="col-eg">RND 1F</td></tr>
+                        <tr><td class="col-cmd">RNL</td><td class="col-desc">Rand Left Cmd <span class="note">X/Y: L/R Digit Range (0-F)</span></td><td class="col-eg">RNL 44</td></tr>
                         <tr><td class="col-cmd">MTT</td><td class="col-desc">Micro Timing <span class="badge">NEW</span><span class="note">Sub-tick note shift</span></td><td class="col-eg">MTT 10</td></tr>
                     </table>
                 </div>
