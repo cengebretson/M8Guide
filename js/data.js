@@ -1,22 +1,6 @@
 const data = [
   {
     column: 1,
-    section: "Navigation",
-    actions: [
-      {
-        name: "Move Cursor",
-        description: "UP or DOWN or LEFT or RIGHT",
-        command: "up down left right",
-      },
-      {
-        name: "Screen Navigation",
-        description: "hold SHIFT + [ UP or DOWN or LEFT or RIGHT ]",
-        command: "shifthold up down left right",
-      },
-    ],
-  },
-  {
-    column: 1,
     section: "Editing",
     actions: [
       {
@@ -126,6 +110,11 @@ const data = [
     column: 1,
     section: "Legend",
     actions: [
+      {
+        name: "Move Cursor",
+        description: "UP or DOWN or LEFT or RIGHT",
+        command: "up down left right",
+      },
       {
         name: "EDIT",
         description: "Select / Enter",
