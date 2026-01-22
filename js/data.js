@@ -225,9 +225,9 @@ const data = [
         command: "option",
       },
       {
-        name: "Track Reorder",
+        name: "Track Select / Reorder",
         secondary: "Move Track",
-        description: "On ROW 00, double-tap UP",
+        description: "Row 00: 2xUP. Move: Hold EDIT + L/R",
         command: "up double",
       },
     ],
@@ -358,6 +358,20 @@ const data = [
         command: "optionhold up down",
       },
       {
+        name: "Transpose",
+        secondary: "Octave",
+        description: "hold SHIFT + [ UP or DOWN ]",
+        extra: "only in selection mode",
+        command: "shifthold up down",
+      },
+      {
+        name: "Transpose",
+        secondary: "Semitone",
+        description: "hold SHIFT + [ LEFT or RIGHT ]",
+        extra: "only in selection mode",
+        command: "shifthold left right",
+      },
+      {
         name: "Interpolate",
         description: "in selection mode (single column), hold SHIFT + EDIT",
         command: "shifthold edit",
@@ -390,6 +404,11 @@ const data = [
         page: 15,
       },
       {
+        name: "Cycle Commands",
+        description: "on command column, hold OPTION + [ UP or DOWN ]",
+        command: "optionhold up down",
+      },
+      {
         name: "Effect Help",
         secondary: "on command column",
         description: "hold EDIT + [ UP or DOWN ]",
@@ -401,6 +420,11 @@ const data = [
     column: 3,
     section: "Instrument Pool",
     actions: [
+      {
+        name: "Select / Load",
+        description: "EDIT",
+        command: "edit",
+      },
       {
         name: "Preview Instrument",
         description: "PLAY",
@@ -421,12 +445,6 @@ const data = [
         name: "Clone Instrument",
         description: "on name column, hold SHIFT + OPTION",
         command: "shifthold option",
-      },
-      {
-        name: "Quick Switch View",
-        secondary: "to Instrument View",
-        description: "hold SHIFT + RIGHT",
-        command: "shifthold right",
       },
     ],
   },
