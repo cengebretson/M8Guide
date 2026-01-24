@@ -182,10 +182,10 @@ const data = [
     section: "Song Screen",
     actions: [
       {
-        name: "Cue Row",
-        secondary: "while playing",
-        description: "hold LEFT + PLAY",
-        command: "lefthold play",
+        name: "Execute Insert",
+        description: "SHIFT + OPTION + EDIT",
+        extra: "This will paste your clipboard data and shift all subsequent rows in that track (or tracks) downward to make room.",
+        command: "shift option edit",
       },
       {
         name: "Create",
