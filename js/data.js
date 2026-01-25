@@ -60,6 +60,13 @@ const data = [
         command: "optionhold shifthold play",
         page: 11,
       },
+      {
+        name: "Play Selection",
+        secondary: "(Selection Mode)",
+        description: "hold SHIFT + PLAY",
+        command: "shifthold play",
+        selection: true,
+      },
     ],
   },
   {
@@ -144,11 +151,6 @@ const data = [
     column: 1,
     section: "Legend",
     actions: [
-      {
-        name: "Move Cursor",
-        description: "UP or DOWN or LEFT or RIGHT",
-        command: "up down left right",
-      },
       {
         name: "EDIT",
         description: "Select / Enter",
