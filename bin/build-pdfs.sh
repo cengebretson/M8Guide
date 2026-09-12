@@ -12,7 +12,7 @@ set -euo pipefail
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 out_dir="${1:-$repo_root}"
 chrome="${CHROME:-/Applications/Google Chrome.app/Contents/MacOS/Google Chrome}"
-guides=(shortcuts efx tips macrosynth fm sampler)
+guides=(shortcuts efx tips macrosynth fm sampler hypersynth-wavsynth)
 
 if [[ ! -x "$chrome" ]]; then
     echo "Chrome not found at: $chrome (set CHROME to override)" >&2

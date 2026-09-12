@@ -33,6 +33,10 @@ How carriers, modulators, and op-mods work, operator controls and useful algorit
 
 Sampler parameters and sample editor processes, plus recipes for chopping breaks, lazy chop, tempo-synced loops, resampling, kit samples, timestretch loops, and lo-fi textures.
 
+### 7. Hypersynth & Wavsynth Guide (`hypersynth-wavsynth.html` → [`hypersynth-wavsynth.pdf`](hypersynth-wavsynth.pdf))
+
+Wavsynth shapes, controls, and the wavetable index, plus Hypersynth chord settings, with recipes for chip basses, PWM leads, noise drums, wavetable morphs, lush pads, chord progressions, and supersaw stabs.
+
 All guides are laid out for **US Letter, landscape**.
 
 ---

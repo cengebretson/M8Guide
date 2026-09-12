@@ -103,7 +103,7 @@
                 </div>
             </div>
 
-            <!-- COLUMN 2: rhythm, tables, styles -->
+            <!-- COLUMN 2: rhythm and mix -->
             <div class="column">
                 <div class="section_container">
                     <div class="section_header h-orange">
@@ -144,59 +144,6 @@
                     </div>
                 </div>
 
-                <div class="section_container">
-                    <div class="section_header h-teal">
-                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
-                        Tables
-                    </div>
-                    <div class="tip">
-                        <div class="tip-head"><span class="tip-title">Looping Arp</span><span class="tip-cmd">N · HOP 00</span></div>
-                        <ul class="tip-steps">
-                            <li>N column rows 0–3: 00, 04, 07, 0C (a major arpeggio)</li>
-                            <li>HOP 00 on row 4 loops it; TABLE TIC sets the speed</li>
-                            <li>Plucky sounds: RET 10 on the rows so each note re-strikes</li>
-                        </ul>
-                    </div>
-                    <div class="tip">
-                        <div class="tip-head"><span class="tip-title">Change Each Hit</span><span class="tip-cmd">TIC 00</span></div>
-                        <ul class="tip-steps">
-                            <li>TABLE TIC 00 moves the table one row per note</li>
-                            <li>Put different CUT or PAN values down the rows</li>
-                            <li>HOP 00 after the last used row cycles the pattern</li>
-                        </ul>
-                    </div>
-                    <div class="tip">
-                        <div class="tip-head"><span class="tip-title">Drum Kit on One Track</span><span class="tip-cmd">TIC FE · INS</span></div>
-                        <ul class="tip-steps">
-                            <li>TIC FE: the note picks the row (C is row 0, C# row 1, …)</li>
-                            <li>INS on each row selects the kick, snare, or hat instrument</li>
-                        </ul>
-                    </div>
-                    <div class="tip">
-                        <div class="tip-head"><span class="tip-title">Trance Gate</span><span class="tip-cmd">V COLUMN</span></div>
-                        <ul class="tip-steps">
-                            <li>Table V column: alternate loud and silent rows (FF, 00, …)</li>
-                            <li>HOP 00 at the end loops it; TABLE TIC sets the gate rate</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="section_container styles">
-                    <div class="section_header h-pink">
-                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        Style Starters
-                    </div>
-                    <table class="cmd-table">
-                        <tr><td class="col-cmd">128 BPM</td><td class="col-desc">Techno <span class="note">808 Kick (Macrosynth) + Sidechain Pump + Dub Throw</span></td></tr>
-                        <tr><td class="col-cmd">170 BPM</td><td class="col-desc">Jungle <span class="note">Chop a Break (Sampler) + Rolls + Round FM Bass (FM)</span></td></tr>
-                        <tr><td class="col-cmd">90 BPM</td><td class="col-desc">Lo-Fi <span class="note">Swing + Lo-Fi Texture (Sampler) + Soft Clip</span></td></tr>
-                        <tr><td class="col-cmd">70 BPM</td><td class="col-desc">Ambient <span class="note">Lush Pad + Ghost Notes + Shimmer Reverb</span></td></tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- COLUMN 3: mix, hypersynth, workflow -->
-            <div class="column">
                 <div class="section_container">
                     <div class="section_header h-gray">
                         <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
@@ -250,24 +197,79 @@
                     </div>
                 </div>
 
+            </div>
+
+            <!-- COLUMN 3: tables and workflow -->
+            <div class="column">
                 <div class="section_container">
-                    <div class="section_header h-blue">
-                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 3 10.62 3 14c0 4.97 4.03 9 9 9s9-4.03 9-9c0-6.27-4.5-11.41-7.5-13.33z"/></svg>
-                        Hypersynth
+                    <div class="section_header h-teal">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                        Tables
                     </div>
                     <div class="tip">
-                        <div class="tip-head"><span class="tip-title">Lush Pad</span><span class="tip-cmd">SWARM · WIDTH</span></div>
+                        <div class="tip-head"><span class="tip-title">Looping Arp</span><span class="tip-cmd">N · HOP 00</span></div>
                         <ul class="tip-steps">
-                            <li>CHORD: pick a bank and set its intervals (e.g. 0, 4, 7)</li>
-                            <li>SWARM detunes the saws; WIDTH toward FF spreads them</li>
-                            <li>ADSR on volume, slow ATK and long REL; end notes with OFF</li>
+                            <li>N column rows 0–3: 00, 04, 07, 0C (a major arpeggio)</li>
+                            <li>HOP 00 on row 4 loops it; TABLE TIC sets the speed</li>
+                            <li>Plucky sounds: RET 10 on the rows so each note re-strikes</li>
                         </ul>
                     </div>
                     <div class="tip">
-                        <div class="tip-head"><span class="tip-title">Bass + Chord Stab</span><span class="tip-cmd">SUBOSC · SHIFT</span></div>
+                        <div class="tip-head"><span class="tip-title">Change Each Hit</span><span class="tip-cmd">TIC 00</span></div>
                         <ul class="tip-steps">
-                            <li>SUBOSC below 80 is two octaves down, above 80 is one</li>
-                            <li>An LFO on SHIFT fades between intervals 1–3 and 4–6</li>
+                            <li>TABLE TIC 00 moves the table one row per note</li>
+                            <li>Put different CUT or PAN values down the rows</li>
+                            <li>HOP 00 after the last used row cycles the pattern</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Drum Kit on One Track</span><span class="tip-cmd">TIC FE · INS</span></div>
+                        <ul class="tip-steps">
+                            <li>TIC FE: the note picks the row (C is row 0, C# row 1, …)</li>
+                            <li>INS on each row selects the kick, snare, or hat instrument</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Trance Gate</span><span class="tip-cmd">V COLUMN</span></div>
+                        <ul class="tip-steps">
+                            <li>Table V column: alternate loud and silent rows (FF, 00, …)</li>
+                            <li>HOP 00 at the end loops it; TABLE TIC sets the gate rate</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Custom LFOs &amp; Envelopes</span><span class="tip-cmd">CUT · HOP</span></div>
+                        <ul class="tip-steps">
+                            <li>Ramp CUT (or any param) up and down the rows</li>
+                            <li>HOP 00 loops it into an LFO; leave it off for a one-shot envelope</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Columns at Different Speeds</span><span class="tip-cmd">TIC IN TABLE</span></div>
+                        <ul class="tip-steps">
+                            <li>TIC inside a table sets the rate for that FX column only</li>
+                            <li>Loop columns at different lengths for shifting motion</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">A Second Table per Note</span><span class="tip-cmd">TBX</span></div>
+                        <ul class="tip-steps">
+                            <li>TBX XX in a phrase runs table XX alongside the instrument's table</li>
+                            <li>TIC on the same row sets its speed; THO there hops into it</li>
+                            <li>TBX 00 stops it</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Octave &amp; Velocity Maps</span><span class="tip-cmd">TIC FC · FD</span></div>
+                        <ul class="tip-steps">
+                            <li>TIC FC: the octave picks the row; TIC FD: the velocity does</li>
+                            <li>Put different CUT, INS or PIT values on each row for layers</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Random Table Paths</span><span class="tip-cmd">CHA · RNL</span></div>
+                        <ul class="tip-steps">
+                            <li>CHA in a table sets odds for everything left of it (00–FF)</li>
+                            <li>RNL in the first FX column randomizes note and velocity</li>
                         </ul>
                     </div>
                 </div>

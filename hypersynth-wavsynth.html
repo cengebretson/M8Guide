@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirtywave M8 Hypersynth &amp; Wavsynth Tips (Firmware 6.6)</title>
+    <link rel="stylesheet" href="fonts/SofiaSans.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/efx.css">
+    <link rel="stylesheet" href="css/tips.css">
+    <script src="js/layout.js" defer></script>
+</head>
+<body>
+
+    <div class="page">
+        <div id="content">
+
+            <!-- COLUMN 1: Wavsynth reference -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-blue">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></svg>
+                        Wavsynth Parameters
+                    </div>
+                    <table class="cmd-table params">
+                        <tr><td class="col-cmd">SHAPE 00–03</td><td class="col-desc">Pulse 12%, 25%, 50%, 75% <span class="note">Two-level waves: clean even at 8 bits</span></td></tr>
+                        <tr><td class="col-cmd">SHAPE 04–08</td><td class="col-desc">Saw, triangle, sine, pitched noise, noise <span class="note">09 and up are wavetables</span></td></tr>
+                        <tr><td class="col-cmd">SIZE</td><td class="col-desc">Waveform length <span class="note">Also sets how smooth PWM sounds</span></td></tr>
+                        <tr><td class="col-cmd">MULT</td><td class="col-desc">Repeats the shape <span class="note">Sounds like hard sync as it rises</span></td></tr>
+                        <tr><td class="col-cmd">WARP</td><td class="col-desc">Skews the shape <span class="note">Pushes it to one side of the table</span></td></tr>
+                        <tr><td class="col-cmd">SCAN</td><td class="col-desc">Mirror or scan <span class="note">Shapes 00–08: mirror point (PWM); wavetables: 64 waves</span></td></tr>
+                        <tr><td class="col-cmd">WAV LP/HP</td><td class="col-desc">8-bit filters <span class="note">WAV LP, HP, BP, BS reshape the wave itself</span></td></tr>
+                        <tr><td class="col-cmd">FX</td><td class="col-desc">OSC · SIZ · MUL · WRP · SCN <span class="note">Automate each control per step</span></td></tr>
+                    </table>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-teal">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                        Wavetables 09–45
+                    </div>
+                    <table class="cmd-table models">
+                        <tr><td class="col-cmd">09–1A</td><td class="col-desc">OSC <span class="note">CRUSH, FOLDING, FUZZY, GHOST, LIQUID, TUBE, WAVES…</span></td></tr>
+                        <tr><td class="col-cmd">1B–21</td><td class="col-desc">BNK <span class="note">DRIP, FROGGY, INSONIC, RADIUS, SCRATCH, SMOOTH, WOBBLE</span></td></tr>
+                        <tr><td class="col-cmd">22–2E</td><td class="col-desc">HRM <span class="note">GENTLE, HARMONIC, PLAITS01–02, TONAL, TWINE…</span></td></tr>
+                        <tr><td class="col-cmd">2F–43</td><td class="col-desc">EFX <span class="note">ALIEN, FORMANT, RINGS, SHIMMER, SPOOKY, VOCAL, ZAP…</span></td></tr>
+                        <tr><td class="col-cmd">44–45</td><td class="col-desc">VOX <span class="note">BRAIDS, VOXSYNTH</span></td></tr>
+                    </table>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-gray">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                        Good to Know
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">8-Bit Character</span><span class="tip-cmd">256 LEVELS</span></div>
+                        <ul class="tip-steps">
+                            <li>Wavsynth uses 256 levels, so saws look like staircases</li>
+                            <li>Those edges add bright, small-speaker harmonics</li>
+                            <li>Pulse waves have only two levels and stay clean</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Same Tables in FM</span><span class="tip-cmd">FM W SHAPES</span></div>
+                        <ul class="tip-steps">
+                            <li>FM Synth operators can use these wavetables too</li>
+                            <li>There, FB scans the table instead of adding feedback</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: Wavsynth recipes -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-orange">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                        Wavsynth Recipes
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Chip Pulse Bass</span><span class="tip-cmd">PULSE 50%</span></div>
+                        <ul class="tip-steps">
+                            <li>SHAPE PULSE 50%: only two levels, so 8-bit costs nothing</li>
+                            <li>Short AHD on volume; WARP to change its hollow tone</li>
+                            <li>A little MFX send (chorus) widens it</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">PWM Lead</span><span class="tip-cmd">SCAN</span></div>
+                        <ul class="tip-steps">
+                            <li>SHAPE PULSE 50%, then an LFO on SCAN sweeps the width</li>
+                            <li>Larger SIZE makes the sweep smoother</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Chip Chords</span><span class="tip-cmd">ARP 47</span></div>
+                        <ul class="tip-steps">
+                            <li>PULSE 25% with ARP 47 (major) or ARP 37 (minor)</li>
+                            <li>ARC sets the arpeggio mode and speed in ticks</li>
+                            <li>PVB after the attack for a classic wobbly lead</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Noise Drums</span><span class="tip-cmd">NOISE</span></div>
+                        <ul class="tip-steps">
+                            <li>SHAPE NOISE with a very short AHD for hats and snares</li>
+                            <li>PITCHED NOISE plays in tune: the note sets its color</li>
+                            <li>Fast PBN down on pitched noise for laser zaps</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Wavetable Morph</span><span class="tip-cmd">SCN</span></div>
+                        <ul class="tip-steps">
+                            <li>Pick a wavetable (e.g. 26 HRM:HARMONIC or 3F EFX:VOCAL)</li>
+                            <li>An LFO or table steps on SCAN morph through its 64 waves</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Sync-Style Sweeps</span><span class="tip-cmd">MULT</span></div>
+                        <ul class="tip-steps">
+                            <li>AHD on MULT stacks repeats of the shape as it rises</li>
+                            <li>Sounds like a hard-sync sweep on leads and basses</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Tame or Crunch</span><span class="tip-cmd">WAV LP · CUTOFF</span></div>
+                        <ul class="tip-steps">
+                            <li>8-bit saws step like a staircase and add bright edges</li>
+                            <li>A normal low-pass tames them; WAV filters add crunch</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Duty-Cycle Switching</span><span class="tip-cmd">OSC 00–03</span></div>
+                        <ul class="tip-steps">
+                            <li>OSC on a step switches between the four pulse widths</li>
+                            <li>12% is thin and nasal, 50% is hollow and round</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Chip Kick</span><span class="tip-cmd">SINE · AHD PITCH</span></div>
+                        <ul class="tip-steps">
+                            <li>SHAPE SINE with a short AHD on volume</li>
+                            <li>A fast AHD on pitch drops it for the thump</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Echo Channel</span><span class="tip-cmd">DEL · V</span></div>
+                        <ul class="tip-steps">
+                            <li>Copy the lead phrase to a free track with lower V values</li>
+                            <li>DEL on its first row delays it for a classic tracker echo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 3: Hypersynth -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-yellow">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 3 10.62 3 14c0 4.97 4.03 9 9 9s9-4.03 9-9c0-6.27-4.5-11.41-7.5-13.33z"/></svg>
+                        Hypersynth Parameters
+                    </div>
+                    <table class="cmd-table params">
+                        <tr><td class="col-cmd">CHORD</td><td class="col-desc">16 banks, up to 6 intervals <span class="note">Each note is two saws; SHIFT + OPT copies, SHIFT + EDIT pastes</span></td></tr>
+                        <tr><td class="col-cmd">SCALE</td><td class="col-desc">Song scale for the chord <span class="note">00 follows the song or track scale</span></td></tr>
+                        <tr><td class="col-cmd">SHIFT</td><td class="col-desc">Crossfade <span class="note">Between intervals 1–3 and 4–6</span></td></tr>
+                        <tr><td class="col-cmd">SWARM</td><td class="col-desc">Detune <span class="note">Spreads each note's pair of saws</span></td></tr>
+                        <tr><td class="col-cmd">WIDTH</td><td class="col-desc">Stereo spread <span class="note">00 mono to FF full stereo</span></td></tr>
+                        <tr><td class="col-cmd">SUBOSC</td><td class="col-desc">Square sub <span class="note">Below 80: two octaves down · above 80: one</span></td></tr>
+                        <tr><td class="col-cmd">FX</td><td class="col-desc">CRD · CVO · SWM · WID · SUB <span class="note">Change chords and tone per step</span></td></tr>
+                    </table>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-pink">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                        Hypersynth Recipes
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Lush Pad</span><span class="tip-cmd">SWARM · WIDTH</span></div>
+                        <ul class="tip-steps">
+                            <li>CHORD: a triad or 7th (e.g. 0, 4, 7, 11)</li>
+                            <li>Moderate SWARM, WIDTH toward FF, MFX and REV sends</li>
+                            <li>ADSR on volume, slow ATK and long REL; end notes with OFF</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Chord Progressions</span><span class="tip-cmd">CRD</span></div>
+                        <ul class="tip-steps">
+                            <li>Build a bank for each chord shape you need</li>
+                            <li>CRD on a step switches banks; the note sets the root</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Evolving Extensions</span><span class="tip-cmd">SHIFT</span></div>
+                        <ul class="tip-steps">
+                            <li>Intervals 1–3: a triad · 4–6: its 7th, 9th and 11th</li>
+                            <li>A slow LFO on SHIFT morphs from plain to rich</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Supersaw Stab</span><span class="tip-cmd">SWARM · AHD</span></div>
+                        <ul class="tip-steps">
+                            <li>High SWARM, WIDTH FF, short AHD on volume</li>
+                            <li>A DEL send for trance-style echoes</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Bass + Chord in One</span><span class="tip-cmd">SUBOSC</span></div>
+                        <ul class="tip-steps">
+                            <li>Raise SUBOSC for the root under the chord</li>
+                            <li>Low CUTOFF and a short AHD on it for a stab</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Stay in Key</span><span class="tip-cmd">SCALE</span></div>
+                        <ul class="tip-steps">
+                            <li>Set SCALE to a song scale so intervals follow the key</li>
+                            <li>SCA or SCG changes the scale mid-song</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Solid Low End</span><span class="tip-cmd">WIDTH</span></div>
+                        <ul class="tip-steps">
+                            <li>Keep WIDTH low when SUBOSC or low notes carry the bass</li>
+                            <li>Save full width for pads that sit above it</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Pluck Chords</span><span class="tip-cmd">CUTOFF · AHD</span></div>
+                        <ul class="tip-steps">
+                            <li>Low SWARM, short AHD on CUTOFF with some RES</li>
+                            <li>Play off-beat chords for house and garage stabs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="side-header">
+            DIRTYWAVE M8
+            <span class="fw-text">Hypersynth &amp; Wavsynth · Firmware 6.6</span>
+            <span class="key">Wavsynth is 8-bit · Hypersynth is 6 notes</span>
+            <span class="credit">Based on LaurentVitalis/M8Guide</span>
+        </div>
+    </div>
+
+</body>
+</html>
