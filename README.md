@@ -25,6 +25,14 @@ A single-page set of step-by-step techniques, organized by instrument (Macrosynt
 
 A single-page deep dive into the Macrosynth: every model family with its SHAPE number and what TIMBRE and COLOR do, plus step-by-step recipes (supersaw lead, sync sweep, talking lead, bells, drone strings, 808 drums, paraphonic chords, noise risers).
 
+### 5. FM Synth Guide (`fm.html` → [`fm.pdf`](fm.pdf))
+
+How carriers, modulators, and op-mods work, operator controls and useful algorithms, plus recipes for FM drums, basses, chords, pads, PWM and wavetable leads.
+
+### 6. Sampler Guide (`sampler.html` → [`sampler.pdf`](sampler.pdf))
+
+Sampler parameters and sample editor processes, plus recipes for chopping breaks, lazy chop, tempo-synced loops, resampling, kit samples, timestretch loops, and lo-fi textures.
+
 All guides are laid out for **US Letter, landscape**.
 
 ---

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirtywave M8 Sampler Tips (Firmware 6.6)</title>
+    <link rel="stylesheet" href="fonts/SofiaSans.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/efx.css">
+    <link rel="stylesheet" href="css/tips.css">
+    <script src="js/layout.js" defer></script>
+</head>
+<body>
+
+    <div class="page">
+        <div id="content">
+
+            <!-- COLUMN 1: instrument -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-blue">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 18h2V6H7v12zm4 4h2V2h-2v20zm-8-8h2v-4H3v4zm12 4h2V6h-2v12zm4-8v4h2v-4h-2z"/></svg>
+                        Sampler Parameters
+                    </div>
+                    <table class="cmd-table params">
+                        <tr><td class="col-cmd">SLICE</td><td class="col-desc">Equal slices from C-1 <span class="note">01 FILE uses markers saved in the wav</span></td></tr>
+                        <tr><td class="col-cmd">PLAY</td><td class="col-desc">FWD, REV, FWDLOOP, REVLOOP <span class="note">FWD PP and REV PP ping-pong back and forth</span></td></tr>
+                        <tr><td class="col-cmd">OSC</td><td class="col-desc">Oscillator modes <span class="note">Ignore START and don't restart on retrigger</span></td></tr>
+                        <tr><td class="col-cmd">REPITCH</td><td class="col-desc">REPITCH/BPM <span class="note">Pitch follows tempo; set STEPS/BPM below</span></td></tr>
+                        <tr><td class="col-cmd">START</td><td class="col-desc">Start point <span class="note">STA command; ignored in OSC modes</span></td></tr>
+                        <tr><td class="col-cmd">LOOP ST.</td><td class="col-desc">Loop start <span class="note">Where looping modes jump back to (LOP)</span></td></tr>
+                        <tr><td class="col-cmd">LEN</td><td class="col-desc">Length <span class="note">How much of the sample plays</span></td></tr>
+                        <tr><td class="col-cmd">DETUNE</td><td class="col-desc">Detune <span class="note">80 = center; 1st digit semitones, 2nd 1/16 semitone</span></td></tr>
+                        <tr><td class="col-cmd">DEGRADE</td><td class="col-desc">Sample-rate crunch <span class="note">Above 00 also turns off interpolation</span></td></tr>
+                        <tr><td class="col-cmd">SLI</td><td class="col-desc">Slice command <span class="note">Cue a slice marker from a phrase or table</span></td></tr>
+                    </table>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-gray">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                        Good to Know
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Slices Use the Note Column</span><span class="tip-cmd">PIT</span></div>
+                        <ul class="tip-steps">
+                            <li>With SLICE on, the note picks the slice, not the pitch</li>
+                            <li>PIT per step repitches one slice; DETUNE shifts them all</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Each Track Is a Choke Group</span><span class="tip-cmd">ONE TRACK</span></div>
+                        <ul class="tip-steps">
+                            <li>A new hit cuts off the last one on the same track</li>
+                            <li>Put open and closed hats on one track so the open hat chokes</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Keep the CPU Happy</span><span class="tip-cmd">MONO · 16-BIT</span></div>
+                        <ul class="tip-steps">
+                            <li>Mono for kicks and bass; 16- or 8-bit instead of 24/32-bit</li>
+                            <li>Avoid pitching a sample an octave or more above its original</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Lo-Fi Texture</span><span class="tip-cmd">DEGRADE</span></div>
+                        <ul class="tip-steps">
+                            <li>DEGRADE here, or DOWNSAMPLE / 8-BIT in the editor</li>
+                            <li>A RANDOM LFO on DEGRADE crunches each hit differently</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Linear Drumming</span><span class="tip-cmd">ONE TRACK</span></div>
+                        <ul class="tip-steps">
+                            <li>Kick, snare, and hats on one track, so no hits overlap</li>
+                            <li>Change the instrument per step; each hit gets its own space</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: sample editor -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-teal">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                        Sample Editor Processes
+                    </div>
+                    <table class="cmd-table params">
+                        <tr><td class="col-cmd">CROP</td><td class="col-desc">Keep the selection <span class="note">DELETE removes it, DUPLICATE repeats it</span></td></tr>
+                        <tr><td class="col-cmd">NORMALIZE</td><td class="col-desc">Maximize level <span class="note">Without clipping</span></td></tr>
+                        <tr><td class="col-cmd">REVERSE</td><td class="col-desc">Flip in time <span class="note">INVERT flips polarity instead</span></td></tr>
+                        <tr><td class="col-cmd">FADE</td><td class="col-desc">FADE IN/OUT <span class="note">Smooth the edges of a cut</span></td></tr>
+                        <tr><td class="col-cmd">XFADE LOOP</td><td class="col-desc">Seamless loop <span class="note">Crossfades inside the selection</span></td></tr>
+                        <tr><td class="col-cmd">SQUISH</td><td class="col-desc">SQUISH(OTT) <span class="note">Multiband squash using the mixer's OTT settings</span></td></tr>
+                        <tr><td class="col-cmd">MONO</td><td class="col-desc">MIX / LEFT / RIGHT <span class="note">Stereo to mono</span></td></tr>
+                        <tr><td class="col-cmd">DOWNSAMPLE</td><td class="col-desc">Halve the sample rate <span class="note">16-BIT and 8-BIT reduce bit depth</span></td></tr>
+                        <tr><td class="col-cmd">SLICE:AUTO</td><td class="col-desc">Markers at transients <span class="note">SLICE:SILENC uses silence instead</span></td></tr>
+                        <tr><td class="col-cmd">SLICE:16</td><td class="col-desc">Even divisions <span class="note">Any count from 0 to 128</span></td></tr>
+                    </table>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-orange">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+                        Editing &amp; Recording
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Crop a Loop to the Beat</span><span class="tip-cmd">OPT + UP/DOWN</span></div>
+                        <ul class="tip-steps">
+                            <li>In SELECT, OPT + UP/DOWN snaps markers to the song's beats</li>
+                            <li>Select exactly 1, 2 or 4 bars, then PROCESS → CROP</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Lazy Chop</span><span class="tip-cmd">PLAY + EDIT</span></div>
+                        <ul class="tip-steps">
+                            <li>Highlight SLICE MARKER and play the sample</li>
+                            <li>Tap PLAY + EDIT on each hit to drop a marker there</li>
+                            <li>SAVE, then set the instrument's SLICE to 01 FILE</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Record Your Own</span><span class="tip-cmd">REC.</span></div>
+                        <ul class="tip-steps">
+                            <li>EDIT on REC.; SRC picks line-in, USB, or TR1–8</li>
+                            <li>ARM starts recording once the input passes a threshold</li>
+                            <li>Process, name, and SAVE before leaving the editor</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Build a Kit Sample</span><span class="tip-cmd">QUICK RENDER</span></div>
+                        <ul class="tip-steps">
+                            <li>Sequence your one-shots in a phrase, one per step</li>
+                            <li>Quick render the selection, then PROCESS → SLICE:AUTO</li>
+                            <li>One instrument now plays the whole kit from C-1</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Random Slices</span><span class="tip-cmd">RNL</span></div>
+                        <ul class="tip-steps">
+                            <li>RNL in the first FX column randomizes the note (the slice)</li>
+                            <li>Keep its second digit 0 so the instrument doesn't change</li>
+                            <li>SED at the phrase start repeats a take you like</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 3: recipes -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-pink">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        Recipes
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Chop a Break</span><span class="tip-cmd">SLICE:AUTO</span></div>
+                        <ul class="tip-steps">
+                            <li>Editor: PROCESS → SLICE:AUTO (or SLICE:16), then SAVE</li>
+                            <li>Instrument: SLICE → 01 FILE; notes from C-1 play the slices</li>
+                            <li>Rearrange notes, RET 03 on snares, CHA on ghost hits</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Loops in Tempo</span><span class="tip-cmd">REPITCH/BPM</span></div>
+                        <ul class="tip-steps">
+                            <li>PLAY → REPITCH/BPM; set STEPS/BPM to the loop's length</li>
+                            <li>Changing TPO keeps it in time (the pitch moves with it)</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Resample &amp; Layer</span><span class="tip-cmd">EDIT ×2</span></div>
+                        <ul class="tip-steps">
+                            <li>Song view: SHIFT + OPTION select phrases, double-tap EDIT</li>
+                            <li>QUICK RENDER creates a new instrument (needs a free slot)</li>
+                            <li>Slice, DEGRADE, or re-render it: layers without using tracks</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Pad From a One-Shot</span><span class="tip-cmd">FWDLOOP</span></div>
+                        <ul class="tip-steps">
+                            <li>PLAY → FWDLOOP; set LOOP ST. inside the steady part</li>
+                            <li>XFADE LOOP in the editor removes the loop click</li>
+                            <li>ADSR on volume with a long REL; end notes with OFF</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Humanized One-Shots</span><span class="tip-cmd">LFO RANDOM</span></div>
+                        <ul class="tip-steps">
+                            <li>MOD → LFO, OSC RANDOM, TRIG RETRIG</li>
+                            <li>Low AMT on CUTOFF or volume: every hit sounds a bit different</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Old-School Warp</span><span class="tip-cmd">STA</span></div>
+                        <ul class="tip-steps">
+                            <li>Short notes with a new STA each step replay from new spots</li>
+                            <li>Play low notes for slowed, grainy textures</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Reverse Swell</span><span class="tip-cmd">PLAY REV</span></div>
+                        <ul class="tip-steps">
+                            <li>PLAY → REV on a crash or vocal, timed to end on the downbeat</li>
+                            <li>Reverse reverb: quick render it with REV, then REVERSE</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Timestretch Loop</span><span class="tip-cmd">LFO → LOOP ST.</span></div>
+                        <ul class="tip-steps">
+                            <li>PLAY → FWDLOOP; MOD → LFO with DEST LOOP ST.</li>
+                            <li>OSC RAMP UP, TRIG RETRIG so each note restarts the scan</li>
+                            <li>FREQ is in steps (10 = one bar); AMT sets how far it scans</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Stutter Fills</span><span class="tip-cmd">RET · LEN</span></div>
+                        <ul class="tip-steps">
+                            <li>RET 03 on a slice note repeats its start</li>
+                            <li>LEN on the same step shortens each repeat for a tight glitch</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="side-header">
+            DIRTYWAVE M8
+            <span class="fw-text">Sampler · Firmware 6.6</span>
+            <span class="key">Slices start at C-1 · 128 markers max</span>
+            <span class="credit">Based on LaurentVitalis/M8Guide</span>
+        </div>
+    </div>
+
+</body>
+</html>

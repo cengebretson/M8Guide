@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirtywave M8 FM Synth Tips (Firmware 6.6)</title>
+    <link rel="stylesheet" href="fonts/SofiaSans.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/efx.css">
+    <link rel="stylesheet" href="css/tips.css">
+    <script src="js/layout.js" defer></script>
+</head>
+<body>
+
+    <div class="page">
+        <div id="content">
+
+            <!-- COLUMN 1: how FM works -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-gray">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                        How FM Works
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Carriers &amp; Modulators</span><span class="tip-cmd">RATIO · LEV</span></div>
+                        <ul class="tip-steps">
+                            <li>Carriers are heard; modulators reshape a carrier's tone</li>
+                            <li>Modulator LEV sets brightness; RATIO multiplies the note</li>
+                            <li>Whole-number ratios sound harmonic, odd ones metallic</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Op-Mods (the MOD rows)</span><span class="tip-cmd">MOD1–4</span></div>
+                        <ul class="tip-steps">
+                            <li>MODS page: set a slot's DEST to MOD1–4 to feed that op-mod</li>
+                            <li>An operator's MOD slot applies it to LEV, RAT, PIT or FBK</li>
+                            <li>One envelope can drive several operators; FM1–FM4 automate</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-blue">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
+                        Operator Controls
+                    </div>
+                    <table class="cmd-table params">
+                        <tr><td class="col-cmd">RATIO</td><td class="col-desc">Note multiplier <span class="note">Decimal: 2.00 = octave up, 0.50 = octave down</span></td></tr>
+                        <tr><td class="col-cmd">LEV/FB</td><td class="col-desc">Level &amp; feedback <span class="note">Per operator</span></td></tr>
+                        <tr><td class="col-cmd">MOD LEV</td><td class="col-desc">Level slot <span class="note">Scales level from 00 up to LEV</span></td></tr>
+                        <tr><td class="col-cmd">MOD RAT</td><td class="col-desc">Ratio slot <span class="note">Adds 0.00 to +16.00 to the ratio</span></td></tr>
+                        <tr><td class="col-cmd">MOD PIT</td><td class="col-desc">Pitch slot <span class="note">Adds semitones to that operator</span></td></tr>
+                        <tr><td class="col-cmd">MOD FBK</td><td class="col-desc">Feedback slot <span class="note">Scales feedback from 00 up to FB</span></td></tr>
+                        <tr><td class="col-cmd">SHAPES</td><td class="col-desc">SIN, SW2–SW6, TRI, SAW, SQU, PUL, IMP, NOISE <span class="note">Plus W wavetable shapes</span></td></tr>
+                        <tr><td class="col-cmd">IMP</td><td class="col-desc">Impulse <span class="note">FB sets the pulse width</span></td></tr>
+                        <tr><td class="col-cmd">W…</td><td class="col-desc">Wavetables <span class="note">FB scans through the table</span></td></tr>
+                    </table>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-teal">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                        Useful Algorithms
+                    </div>
+                    <table class="cmd-table models">
+                        <tr><td class="col-cmd">00</td><td class="col-desc">A → B → C → D <span class="note">Serial chain: bright, complex stacks</span></td></tr>
+                        <tr><td class="col-cmd">04</td><td class="col-desc">A + B + C → D <span class="note">Three modulators into one carrier</span></td></tr>
+                        <tr><td class="col-cmd">08</td><td class="col-desc">A → B + C + D <span class="note">One modulator shared by three carriers</span></td></tr>
+                        <tr><td class="col-cmd">0B</td><td class="col-desc">A + B + C + D <span class="note">Additive: four carriers, no FM</span></td></tr>
+                        <tr><td class="col-cmd">ALGO</td><td class="col-desc">Others <span class="note">The screen draws each routing as you scroll</span></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: drums and basses -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-pink">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 3 10.62 3 14c0 4.97 4.03 9 9 9s9-4.03 9-9c0-6.27-4.5-11.41-7.5-13.33z"/></svg>
+                        Drums &amp; Percussion
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">FM Kick</span><span class="tip-cmd">MOD RAT</span></div>
+                        <ul class="tip-steps">
+                            <li>A 2-op stack with the modulator at LEV 00: one SIN carrier</li>
+                            <li>MOD1 → AHD, short DEC → op-mod on the carrier's RAT slot</li>
+                            <li>MOD2 → AHD on volume; its DEC sets the kick's length</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Snare</span><span class="tip-cmd">NOISE · AMP</span></div>
+                        <ul class="tip-steps">
+                            <li>A tone carrier plus a NOISE operator for the rattle</li>
+                            <li>Short envelope on carrier LEV through an op-mod</li>
+                            <li>Raise AMP (around 20) so clipping makes a stick transient</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Bell</span><span class="tip-cmd">ODD RATIO</span></div>
+                        <ul class="tip-steps">
+                            <li>Modulator RATIO off the grid (e.g. 3.50), low feedback</li>
+                            <li>One AHD op-mod on both modulator LEV and carrier LEV</li>
+                            <li>Brightness fades with the volume, like a struck bell</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Hi-Hats</span><span class="tip-cmd">NOISE</span></div>
+                        <ul class="tip-steps">
+                            <li>NOISE shape on the carrier, very short AHD on volume</li>
+                            <li>High-pass FILTER; KIL 02 for closed, longer DEC for open</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Toms</span><span class="tip-cmd">MOD RAT</span></div>
+                        <ul class="tip-steps">
+                            <li>Start from the FM kick with a higher note and slower RAT decay</li>
+                            <li>Step through a few notes for a tom fill</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Layer Two Sounds</span><span class="tip-cmd">TWO STACKS</span></div>
+                        <ul class="tip-steps">
+                            <li>Pick an algorithm with two separate 2-op stacks</li>
+                            <li>One stack for the body, the other for a click or noise tail</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-blue">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 2v4.07C7.38 6.57 4 9.9 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8c0-4.1-3.38-7.43-7-7.93V2h-2zm1 17.5c-3.03 0-5.5-2.47-5.5-5.5s2.47-5.5 5.5-5.5 5.5 2.47 5.5 5.5-2.47 5.5-5.5 5.5z"/></svg>
+                        Basses
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Round FM Bass</span><span class="tip-cmd">RATIO 0.50</span></div>
+                        <ul class="tip-steps">
+                            <li>Modulator RATIO 0.50 or 0.25 adds sub-like weight</li>
+                            <li>Short AHD on the modulator's LEV slot for the pluck</li>
+                            <li>Keep DEL and REV sends low so the low end stays tight</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Growl &amp; Wobble</span><span class="tip-cmd">FB · FBK</span></div>
+                        <ul class="tip-steps">
+                            <li>Raise the modulator's FB for grit</li>
+                            <li>LFO → op-mod → the modulator's FBK slot to wobble it</li>
+                            <li>LIM SIN or POST:AD thickens without harsh clipping</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">No More Clicks</span><span class="tip-cmd">DE1 · ATK</span></div>
+                        <ul class="tip-steps">
+                            <li>Long decays clash with fast notes: shorten them with DE1</li>
+                            <li>Still clicking? Raise the volume envelope's ATK above 00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 3: chords, pads, leads -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-yellow">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                        Chords, Pads &amp; Leads
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Four-Voice Chords</span><span class="tip-cmd">ALGO 0B</span></div>
+                        <ul class="tip-steps">
+                            <li>ALGO 0B makes all four operators carriers</li>
+                            <li>RATIOs 1.00 · 1.26 · 1.50 · 2.00 = major chord plus octave</li>
+                            <li>Minor: 1.00 · 1.19 · 1.50; balance voices with LEV</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Dub Pad</span><span class="tip-cmd">ALGO 08</span></div>
+                        <ul class="tip-steps">
+                            <li>One modulator shared by three carriers</li>
+                            <li>Carriers on a minor chord across octaves (1.00 · 2.38 · 5.99)</li>
+                            <li>Detune the modulator slightly; slow AHD, MFX and REV sends</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">PWM Lead</span><span class="tip-cmd">IMP · FBK</span></div>
+                        <ul class="tip-steps">
+                            <li>Carrier shape IMP; its FB sets the pulse width</li>
+                            <li>LFO → op-mod → the carrier's FBK slot sweeps the width</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Wavetable Scan</span><span class="tip-cmd">W SHAPES</span></div>
+                        <ul class="tip-steps">
+                            <li>Pick a W shape; FB moves through the wavetable</li>
+                            <li>A slow LFO on the FBK slot evolves the tone over bars</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Expressive Brightness</span><span class="tip-cmd">TRACKING</span></div>
+                        <ul class="tip-steps">
+                            <li>MOD → TRACKING, SRC VELOCITY → op-mod on modulator LEV</li>
+                            <li>Soft notes are mellow, hard notes bite, like an electric piano</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Detuned Unison Pad</span><span class="tip-cmd">ALGO 0B</span></div>
+                        <ul class="tip-steps">
+                            <li>ALGO 0B with RATIOs 1.00 · 1.01 · 0.99 · 2.00</li>
+                            <li>SAW or SQU shapes, slow ADSR, and an MFX send for chorus</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Additive Organ</span><span class="tip-cmd">ALGO 0B</span></div>
+                        <ul class="tip-steps">
+                            <li>ALGO 0B with RATIOs 1.00 · 2.00 · 3.00 · 4.00 on SIN shapes</li>
+                            <li>Each operator's LEV works like a drawbar</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Vibrato</span><span class="tip-cmd">LFO · PVB</span></div>
+                        <ul class="tip-steps">
+                            <li>MOD → LFO on pitch with a small AMT; FREQ sets the speed</li>
+                            <li>Or PVB in the phrase for vibrato on single notes</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Per-Step Accents</span><span class="tip-cmd">FM1 · DE1</span></div>
+                        <ul class="tip-steps">
+                            <li>FM1 on a step changes op-mod 1's amount for that note</li>
+                            <li>DE1 lengthens or shortens envelope 1's decay per step</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="side-header">
+            DIRTYWAVE M8
+            <span class="fw-text">FM Synth · Firmware 6.6</span>
+            <span class="key">Op-mod = MOD1–4 · RATIO is decimal</span>
+            <span class="credit">Based on LaurentVitalis/M8Guide</span>
+        </div>
+    </div>
+
+</body>
+</html>
