@@ -17,7 +17,11 @@ A single-page reference for common instrument and sequencer EFX commands, per-sy
 - **Design:** Features a vertical sidebar and flex-aligned columns for a professional reference card look.
 - **Alignment:** Sections stack with even gaps, and spare column height is shared across rows so bottom borders line up across the page.
 
-Both guides are laid out for **US Letter, landscape**.
+### 3. M8 Tips & Tricks (`tips.html` → [`tips.pdf`](tips.pdf))
+
+A single-page cheat sheet of techniques for drums, groove, bass and leads, chords and pads, sampling, tables, and mixing, plus quick starting points for techno, jungle, lo-fi, chiptune, and ambient. Tips are drawn from the M8 community and checked against the firmware 6.6 changelog and command reference.
+
+All guides are laid out for **US Letter, landscape**.
 
 ---
 

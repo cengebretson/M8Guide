@@ -1,0 +1,8 @@
+/* Tips guide: reuses the EFX table layout, with a wider command column for
+   short command-plus-value labels like "RET 03" */
+
+.cmd-table .col-cmd {
+  width: 64px; /* fits the longest label ("DRUM ENV") so columns line up */
+  white-space: nowrap;
+  font-size: 0.95em;
+}
