@@ -1,8 +1,74 @@
-/* Tips guide: reuses the EFX table layout, with a wider command column for
-   short command-plus-value labels like "RET 03" */
+/* Tips guide: step-by-step tips on the EFX page styles */
 
-.cmd-table .col-cmd {
-  width: 64px; /* fits the longest label ("DRUM ENV") so columns line up */
+.tip,
+.styles .cmd-table {
+  font-size: 1.18em; /* larger than the EFX tables: steps are read, not scanned */
+}
+
+.tip {
+  flex-grow: 1; /* tips share the column's leftover height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.9mm 1.8mm;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tip:last-child {
+  border-bottom: none;
+}
+
+.tip-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2mm;
+}
+
+.tip-title {
+  font-weight: 800;
+  font-size: 1.02em;
+}
+
+/* Command chip, black like a pressed key */
+.tip-cmd {
+  flex-shrink: 0;
+  padding: 0.15mm 1mm;
+  border-radius: 0.6mm;
+  background-color: #222;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.78em;
+  white-space: nowrap;
+}
+
+.tip-steps {
+  margin: 0.4mm 0 0;
+  padding-left: 3mm;
+  font-family: "SofiaSansCond";
+  font-weight: 500;
+  font-size: 0.95em;
+  line-height: 1.12;
+  color: #333;
+}
+
+.tip-steps li::marker {
+  color: #999;
+}
+
+/* Instrument pages: model reference tables above the recipes */
+.models .col-cmd {
+  width: 34px;
+  white-space: nowrap;
+}
+
+.models + .tip {
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Style starters keep the EFX table, with room for "TPO 80" labels */
+.styles .cmd-table .col-cmd {
+  width: 46px;
   white-space: nowrap;
   font-size: 0.95em;
 }

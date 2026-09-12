@@ -3,7 +3,7 @@
 // after the shortcuts guide has rendered its sections.
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".section_container").forEach(function (section) {
-    const rows = section.querySelectorAll(".action, tr").length;
+    const rows = section.querySelectorAll(".action, tr, .tip").length;
     section.style.setProperty("--rows", Math.max(rows, 1));
   });
 });

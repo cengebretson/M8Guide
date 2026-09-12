@@ -15,26 +15,134 @@
     <div class="page">
         <div id="content">
 
-            <!-- COLUMN 1 -->
+            <!-- COLUMN 1: instruments -->
             <div class="column">
                 <div class="section_container">
                     <div class="section_header h-blue">
-                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 3 10.62 3 14c0 4.97 4.03 9 9 9s9-4.03 9-9c0-6.27-4.5-11.41-7.5-13.33z"/></svg>
-                        Drums
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9H9v6h6V9zm-2 4h-2v-2h2v2zm8-2V9h-2V7c0-1.1-.9-2-2-2h-2V3h-2v2h-2V3H9v2H7c-1.1 0-2 .9-2 2v2H3v2h2v2H3v2h2v2c0 1.1.9 2 2 2h2v2h2v-2h2v2h2v-2h2c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2zm-4 6H7V7h10v10z"/></svg>
+                        Macrosynth
                     </div>
-                    <table class="cmd-table">
-                        <tr><td class="col-cmd">OSC 22</td><td class="col-desc">Synth Kick <span class="note">Macrosynth KICK; 23 is cymbal, 24 is snare</span></td></tr>
-                        <tr><td class="col-cmd">DRUM ENV</td><td class="col-desc">Punchy Transient <span class="note">Drum envelope on pitch: high peak, fast drop, short body</span></td></tr>
-                        <tr><td class="col-cmd">KIL 02</td><td class="col-desc">Tight Hats <span class="note">Hard-cut closed hats after 2 ticks for a crisp tick</span></td></tr>
-                        <tr><td class="col-cmd">RET 03</td><td class="col-desc">Hat &amp; Snare Rolls <span class="note">Retrig every 3 ticks; first digit 1–7 fades, 9–F swells</span></td></tr>
-                        <tr><td class="col-cmd">NXT</td><td class="col-desc">Layered Hits <span class="note">Fire a second instrument on the next track (clap on snare)</span></td></tr>
-                        <tr><td class="col-cmd">OSC 21</td><td class="col-desc">Metal Percussion <span class="note">STRUCK DRUM / BELL, or PLUCKED on very low notes</span></td></tr>
-                        <tr><td class="col-cmd">ERR</td><td class="col-desc">Lo-Fi Drift <span class="note">A little ERR jitters pitch and params on each hit</span></td></tr>
-                        <tr><td class="col-cmd">VEL</td><td class="col-desc">Accents <span class="note">Vary hat velocity so a straight grid stops sounding robotic</span></td></tr>
-                        <tr><td class="col-cmd">CUT</td><td class="col-desc">Opening Hats <span class="note">Ramp cutoff across a bar so hats brighten into the drop</span></td></tr>
-                        <tr><td class="col-cmd">PAN</td><td class="col-desc">Wide Percussion <span class="note">Alternate PAN on shakers; keep kick and snare centered</span></td></tr>
-                        <tr><td class="col-cmd">PIT</td><td class="col-desc">Tuned Drums <span class="note">Tune the kick and toms to the song's key</span></td></tr>
-                    </table>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">808 Kick</span><span class="tip-cmd">SHAPE KICK</span></div>
+                        <ul class="tip-steps">
+                            <li>SHAPE → KICK: TIMBRE sets decay, COLOR sets tone</li>
+                            <li>The note tunes the drum, so pick one in the song's key</li>
+                            <li>Raise AMP with LIM set to SIN for extra weight</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Snare &amp; Hats</span><span class="tip-cmd">SNARE · CYMBAL</span></div>
+                        <ul class="tip-steps">
+                            <li>SNARE: TIMBRE is tone, COLOR is snappy noise</li>
+                            <li>CYMBAL: COLOR blends metal and noise, TIMBRE is brightness</li>
+                            <li>Short AHD on volume for closed hats; KIL 02 cuts tighter</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Plucked Lead</span><span class="tip-cmd">SHAPE PLUCKED</span></div>
+                        <ul class="tip-steps">
+                            <li>TIMBRE is damping (length), COLOR is pluck position</li>
+                            <li>Very low notes turn it into knocks and wood percussion</li>
+                            <li>Add a DEL send and PSL slides for a guitar-like line</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Chords on One Track</span><span class="tip-cmd">WAV PARAPHONIC</span></div>
+                        <ul class="tip-steps">
+                            <li>Four voices: COLOR picks the chord, TIMBRE morphs the wave</li>
+                            <li>COL in the phrase changes the chord per step</li>
+                            <li>COLOR 00 stacks unison voices for a thick detuned lead</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-blue">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 2v4.07C7.38 6.57 4 9.9 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8c0-4.1-3.38-7.43-7-7.93V2h-2zm1 17.5c-3.03 0-5.5-2.47-5.5-5.5s2.47-5.5 5.5-5.5 5.5 2.47 5.5 5.5-2.47 5.5-5.5 5.5z"/></svg>
+                        FM Synth
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Punchy FM Kick</span><span class="tip-cmd">DRUM ENV</span></div>
+                        <ul class="tip-steps">
+                            <li>One SIN carrier at RATIO 1.00, other operators at LEV 00</li>
+                            <li>MOD1 → DRUM ENV with a high PEAK and short BODY</li>
+                            <li>In the carrier's MOD slot, route MOD1 to PIT</li>
+                            <li>MOD2 → AHD on volume; DEC sets the kick's length</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Growling Bass</span><span class="tip-cmd">RATIO · LEV/FB</span></div>
+                        <ul class="tip-steps">
+                            <li>Carrier RATIO 1.00; modulator 1.00 or 2.00 (0.50 for a sub)</li>
+                            <li>Modulator LEV sets brightness, FB adds grit</li>
+                            <li>Short AHD on the modulator's LEV slot for a plucky attack</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-blue">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 3 10.62 3 14c0 4.97 4.03 9 9 9s9-4.03 9-9c0-6.27-4.5-11.41-7.5-13.33z"/></svg>
+                        Hypersynth
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Lush Pad</span><span class="tip-cmd">SWARM · WIDTH</span></div>
+                        <ul class="tip-steps">
+                            <li>CHORD: pick a bank and set its intervals (e.g. 0, 4, 7)</li>
+                            <li>SWARM detunes the saws; WIDTH toward FF spreads them</li>
+                            <li>ADSR on volume, slow ATK and long REL; end notes with OFF</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Bass + Chord Stab</span><span class="tip-cmd">SUBOSC · SHIFT</span></div>
+                        <ul class="tip-steps">
+                            <li>SUBOSC below 80 is two octaves down, above 80 is one</li>
+                            <li>Low CUTOFF and a short AHD on it for a stab</li>
+                            <li>An LFO on SHIFT fades between intervals 1–3 and 4–6</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: sampler and rhythm -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-blue">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 18h2V6H7v12zm4 4h2V2h-2v20zm-8-8h2v-4H3v4zm12 4h2V6h-2v12zm4-8v4h2v-4h-2z"/></svg>
+                        Sampler
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Chop a Break</span><span class="tip-cmd">SLICE</span></div>
+                        <ul class="tip-steps">
+                            <li>Sample editor: PROCESS → SLICE:AUTO (transients) or SLICE:16</li>
+                            <li>SAVE, then set the instrument's SLICE to 01 FILE</li>
+                            <li>Notes from C-1 up play slices in order; rearrange freely</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Lazy Chop</span><span class="tip-cmd">PLAY + EDIT</span></div>
+                        <ul class="tip-steps">
+                            <li>In the editor, highlight SLICE MARKER and play the sample</li>
+                            <li>Tap PLAY + EDIT on each hit to drop a marker there</li>
+                            <li>SAVE, set SLICE to 01 FILE, and play the slices from C-1</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Loops in Tempo</span><span class="tip-cmd">REPITCH/BPM</span></div>
+                        <ul class="tip-steps">
+                            <li>PLAY → REPITCH/BPM, then set STEPS/BPM to the loop's length</li>
+                            <li>The loop follows the song tempo (pitch moves with it)</li>
+                            <li>OSC play modes ignore START, for sustained tones</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Resample &amp; Mangle</span><span class="tip-cmd">EDIT ×2</span></div>
+                        <ul class="tip-steps">
+                            <li>Song view: SHIFT + OPTION to select, then double-tap EDIT</li>
+                            <li>QUICK RENDER makes a new sampler instrument</li>
+                            <li>REVERSE, SQUISH(OTT) or DOWNSAMPLE it in the editor</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="section_container">
@@ -42,95 +150,93 @@
                         <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.71L11 12.41V7h2v4.59l3.71 3.71-1.42 1.41z"/></svg>
                         Rhythm &amp; Groove
                     </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Swing Only the Hats</span><span class="tip-cmd">GRV</span></div>
+                        <ul class="tip-steps">
+                            <li>Groove view (SHIFT + UP from a phrase): make groove 01 07 05</li>
+                            <li>Put GRV 01 on the hat track; others stay on groove 00</li>
+                            <li>Subtler swing: raise the groove's PPQN to 48–192</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Ghost Notes &amp; Fills</span><span class="tip-cmd">CHA · NTH · SED</span></div>
+                        <ul class="tip-steps">
+                            <li>CHA 8F plays the note about half the time (CHA 1F ≈ 10%)</li>
+                            <li>NTH skips hits by loop count; read its on-screen help</li>
+                            <li>SED at a section start makes the chances repeat each pass</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Rolls &amp; Ratchets</span><span class="tip-cmd">RET</span></div>
+                        <ul class="tip-steps">
+                            <li>RET 03 retriggers every 3 ticks (32nds); RET 02 is faster</li>
+                            <li>First digit ramps volume: 1–7 fades, 9–F swells</li>
+                            <li>RET 30 plays a single repeat after 3 ticks (a flam)</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Human Feel</span><span class="tip-cmd">DEL · MTT · RND</span></div>
+                        <ul class="tip-steps">
+                            <li>DEL 03 pushes a row half a step late (6 ticks = 1 step)</li>
+                            <li>MTT nudges by 1/8 tick; 80–FF is early (not on row 0)</li>
+                            <li>VOL, then RND with a small range varies each hit</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section_container styles">
+                    <div class="section_header h-pink">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        Style Starters
+                    </div>
                     <table class="cmd-table">
-                        <tr><td class="col-cmd">GRV</td><td class="col-desc">Swing <span class="note">Groove 07 05 or 08 04 swings 16ths (06 06 is straight)</span></td></tr>
-                        <tr><td class="col-cmd">CHA 8F</td><td class="col-desc">Ghost Notes <span class="note">Note plays about half the time; right-side FX always run</span></td></tr>
-                        <tr><td class="col-cmd">DEL 03</td><td class="col-desc">Late Hit <span class="note">Push one hit half a step (6 ticks = 1 step)</span></td></tr>
-                        <tr><td class="col-cmd">MTT</td><td class="col-desc">Humanize <span class="note">Sub-tick nudge in 1/8 ticks; 80–FF pulls early</span></td></tr>
-                        <tr><td class="col-cmd">00</td><td class="col-desc">Odd Meters <span class="note">A 00 value in a groove skips that step entirely</span></td></tr>
-                        <tr><td class="col-cmd">GRV</td><td class="col-desc">Polyrhythm <span class="note">Give tracks grooves of different lengths to drift in phase</span></td></tr>
-                        <tr><td class="col-cmd">NTH</td><td class="col-desc">Fills <span class="note">Play a hit only on certain loops; see on-screen help</span></td></tr>
-                        <tr><td class="col-cmd">RND</td><td class="col-desc">Per-Hit Variation <span class="note">Randomize the previous FX within a digit range</span></td></tr>
-                        <tr><td class="col-cmd">SED</td><td class="col-desc">Repeatable Random <span class="note">Set a seed at a section start so CHA and RND repeat</span></td></tr>
-                        <tr><td class="col-cmd">GRV</td><td class="col-desc">Triplets <span class="note">A groove of 04 makes that track's steps 16th-note triplets</span></td></tr>
-                        <tr><td class="col-cmd">GRV</td><td class="col-desc">Half-Time <span class="note">A groove of 0C doubles each step's length</span></td></tr>
-                        <tr><td class="col-cmd">RMX</td><td class="col-desc">Cut-Up Jumps <span class="note">Moves the playhead on all tracks to the left</span></td></tr>
+                        <tr><td class="col-cmd">TPO 80</td><td class="col-desc">Techno · 128 <span class="note">808 Kick + Sidechain Pump + Dub Throw</span></td></tr>
+                        <tr><td class="col-cmd">TPO AA</td><td class="col-desc">Jungle · 170 <span class="note">Chop a Break + Rolls + Growling Bass</span></td></tr>
+                        <tr><td class="col-cmd">TPO 5A</td><td class="col-desc">Lo-Fi · 90 <span class="note">Swing + Resample (DOWNSAMPLE) + LIM SIN</span></td></tr>
+                        <tr><td class="col-cmd">TPO 46</td><td class="col-desc">Ambient · 70 <span class="note">Lush Pad + Ghost Notes + DRUNK LFO on cutoff</span></td></tr>
                     </table>
                 </div>
             </div>
 
-            <!-- COLUMN 2 -->
-            <div class="column">
-                <div class="section_container">
-                    <div class="section_header h-blue">
-                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 2v4.07C7.38 6.57 4 9.9 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8c0-4.1-3.38-7.43-7-7.93V2h-2zm1 17.5c-3.03 0-5.5-2.47-5.5-5.5s2.47-5.5 5.5-5.5 5.5 2.47 5.5 5.5-2.47 5.5-5.5 5.5z"/></svg>
-                        Bass &amp; Leads
-                    </div>
-                    <table class="cmd-table">
-                        <tr><td class="col-cmd">PSL</td><td class="col-desc">Acid Slides <span class="note">Slide into notes; pair with a resonant filter and short decay</span></td></tr>
-                        <tr><td class="col-cmd">SUB</td><td class="col-desc">Instant Low End <span class="note">Hypersynth sub oscillator under chords or a mono line</span></td></tr>
-                        <tr><td class="col-cmd">LIM</td><td class="col-desc">Grit <span class="note">SIN or FOLD limiter types add harmonics to a dull bass</span></td></tr>
-                        <tr><td class="col-cmd">AMP</td><td class="col-desc">Drive <span class="note">Push AMP into the limiter for saturation</span></td></tr>
-                        <tr><td class="col-cmd">PVB</td><td class="col-desc">Lead Vibrato <span class="note">Add after the attack for expressive leads; PVX for extreme</span></td></tr>
-                        <tr><td class="col-cmd">PBN</td><td class="col-desc">Dive Bomb <span class="note">Continuous bend; 80–FF bends down, pair with a VOL fade</span></td></tr>
-                        <tr><td class="col-cmd">OFF</td><td class="col-desc">Natural Release <span class="note">OFF lets an ADSR note release; KIL cuts it dead</span></td></tr>
-                        <tr><td class="col-cmd">CUT</td><td class="col-desc">Pluck <span class="note">Short AHD on cutoff turns a saw into a pluck</span></td></tr>
-                        <tr><td class="col-cmd">OSC 1C</td><td class="col-desc">Plucked Lead <span class="note">Macrosynth PLUCKED; try BOWED or BLOWN too</span></td></tr>
-                    </table>
-                </div>
-
-                <div class="section_container">
-                    <div class="section_header h-yellow">
-                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
-                        Chords &amp; Pads
-                    </div>
-                    <table class="cmd-table">
-                        <tr><td class="col-cmd">CRD</td><td class="col-desc">One-Track Chords <span class="note">Hypersynth chord bank; change chords per step with CRD</span></td></tr>
-                        <tr><td class="col-cmd">SWM</td><td class="col-desc">Lush Pad <span class="note">Moderate SWM and WID with slow attack and release</span></td></tr>
-                        <tr><td class="col-cmd">OSC 28</td><td class="col-desc">Paraphonic Chords <span class="note">Macrosynth WAV PARAPHONIC plays chords on one track</span></td></tr>
-                        <tr><td class="col-cmd">ARP 47</td><td class="col-desc">Chip Chords <span class="note">Fast major arpeggio (ARP 37 minor); ARC sets the speed</span></td></tr>
-                        <tr><td class="col-cmd">TBX</td><td class="col-desc">More FX per Step <span class="note">Aux table runs extra commands alongside the note</span></td></tr>
-                        <tr><td class="col-cmd">SCA</td><td class="col-desc">Key Change <span class="note">Switch a track's scale mid-song</span></td></tr>
-                        <tr><td class="col-cmd">ADSR</td><td class="col-desc">Smooth Retriggers <span class="note">Repeated pad notes resume from the current envelope level</span></td></tr>
-                        <tr><td class="col-cmd">SRV</td><td class="col-desc">Wash <span class="note">High reverb send plus a long release for ambient beds</span></td></tr>
-                    </table>
-                </div>
-
-                <div class="section_container">
-                    <div class="section_header h-blue">
-                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 18h2V6H7v12zm4 4h2V2h-2v20zm-8-8h2v-4H3v4zm12 4h2V6h-2v12zm4-8v4h2v-4h-2z"/></svg>
-                        Sampling
-                    </div>
-                    <table class="cmd-table">
-                        <tr><td class="col-cmd">SLICE</td><td class="col-desc">Chop a Break <span class="note">Slice in the sample editor; snap markers to tempo</span></td></tr>
-                        <tr><td class="col-cmd">STA</td><td class="col-desc">Warp Stutter <span class="note">Move the start point on short notes for old-school warping</span></td></tr>
-                        <tr><td class="col-cmd">LFO</td><td class="col-desc">Timestretch <span class="note">LFO to LOOP ST, ramp shape, RETRIG (FRQ 10 ≈ 1 bar)</span></td></tr>
-                        <tr><td class="col-cmd">PLY</td><td class="col-desc">Reverse Swell <span class="note">Reverse a crash or vocal into the downbeat</span></td></tr>
-                        <tr><td class="col-cmd">CHA</td><td class="col-desc">Generative Breaks <span class="note">Chance on slice notes; SED locks a take you like</span></td></tr>
-                        <tr><td class="col-cmd">EDIT ×2</td><td class="col-desc">Resample <span class="note">Render a selection to a sampler instrument, then mangle it</span></td></tr>
-                        <tr><td class="col-cmd">OTT</td><td class="col-desc">Punch Up a Sample <span class="note">Sample editor Process: OTT squashes and brightens</span></td></tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- COLUMN 3 -->
+            <!-- COLUMN 3: tables, mix, styles -->
             <div class="column">
                 <div class="section_container">
                     <div class="section_header h-teal">
                         <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
-                        Table Tricks
+                        Tables
                     </div>
-                    <table class="cmd-table">
-                        <tr><td class="col-cmd">TIC 01</td><td class="col-desc">Flams &amp; Grace Notes <span class="note">Softer note a semitone below, one tick before the hit</span></td></tr>
-                        <tr><td class="col-cmd">HOP 00</td><td class="col-desc">Looping Arp <span class="note">Intervals in the N column, HOP 00 at the end repeats them</span></td></tr>
-                        <tr><td class="col-cmd">HOP 3X</td><td class="col-desc">Loop N Times <span class="note">First digit counts repeats before moving on</span></td></tr>
-                        <tr><td class="col-cmd">V COL</td><td class="col-desc">Custom Envelope <span class="note">Step the volume column for gates and tremolo</span></td></tr>
-                        <tr><td class="col-cmd">TIC 00</td><td class="col-desc">Per-Note Automation <span class="note">Advance a row per note: cycle cutoff or pan each hit</span></td></tr>
-                        <tr><td class="col-cmd">TIC FE</td><td class="col-desc">Kit on One Track <span class="note">Note picks the row; INS per row swaps instruments</span></td></tr>
-                        <tr><td class="col-cmd">TIC FD</td><td class="col-desc">Velocity Layers <span class="note">Velocity picks the row, so harder hits change the sound</span></td></tr>
-                        <tr><td class="col-cmd">THO</td><td class="col-desc">Table Sections <span class="note">Split one table into parts and hop between them</span></td></tr>
-                        <tr><td class="col-cmd">TBL</td><td class="col-desc">Swap Tables <span class="note">Change an instrument's table mid-phrase for variations</span></td></tr>
-                    </table>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Looping Arp</span><span class="tip-cmd">N · HOP 00</span></div>
+                        <ul class="tip-steps">
+                            <li>N column rows 0–3: 00, 04, 07, 0C (a major arpeggio)</li>
+                            <li>HOP 00 on row 4 loops it; TABLE TIC sets the speed</li>
+                            <li>Plucky sounds: RET 10 on the rows so each note re-strikes</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Change Each Hit</span><span class="tip-cmd">TIC 00</span></div>
+                        <ul class="tip-steps">
+                            <li>TABLE TIC 00 moves the table one row per note</li>
+                            <li>Put different CUT or PAN values down the rows</li>
+                            <li>HOP 00 after the last used row cycles the pattern</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Drum Kit on One Track</span><span class="tip-cmd">TIC FE · INS</span></div>
+                        <ul class="tip-steps">
+                            <li>TIC FE: the note picks the row (C is row 0, C# row 1, …)</li>
+                            <li>INS on each row selects the kick, snare, or hat instrument</li>
+                            <li>Program the whole beat by note name on a single track</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Trance Gate</span><span class="tip-cmd">V COLUMN</span></div>
+                        <ul class="tip-steps">
+                            <li>Table V column: alternate loud and silent rows (FF, 00, …)</li>
+                            <li>HOP 00 at the end loops it; TABLE TIC sets the gate rate</li>
+                            <li>Works on any held pad or chord</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="section_container">
@@ -138,32 +244,45 @@
                         <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
                         Mix &amp; FX
                     </div>
-                    <table class="cmd-table">
-                        <tr><td class="col-cmd">TRIG ENV</td><td class="col-desc">Sidechain Pump <span class="note">Trig envelope on volume, triggered by the kick track, inverted</span></td></tr>
-                        <tr><td class="col-cmd">SDL FF</td><td class="col-desc">Dub Throw <span class="note">Full delay send on one hit, back to 00 on the next step</span></td></tr>
-                        <tr><td class="col-cmd">REP</td><td class="col-desc">Send Ramp <span class="note">SRV then REP ramps it each tick; RTO sets where it stops</span></td></tr>
-                        <tr><td class="col-cmd">DJC</td><td class="col-desc">Build-Up <span class="note">Sweep the global DJ filter over 4–8 bars; DJR adds bite</span></td></tr>
-                        <tr><td class="col-cmd">TSP</td><td class="col-desc">Final Chorus Lift <span class="note">Transpose the whole song up on a song row</span></td></tr>
-                        <tr><td class="col-cmd">SMX</td><td class="col-desc">Width <span class="note">A touch of ModFX send widens pads and leads</span></td></tr>
-                        <tr><td class="col-cmd">USB</td><td class="col-desc">Multitrack Recording <span class="note">Multichannel USB audio sends each track to a DAW</span></td></tr>
-                    </table>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Sidechain Pump</span><span class="tip-cmd">TRIG ENV</span></div>
+                        <ul class="tip-steps">
+                            <li>On the pad or bass: a MOD slot → TRIG ENV, DEST volume</li>
+                            <li>SRC 80–87 picks the kick's track (80 is track 1)</li>
+                            <li>Negative AMT ducks on each kick; DEC sets the recovery</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Dub Throw</span><span class="tip-cmd">SDL</span></div>
+                        <ul class="tip-steps">
+                            <li>Keep the instrument's DEL send low for the groove</li>
+                            <li>SDL FF on one hit, then SDL 00 on the next step</li>
+                            <li>Long delay feedback lets the throw trail off</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Build-Up Sweep</span><span class="tip-cmd">DJC · REP</span></div>
+                        <ul class="tip-steps">
+                            <li>DJC to start the DJ filter, then REP ramps it each tick</li>
+                            <li>RTO sets where the ramp stops; DJR adds resonance</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Carve Space</span><span class="tip-cmd">EQ</span></div>
+                        <ul class="tip-steps">
+                            <li>Instrument EQ: pick a slot, then EDIT opens the EQ editor</li>
+                            <li>Cut lows from pads and hats so the kick and bass stay clear</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Grit &amp; Warmth</span><span class="tip-cmd">AMP · LIM</span></div>
+                        <ul class="tip-steps">
+                            <li>Raise AMP: LIM SIN is soft, FOLD and WRAP are aggressive</li>
+                            <li>POST:AD soft-clips after the filter for analog drive</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="section_container">
-                    <div class="section_header h-pink">
-                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        Style Starters
-                    </div>
-                    <table class="cmd-table">
-                        <tr><td class="col-cmd">TPO 80</td><td class="col-desc">Techno · 128 <span class="note">Drum-env kick, offbeat open hat, trig-env pump, dub throws</span></td></tr>
-                        <tr><td class="col-cmd">TPO 7C</td><td class="col-desc">House · 124 <span class="note">Groove 07 05 hats, offbeat bass, Hypersynth stabs</span></td></tr>
-                        <tr><td class="col-cmd">TPO 78</td><td class="col-desc">Dub Techno · 120 <span class="note">FM chord stab, SDL throws, long reverb, DJC sweeps</span></td></tr>
-                        <tr><td class="col-cmd">TPO AA</td><td class="col-desc">Jungle · 170 <span class="note">Sliced break, RET rolls, PSL sub bass</span></td></tr>
-                        <tr><td class="col-cmd">TPO 5A</td><td class="col-desc">Lo-Fi · 90 <span class="note">Groove 08 04, ERR drift, SIN limiter, lots of reverb</span></td></tr>
-                        <tr><td class="col-cmd">TPO 96</td><td class="col-desc">Chiptune · 150 <span class="note">Wavsynth pulse, ARP chords, PVB leads, KIL-tight hats</span></td></tr>
-                        <tr><td class="col-cmd">TPO 46</td><td class="col-desc">Ambient · 70 <span class="note">Hypersynth pads, LFO on cutoff, CHA sparse notes, SED</span></td></tr>
-                    </table>
-                </div>
             </div>
 
         </div>
