@@ -19,7 +19,7 @@ A single-page reference for common instrument and sequencer EFX commands, per-sy
 
 ### 3. M8 Tips & Tricks (`tips.html` → [`tips.pdf`](tips.pdf))
 
-A single-page set of step-by-step techniques, organized by instrument (Macrosynth, FM Synth, Hypersynth, Sampler) and by technique (rhythm and groove, tables, mixing), plus style starters that combine them for techno, jungle, lo-fi, and ambient. Tips are drawn from the M8 community and checked against the M8 operation manual and firmware 6.6 changelog.
+A single-page set of step-by-step techniques that apply to any instrument: song arrangement, live performance, rhythm and groove, tables, and mixing and mastering, plus style starters that combine tips from every guide. Tips are drawn from the M8 community and checked against the M8 operation manual and firmware 6.6 changelog.
 
 ### 4. Macrosynth Guide (`macrosynth.html` → [`macrosynth.pdf`](macrosynth.pdf))
 
