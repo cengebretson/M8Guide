@@ -4,8 +4,7 @@
   --section-gap: 2.5mm; /* more air between panels than the dense EFX page */
 }
 
-.tip,
-.styles .cmd-table {
+.tip {
   font-size: 1.18em; /* larger than the EFX tables: steps are read, not scanned */
 }
 
@@ -76,11 +75,4 @@
 .models + .tip,
 .params + .tip {
   border-top: 1px solid #e0e0e0;
-}
-
-/* Style starters keep the EFX table, with room for "TPO 80" labels */
-.styles .cmd-table .col-cmd {
-  width: 46px;
-  white-space: nowrap;
-  font-size: 0.95em;
 }
