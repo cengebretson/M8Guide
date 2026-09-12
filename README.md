@@ -19,7 +19,11 @@ A single-page reference for common instrument and sequencer EFX commands, per-sy
 
 ### 3. M8 Tips & Tricks (`tips.html` → [`tips.pdf`](tips.pdf))
 
-A single-page cheat sheet of techniques for drums, groove, bass and leads, chords and pads, sampling, tables, and mixing, plus quick starting points for techno, jungle, lo-fi, chiptune, and ambient. Tips are drawn from the M8 community and checked against the firmware 6.6 changelog and command reference.
+A single-page set of step-by-step techniques, organized by instrument (Macrosynth, FM Synth, Hypersynth, Sampler) and by technique (rhythm and groove, tables, mixing), plus style starters that combine them for techno, jungle, lo-fi, and ambient. Tips are drawn from the M8 community and checked against the M8 operation manual and firmware 6.6 changelog.
+
+### 4. Macrosynth Guide (`macrosynth.html` → [`macrosynth.pdf`](macrosynth.pdf))
+
+A single-page deep dive into the Macrosynth: every model family with its SHAPE number and what TIMBRE and COLOR do, plus step-by-step recipes (supersaw lead, sync sweep, talking lead, bells, drone strings, 808 drums, paraphonic chords, noise risers).
 
 All guides are laid out for **US Letter, landscape**.
 

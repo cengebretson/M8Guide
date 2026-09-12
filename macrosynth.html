@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirtywave M8 Macrosynth Tips (Firmware 6.6)</title>
+    <link rel="stylesheet" href="fonts/SofiaSans.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/efx.css">
+    <link rel="stylesheet" href="css/tips.css">
+    <script src="js/layout.js" defer></script>
+</head>
+<body>
+
+    <div class="page">
+        <div id="content">
+
+            <!-- COLUMN 1: basics and analog -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-gray">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                        Basics
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Two Knobs, 44 Models</span><span class="tip-cmd">SHAPE</span></div>
+                        <ul class="tip-steps">
+                            <li>SHAPE picks the model; TIMBRE and COLOR vary per model</li>
+                            <li>OSC switches models per step; TBR and COL move the knobs</li>
+                            <li>Put an LFO or AHD on TIMBRE or COLOR for movement</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Lo-Fi Crunch</span><span class="tip-cmd">DEGRADE · REDUX</span></div>
+                        <ul class="tip-steps">
+                            <li>DEGRADE lowers the sample rate, REDUX the bit depth</li>
+                            <li>DEG and RED in a phrase crunch single notes or fills</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-blue">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 2v4.07C7.38 6.57 4 9.9 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8c0-4.1-3.38-7.43-7-7.93V2h-2zm1 17.5c-3.03 0-5.5-2.47-5.5-5.5s2.47-5.5 5.5-5.5 5.5 2.47 5.5 5.5-2.47 5.5-5.5 5.5z"/></svg>
+                        Analog Models
+                    </div>
+                    <table class="cmd-table models">
+                        <tr><td class="col-cmd">00</td><td class="col-desc">CSAW <span class="note">T notch width · C notch depth (phasing)</span></td></tr>
+                        <tr><td class="col-cmd">01</td><td class="col-desc">MORPH <span class="note">T triangle → saw → square → pulse · C tone</span></td></tr>
+                        <tr><td class="col-cmd">02</td><td class="col-desc">SAW SQUARE <span class="note">T dephase / pulse width · C saw → square</span></td></tr>
+                        <tr><td class="col-cmd">03</td><td class="col-desc">SINE TRIANGLE <span class="note">T wavefolder · C sine / triangle balance</span></td></tr>
+                        <tr><td class="col-cmd">04</td><td class="col-desc">BUZZ <span class="note">T sine → comb (formant) · C detune</span></td></tr>
+                        <tr><td class="col-cmd">05–06</td><td class="col-desc">SQUARE / SAW SUB <span class="note">T width · C sub −1 or −2 octaves</span></td></tr>
+                        <tr><td class="col-cmd">07–08</td><td class="col-desc">SQUARE / SAW SYNC <span class="note">T synced pitch · C mix</span></td></tr>
+                        <tr><td class="col-cmd">09–0C</td><td class="col-desc">TRIPLE SAW / SQU / TRI / SIN <span class="note">T, C tune oscillators 2 and 3 (snap to intervals)</span></td></tr>
+                        <tr><td class="col-cmd">0D</td><td class="col-desc">TRIPLE RING <span class="note">T, C ring-mod partner pitches</span></td></tr>
+                        <tr><td class="col-cmd">0E</td><td class="col-desc">SAW SWARM <span class="note">T detune of 7 saws · C high-pass</span></td></tr>
+                        <tr><td class="col-cmd">0F</td><td class="col-desc">SAW COMB <span class="note">T comb pitch · C feedback (80 = none)</span></td></tr>
+                        <tr><td class="col-cmd">10</td><td class="col-desc">TOY <span class="note">T clock rate · C circuit-bent glitches</span></td></tr>
+                    </table>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Supersaw Lead</span><span class="tip-cmd">0E SAW SWARM</span></div>
+                        <ul class="tip-steps">
+                            <li>Raise TIMBRE until the seven saws beat and spread</li>
+                            <li>COLOR high-passes the lows so it sits above the bass</li>
+                            <li>ADSR on volume with a long REL, plus a REV send</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Sync Sweep</span><span class="tip-cmd">08 SAW SYNC</span></div>
+                        <ul class="tip-steps">
+                            <li>AHD or LFO on TIMBRE sweeps the synced harmonics</li>
+                            <li>COLOR blends in the plain oscillator to soften it</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Sub Bass</span><span class="tip-cmd">05 SQUARE SUB</span></div>
+                        <ul class="tip-steps">
+                            <li>COLOR sets the sub one or two octaves down</li>
+                            <li>Low CUTOFF and a short AHD on volume keep it tight</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: digital, vocal, physical -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-yellow">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+                        Digital &amp; Vocal Models
+                    </div>
+                    <table class="cmd-table models">
+                        <tr><td class="col-cmd">11–14</td><td class="col-desc">DIGITAL FILTER LP / PK / BP / HP <span class="note">T cutoff · C saw → square → triangle</span></td></tr>
+                        <tr><td class="col-cmd">15</td><td class="col-desc">VOSIM <span class="note">T, C the two formant pitches</span></td></tr>
+                        <tr><td class="col-cmd">16–17</td><td class="col-desc">VOWEL / VOWEL FOF <span class="note">T a · e · i · o · u · C formant shift</span></td></tr>
+                        <tr><td class="col-cmd">18</td><td class="col-desc">HARMONICS <span class="note">T center harmonic · C spread (12 sines)</span></td></tr>
+                        <tr><td class="col-cmd">19–1B</td><td class="col-desc">FM / FEEDBACK / CHAOTIC <span class="note">T mod amount · C ratio</span></td></tr>
+                    </table>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Talking Lead</span><span class="tip-cmd">16 VOWEL</span></div>
+                        <ul class="tip-steps">
+                            <li>A slow LFO on TIMBRE morphs through a, e, i, o, u</li>
+                            <li>COLOR with a lower note shifts the voice deeper or older</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">CZ Zap Bass</span><span class="tip-cmd">11 DIGITAL FILTER LP</span></div>
+                        <ul class="tip-steps">
+                            <li>Short AHD on TIMBRE sweeps the built-in cutoff down</li>
+                            <li>No filter needed; COLOR picks the wave, RES stays at 00</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Drawbar Organ</span><span class="tip-cmd">18 HARMONICS</span></div>
+                        <ul class="tip-steps">
+                            <li>TIMBRE picks which harmonic is loudest</li>
+                            <li>Low COLOR is pure and hollow, high COLOR is bright and full</li>
+                            <li>ADSR on volume with full SUS for a held organ chord</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-orange">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                        Physical Models
+                    </div>
+                    <table class="cmd-table models">
+                        <tr><td class="col-cmd">1C</td><td class="col-desc">PLUCKED <span class="note">T damping · C pluck position</span></td></tr>
+                        <tr><td class="col-cmd">1D</td><td class="col-desc">BOWED <span class="note">T friction · C bow position (needs a held note)</span></td></tr>
+                        <tr><td class="col-cmd">1E–1F</td><td class="col-desc">BLOWN / FLUTED <span class="note">T air pressure · C instrument shape</span></td></tr>
+                        <tr><td class="col-cmd">20</td><td class="col-desc">STRUCK BELL <span class="note">T damping · C inharmonicity</span></td></tr>
+                        <tr><td class="col-cmd">21</td><td class="col-desc">STRUCK DRUM <span class="note">T damping · C brightness</span></td></tr>
+                    </table>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Plucked Lead</span><span class="tip-cmd">1C PLUCKED</span></div>
+                        <ul class="tip-steps">
+                            <li>TIMBRE sets how long the string rings</li>
+                            <li>Very low notes become knocks and wood percussion</li>
+                            <li>A DEL send and PSL slides give a guitar-like line</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Bells &amp; Mallets</span><span class="tip-cmd">20 STRUCK BELL</span></div>
+                        <ul class="tip-steps">
+                            <li>Low COLOR is sweet and tuned, high COLOR is clangy</li>
+                            <li>TIMBRE shortens the ring for marimba-like hits</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Drone Strings</span><span class="tip-cmd">1D BOWED</span></div>
+                        <ul class="tip-steps">
+                            <li>Hold notes with an ADSR on volume; end them with OFF</li>
+                            <li>A slow LFO on COLOR moves the bow for a living tone</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 3: drums, wavetables, noise -->
+            <div class="column">
+                <div class="section_container">
+                    <div class="section_header h-pink">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 3 10.62 3 14c0 4.97 4.03 9 9 9s9-4.03 9-9c0-6.27-4.5-11.41-7.5-13.33z"/></svg>
+                        808 Drum Models
+                    </div>
+                    <table class="cmd-table models">
+                        <tr><td class="col-cmd">22</td><td class="col-desc">KICK <span class="note">T decay · C tone; the note tunes the drum</span></td></tr>
+                        <tr><td class="col-cmd">23</td><td class="col-desc">CYMBAL <span class="note">T band-pass cutoff · C metal ↔ noise</span></td></tr>
+                        <tr><td class="col-cmd">24</td><td class="col-desc">SNARE <span class="note">T tone · C snappy noise</span></td></tr>
+                    </table>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Tuned 808 Kick</span><span class="tip-cmd">22 KICK</span></div>
+                        <ul class="tip-steps">
+                            <li>Play it on the song's root note; long TIMBRE for a boomy tail</li>
+                            <li>Raise AMP with LIM SIN for weight</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Closed &amp; Open Hats</span><span class="tip-cmd">23 CYMBAL</span></div>
+                        <ul class="tip-steps">
+                            <li>Short AHD on volume for closed, longer DEC for open</li>
+                            <li>KIL 02 on closed hats; COLOR toward noise for a softer hat</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-teal">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></svg>
+                        Wavetable Models
+                    </div>
+                    <table class="cmd-table models">
+                        <tr><td class="col-cmd">25</td><td class="col-desc">WAVETABLES <span class="note">T sweep the table · C pick 1 of 20 tables</span></td></tr>
+                        <tr><td class="col-cmd">26</td><td class="col-desc">WAVE MAP <span class="note">T, C scan a 16 × 16 grid of waves</span></td></tr>
+                        <tr><td class="col-cmd">27</td><td class="col-desc">WAV LINE <span class="note">T move through waves · C interpolation</span></td></tr>
+                        <tr><td class="col-cmd">28</td><td class="col-desc">WAV PARAPHONIC <span class="note">T morph 16 waves · C 4-voice chord (00 = unison)</span></td></tr>
+                    </table>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Chords on One Track</span><span class="tip-cmd">28 WAV PARAPHONIC</span></div>
+                        <ul class="tip-steps">
+                            <li>COLOR picks the chord; COL in the phrase changes it per step</li>
+                            <li>COLOR 00 stacks detuned unison voices for a fat lead</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Scanning Pad</span><span class="tip-cmd">26 WAVE MAP</span></div>
+                        <ul class="tip-steps">
+                            <li>Slow LFO on TIMBRE, a slower one on COLOR</li>
+                            <li>Neighboring waves sound alike, so the scan stays smooth</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section_container">
+                    <div class="section_header h-gray">
+                        <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 18h2V6H7v12zm4 4h2V2h-2v20zm-8-8h2v-4H3v4zm12 4h2V6h-2v12zm4-8v4h2v-4h-2z"/></svg>
+                        Noise &amp; Texture Models
+                    </div>
+                    <table class="cmd-table models">
+                        <tr><td class="col-cmd">29</td><td class="col-desc">FILTERED NOISE <span class="note">Note = cutoff · T resonance · C low-pass ↔ high-pass</span></td></tr>
+                        <tr><td class="col-cmd">2A</td><td class="col-desc">TWIN PEAKS NOISE <span class="note">T resonance · C peak spacing</span></td></tr>
+                        <tr><td class="col-cmd">2B</td><td class="col-desc">CLOCKED NOISE <span class="note">Note = rate · T periodicity · C 2–32 levels</span></td></tr>
+                        <tr><td class="col-cmd">2C–2D</td><td class="col-desc">GRANULAR CLOUD / PARTICLE <span class="note">T grain density · C pitch scatter</span></td></tr>
+                        <tr><td class="col-cmd">2E</td><td class="col-desc">DIGITAL MOD <span class="note">T bit rate · C 8-bit data value</span></td></tr>
+                    </table>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Noise Riser</span><span class="tip-cmd">29 FILTERED NOISE</span></div>
+                        <ul class="tip-steps">
+                            <li>The note sets the cutoff, so PSL or PBN up sweeps it</li>
+                            <li>TIMBRE adds a resonant whistle; COLOR toward HP thins it</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <div class="tip-head"><span class="tip-title">Ambient Texture</span><span class="tip-cmd">2C GRANULAR CLOUD</span></div>
+                        <ul class="tip-steps">
+                            <li>TIMBRE for grain density, COLOR to scatter the pitch</li>
+                            <li>Long REV send and slow notes for evolving beds</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="side-header">
+            DIRTYWAVE M8
+            <span class="fw-text">Macrosynth · Firmware 6.6</span>
+            <span class="key">T = TIMBRE · C = COLOR · hex = SHAPE</span>
+            <span class="credit">Based on LaurentVitalis/M8Guide</span>
+        </div>
+    </div>
+
+</body>
+</html>
