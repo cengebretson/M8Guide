@@ -24,9 +24,9 @@ body {
   font-weight: 800;
   font-size: 1.5em;
   text-transform: uppercase;
-  margin-bottom: 0.8mm;
+  margin-bottom: 0.4mm;
   background-color: #d1e9ff;
-  padding: 0.9mm 0.8mm;
+  padding: 0.35mm 0.8mm;
   border-bottom: 1px solid #a0c4ff;
 }
 
@@ -35,7 +35,7 @@ body {
   align-items: center;
   flex-grow: 1; /* rows share the column's leftover height */
   margin-bottom: 0.2mm;
-  padding: 0.45mm 1.2mm 0.45mm 3.2mm; /* left keeps icons off the border and selection-mode bar */
+  padding: 0.45mm 1.2mm 0.45mm 2.5mm; /* left keeps icons off the border and selection-mode bar */
   break-inside: avoid;
 }
 
@@ -52,7 +52,7 @@ body {
 
 .action_text {
   flex: 1;
-  margin-left: 1.6mm;
+  margin-left: 1.4mm;
   line-height: 3.8mm;
 }
 
@@ -105,8 +105,8 @@ body {
 /* Button icons: one SVG template, parts shown via classes from data.js "command" */
 
 .buttons {
-  width: 8.9mm;
-  height: 6.7mm;
+  width: 9.8mm;
+  height: 7.35mm;
   flex-shrink: 0;
 }
 
@@ -210,34 +210,42 @@ body {
 
 /* Legend section */
 
+/* Two-by-two grid: the header spans both columns, entries fill the cells */
 .legend-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: stretch;
+  column-gap: 1mm;
   border: none;
 }
 
 .legend-section .section_header {
+  grid-column: 1 / -1;
   justify-content: flex-start;
   background-color: transparent;
   border-bottom: none;
   color: #444;
   font-size: 2.2em;
   padding-bottom: 0;
-  margin-bottom: 1mm;
-  padding-left: 3.2mm;
+  margin-bottom: 0.6mm;
+  padding-left: 2.5mm;
 }
 
 .legend-section .action {
   padding-right: 0;
-  margin-bottom: 1.2mm;
-}
-
-.legend-section .action_text {
-  white-space: nowrap;
+  margin-bottom: 0.6mm;
 }
 
 .legend-section .name {
   font-size: 1.95em;
 }
 
+/* Description on its own line under the name */
 .legend-section .description {
+  display: block;
   font-size: 1.65em;
+}
+
+.legend-section .description::before {
+  content: none;
 }

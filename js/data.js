@@ -138,22 +138,22 @@ const data = [
     actions: [
       {
         name: "Hold",
-        description: "blue key with dot, keep holding (SHIFT shown)",
+        description: "blue dot, keep holding",
         command: "shifthold",
       },
       {
         name: "In Order",
-        description: "1 then 2 (OPTION, then EDIT)",
+        description: "press 1, then 2",
         command: "option1st edit2nd",
       },
       {
         name: "Double-tap",
-        description: "stacked button (EDIT shown)",
+        description: "stacked key, tap twice",
         command: "edit double",
       },
       {
         name: "Selection Mode",
-        description: "shaded rows need a selection",
+        description: "shaded, select first",
         command: "",
         selection: true,
       },

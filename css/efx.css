@@ -22,9 +22,9 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 0.8em;
+  font-size: 0.87em; /* same header text size and height as the shortcuts guide */
   text-transform: uppercase;
-  padding: 0.6mm 1.5mm;
+  padding: 0.35mm 1.5mm;
 }
 
 .cmd-table {
