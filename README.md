@@ -15,7 +15,7 @@ A single-page guide containing navigation, common actions, and context-sensitive
 A single-page reference for common instrument and sequencer EFX commands, per-synth parameters (Macrosynth, FM, Wavsynth, Hypersynth, Sampler), global and table commands, and TIC modes.
 
 - **Design:** Features a vertical sidebar and flex-aligned columns for a professional reference card look.
-- **Alignment:** Sections are vertically justified so that top and bottom borders line up perfectly across the page.
+- **Alignment:** Sections stack with even gaps, and spare column height is shared across rows so bottom borders line up across the page.
 
 Both guides are laid out for **US Letter, landscape**.
 
@@ -41,6 +41,23 @@ If you print the HTML directly instead, use these settings in the Print dialog:
 3. **Scale:** **100%** (do not use "Fit to Page").
 4. **Background Graphics:** **ON** (required for icons and header colors).
 5. **Headers and Footers:** **OFF**.
+
+---
+
+## 🎚️ Merging Stereo Samples
+
+Some sample packs ship stereo sounds as separate mono files (`Kick-L.wav` and `Kick-R.wav`). `bin/merge-audio.sh` joins each pair into one stereo WAV (`Kick.wav`, 44.1kHz, 16-bit) ready to copy to the M8's SD card. It requires `ffmpeg` (for example, `brew install ffmpeg`).
+
+```bash
+bin/merge-audio.sh ~/Samples/Drums            # merge every L/R pair under this folder (recursive)
+bin/merge-audio.sh --delete ~/Samples/Drums   # also remove the mono sources after a successful merge
+bin/merge-audio.sh --force ~/Samples/Drums    # overwrite stereo files that already exist
+```
+
+- Pairs are matched by the `-L` / `-R` suffix (any letter case), and trailing spaces before the suffix are dropped from the output name.
+- If the two channels differ in length, the shorter one is padded with silence so nothing is cut off.
+- An existing `<name>.wav` is left alone unless you pass `--force`, and an L file with no matching R file is skipped.
+- It prints a merged/skipped/failed summary and exits non-zero if any merge failed.
 
 ---
 
