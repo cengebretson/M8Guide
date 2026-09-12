@@ -37,14 +37,25 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* top and bottom borders line up across columns */
+  gap: var(--section-gap, 1.5mm);
+  box-sizing: border-box;
   height: 100%;
+  padding-bottom: 0.3mm; /* keeps the last bottom border clear of rounding at the page edge */
 }
 
+/* Leftover column height goes to the rows, evenly: each section grows in
+   proportion to its row count (--rows, set by js/layout.js), so gaps stay
+   uniform and bottom borders still line up across columns. */
 .section_container {
-  flex-shrink: 0; /* overflow spills onto a second page instead of clipping */
+  display: flex;
+  flex-direction: column;
+  flex: var(--rows, 1) 0 auto; /* never shrinks: overflow spills onto a second page */
   border: 1px solid #ddd;
   overflow: hidden;
+}
+
+.section_header {
+  flex-shrink: 0;
 }
 
 /* Section header colors, shared by both guides:
@@ -89,6 +100,8 @@ body {
   padding-left: 1.2mm;
   margin-left: 1.2mm;
   padding-top: 2mm;
+  padding-bottom: 1mm; /* keeps the credit off the page edge */
+  box-sizing: border-box;
   color: #000;
   white-space: nowrap;
 }

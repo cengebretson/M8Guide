@@ -6,6 +6,7 @@
 
 :root {
   --screen-padding: 2.5mm;
+  --section-gap: 1mm;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
 }
 
 .cmd-table {
+  flex-grow: 1; /* rows share the column's leftover height */
   width: 100%;
   border-collapse: collapse;
 }
@@ -40,7 +42,7 @@ body {
 }
 
 .cmd-table td {
-  padding: 3px 3.5px;
+  padding: 2.5px 3.5px;
   vertical-align: middle;
 }
 

@@ -138,7 +138,7 @@ const data = [
     actions: [
       {
         name: "Hold",
-        description: "arrow means keep holding (SHIFT shown)",
+        description: "blue key with dot, keep holding (SHIFT shown)",
         command: "shifthold",
       },
       {
@@ -323,24 +323,23 @@ const data = [
       },
       {
         name: "Jump to Instrument",
-        secondary: "prev or next",
         description: "hold OPTION + LEFT/RIGHT",
         command: "optionhold left right",
       },
       {
         name: "Quick FX Jump",
-        secondary: "set default FX",
         description: "on a parameter, hold SHIFT + LEFT/RIGHT",
+        extra: "(sets the default FX)",
         command: "shifthold left right",
       },
       {
         name: "Edit Parameter",
-        description: "EDIT + touchscreen LEFT/RIGHT",
+        description: "hold EDIT + touchscreen LEFT/RIGHT",
         command: "edithold",
       },
       {
         name: "Map Parameter",
-        description: "OPTION + touchscreen LEFT/RIGHT or UP/DOWN",
+        description: "hold OPTION + touchscreen arrows",
         command: "optionhold",
       },
     ],
@@ -354,7 +353,7 @@ const data = [
       {
         name: "Create",
         secondary: "new instrument",
-        description: "on instrument column, double-tap EDIT",
+        description: "on inst column, double-tap EDIT",
         command: "edit double",
       },
       {
@@ -395,8 +394,7 @@ const data = [
         selection: true,
       },
       {
-        name: "Randomize Notes",
-        secondary: "up or down",
+        name: "Random Notes",
         description: "on note column, hold OPTION + UP/DOWN",
         command: "optionhold up down",
         selection: true,
@@ -425,8 +423,8 @@ const data = [
         command: "play",
       },
       {
-        name: "Move Instrument",
-        secondary: "reorder",
+        name: "Move",
+        secondary: "instrument",
         description: "on name column, hold EDIT + UP/DOWN",
         command: "edithold up down",
       },

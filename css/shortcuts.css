@@ -5,6 +5,7 @@
 
 :root {
   --screen-padding: 5mm;
+  --section-gap: 1.6mm;
 }
 
 body {
@@ -32,8 +33,9 @@ body {
 .action {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5mm;
-  padding: 0.8mm 1.4mm;
+  flex-grow: 1; /* rows share the column's leftover height */
+  margin-bottom: 0.2mm;
+  padding: 0.45mm 1.2mm 0.45mm 3.2mm; /* left keeps icons off the border and selection-mode bar */
   break-inside: avoid;
 }
 
@@ -50,7 +52,7 @@ body {
 
 .action_text {
   flex: 1;
-  margin-left: 3mm;
+  margin-left: 1.6mm;
   line-height: 3.8mm;
 }
 
@@ -103,8 +105,8 @@ body {
 /* Button icons: one SVG template, parts shown via classes from data.js "command" */
 
 .buttons {
-  width: 8mm;
-  height: 6mm;
+  width: 8.9mm;
+  height: 6.7mm;
   flex-shrink: 0;
 }
 
@@ -114,6 +116,27 @@ body {
 .second,
 .double_tap {
   opacity: 0;
+}
+
+/* Unused keys are soft gray with a thin white edge so pressed (black) and
+   held (blue) keys stand out. The rects in shortcuts.html are inset slightly
+   so the stroke stays inside the pressed key's footprint. */
+.buttons .placeholder {
+  fill: #c4c4c4;
+  stroke: #fff;
+  stroke-width: 0.5;
+}
+
+.buttons .hold {
+  fill: #1565c0;
+}
+
+/* Same thin white edge on pressed and held keys, so they read closer in size
+   to the inset unused keys; the 0.25 overhang fits in the 0.5 key gap. */
+.buttons .bkg,
+.buttons .hold {
+  stroke: #fff;
+  stroke-width: 0.5;
 }
 
 .left .left_button .bkg,
@@ -189,7 +212,6 @@ body {
 
 .legend-section {
   border: none;
-  padding-left: 2mm;
 }
 
 .legend-section .section_header {
@@ -200,11 +222,10 @@ body {
   font-size: 2.2em;
   padding-bottom: 0;
   margin-bottom: 1mm;
-  padding-left: 0;
+  padding-left: 3.2mm;
 }
 
 .legend-section .action {
-  padding-left: 0;
   padding-right: 0;
   margin-bottom: 1.2mm;
 }
