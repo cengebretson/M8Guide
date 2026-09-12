@@ -1,36 +1,12 @@
-@font-face{font-family:sofiasans;font-style:normal;font-weight:900;src:local('SofiaSans'),url('SofiaSans-Black.ttf')}
-@font-face{font-family:sofiasans;font-style:italic;font-weight:900;src:local('SofiaSans'),url('SofiaSans-BlackItalic.ttf')}
-@font-face{font-family:sofiasans;font-style:normal;font-weight:700;src:local('SofiaSans'),url('SofiaSans-Bold.ttf')}
-@font-face{font-family:sofiasans;font-style:italic;font-weight:700;src:local('SofiaSans'),url('SofiaSans-BoldItalic.ttf')}
-@font-face{font-family:sofiasans;font-style:normal;font-weight:800;src:local('SofiaSans'),url('SofiaSans-ExtraBold.ttf')}
-@font-face{font-family:sofiasans;font-style:italic;font-weight:800;src:local('SofiaSans'),url('SofiaSans-ExtraBoldItalic.ttf')}
-@font-face{font-family:sofiasans;font-style:normal;font-weight:200;src:local('SofiaSans'),url('SofiaSans-ExtraLight.ttf')}
-@font-face{font-family:sofiasans;font-style:italic;font-weight:200;src:local('SofiaSans'),url('SofiaSans-ExtraLightItalic.ttf')}
-@font-face{font-family:sofiasans;font-style:italic;font-weight:400;src:local('SofiaSans'),url('SofiaSans-Italic.ttf')}
-@font-face{font-family:sofiasans;font-style:normal;font-weight:300;src:local('SofiaSans'),url('SofiaSans-Light.ttf')}
-@font-face{font-family:sofiasans;font-style:italic;font-weight:300;src:local('SofiaSans'),url('SofiaSans-LightItalic.ttf')}
-@font-face{font-family:sofiasans;font-style:normal;font-weight:500;src:local('SofiaSans'),url('SofiaSans-Medium.ttf')}
-@font-face{font-family:sofiasans;font-style:italic;font-weight:500;src:local('SofiaSans'),url('SofiaSans-MediumItalic.ttf')}
-@font-face{font-family:sofiasans;font-style:normal;font-weight:400;src:local('SofiaSans'),url('SofiaSans-Regular.ttf')}
-@font-face{font-family:sofiasans;font-style:normal;font-weight:600;src:local('SofiaSans'),url('SofiaSans-SemiBold.ttf')}
-@font-face{font-family:sofiasans;font-style:italic;font-weight:600;src:local('SofiaSans'),url('SofiaSans-SemiBoldItalic.ttf')}
-@font-face{font-family:sofiasans;font-style:normal;font-weight:100;src:local('SofiaSans'),url('SofiaSans-Thin.ttf')}
-@font-face{font-family:sofiasans;font-style:italic;font-weight:100;src:local('SofiaSans'),url('SofiaSans-ThinItalic.ttf')}
-@font-face{font-family:sofiasans;font-style:normal;font-weight:900;src:local('SofiaSansCond'),url('SofiaSansCondensed-Black.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:italic;font-weight:900;src:local('SofiaSansCond'),url('SofiaSansCondensed-BlackItalic.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:normal;font-weight:700;src:local('SofiaSansCond'),url('SofiaSansCondensed-Bold.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:italic;font-weight:700;src:local('SofiaSansCond'),url('SofiaSansCondensed-BoldItalic.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:normal;font-weight:800;src:local('SofiaSansCond'),url('SofiaSansCondensed-ExtraBold.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:italic;font-weight:800;src:local('SofiaSansCond'),url('SofiaSansCondensed-ExtraBoldItalic.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:normal;font-weight:200;src:local('SofiaSansCond'),url('SofiaSansCondensed-ExtraLight.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:italic;font-weight:200;src:local('SofiaSansCond'),url('SofiaSansCondensed-ExtraLightItalic.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:italic;font-weight:400;src:local('SofiaSansCond'),url('SofiaSansCondensed-Italic.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:normal;font-weight:300;src:local('SofiaSansCond'),url('SofiaSansCondensed-Light.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:normal;font-weight:300;src:local('SofiaSansCond'),url('SofiaSansCondensed-LightItalic.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:normal;font-weight:500;src:local('SofiaSansCond'),url('SofiaSansCondensed-Medium.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:italic;font-weight:500;src:local('SofiaSansCond'),url('SofiaSansCondensed-MediumItalic.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:normal;font-weight:400;src:local('SofiaSansCond'),url('SofiaSansCondensed-Regular.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:normal;font-weight:600;src:local('SofiaSansCond'),url('SofiaSansCondensed-SemiBold.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:italic;font-weight:600;src:local('SofiaSansCond'),url('SofiaSansCondensed-SemiBoldItalic.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:normal;font-weight:100;src:local('SofiaSansCond'),url('SofiaSansCondensed-Thin.ttf')}
-@font-face{font-family:SofiaSansCond;font-style:italic;font-weight:100;src:local('SofiaSansCond'),url('SofiaSansCondensed-ThinItalic.ttf')}
+/* Sofia Sans (OFL, see OFL.txt) - only the faces the guides use */
+@font-face { font-family: "SofiaSans"; font-style: normal; font-weight: 300; src: url("SofiaSans-Light.ttf") format("truetype"); }
+@font-face { font-family: "SofiaSans"; font-style: normal; font-weight: 400; src: url("SofiaSans-Regular.ttf") format("truetype"); }
+@font-face { font-family: "SofiaSans"; font-style: normal; font-weight: 700; src: url("SofiaSans-Bold.ttf") format("truetype"); }
+@font-face { font-family: "SofiaSans"; font-style: normal; font-weight: 800; src: url("SofiaSans-ExtraBold.ttf") format("truetype"); }
+@font-face { font-family: "SofiaSans"; font-style: normal; font-weight: 900; src: url("SofiaSans-Black.ttf") format("truetype"); }
+
+@font-face { font-family: "SofiaSansCond"; font-style: normal; font-weight: 400; src: url("SofiaSansCondensed-Regular.ttf") format("truetype"); }
+@font-face { font-family: "SofiaSansCond"; font-style: italic; font-weight: 400; src: url("SofiaSansCondensed-Italic.ttf") format("truetype"); }
+@font-face { font-family: "SofiaSansCond"; font-style: normal; font-weight: 500; src: url("SofiaSansCondensed-Medium.ttf") format("truetype"); }
+@font-face { font-family: "SofiaSansCond"; font-style: italic; font-weight: 500; src: url("SofiaSansCondensed-MediumItalic.ttf") format("truetype"); }
+@font-face { font-family: "SofiaSansCond"; font-style: normal; font-weight: 800; src: url("SofiaSansCondensed-ExtraBold.ttf") format("truetype"); }

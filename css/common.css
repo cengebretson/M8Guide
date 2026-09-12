@@ -1,0 +1,122 @@
+/* Shared page layout for all guides */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  padding: var(--screen-padding, 0);
+  font-family: "SofiaSans", sans-serif;
+  line-height: 1;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+#content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 4mm;
+  height: 100%;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* top and bottom borders line up across columns */
+  height: 100%;
+}
+
+.section_container {
+  flex-shrink: 0; /* overflow spills onto a second page instead of clipping */
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+/* Section header colors, shared by both guides:
+   gray = global, orange = sequencing, blue = instruments & synths,
+   pink = common instrument, yellow = notes, teal = tables.
+   The darker accent line keeps sections distinct in black-and-white prints. */
+.section_header.h-pink {
+  background-color: #ffd1dc;
+  border-bottom: 0.4mm solid #c2185b;
+}
+.section_header.h-orange {
+  background-color: #ffe0b2;
+  border-bottom: 0.4mm solid #e65100;
+}
+.section_header.h-yellow {
+  background-color: #fff9c4;
+  border-bottom: 0.4mm solid #f9a825;
+}
+.section_header.h-teal {
+  background-color: #b2dfdb;
+  border-bottom: 0.4mm solid #00796b;
+}
+.section_header.h-blue {
+  background-color: #bbdefb;
+  border-bottom: 0.4mm solid #1565c0;
+}
+.section_header.h-gray {
+  background-color: #e0e0e0;
+  border-bottom: 0.4mm solid #424242;
+}
+
+.side-header {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding-left: 1.2mm;
+  margin-left: 1.2mm;
+  padding-top: 2mm;
+  color: #000;
+  white-space: nowrap;
+}
+
+.side-header .credit {
+  margin-top: auto; /* pinned to the bottom of the page */
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: #888;
+}
+
+.header-icon {
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: 0.35em;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.side-header .fw-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 3mm;
+  color: #666;
+}
+
+@media print {
+  body {
+    padding: 0;
+  }
+}

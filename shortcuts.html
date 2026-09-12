@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<script src="js/jquery-3.6.3.min.js"></script>
-	<script src="js/data.js"></script>
-	<script src="js/script.js"></script>
-	<link href="fonts/sofiasans.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/shortcuts.css">                             
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dirtywave M8 Shortcuts (Firmware 6.6)</title>
+	<link rel="stylesheet" href="fonts/SofiaSans.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/shortcuts.css">
+	<script src="js/data.js" defer></script>
+	<script src="js/script.js" defer></script>
 </head>
 <body>
 
-<div class="main-layout">
-	<div class="guide">
-		<div id="content"></div>
-	</div>
+<div class="page">
+	<div id="content"></div>
 
 	<div class="side-header">
-		DIRTYWAVE M8 <span class="fw-text">Firmware 6.5</span>
+		DIRTYWAVE M8
+		<span class="fw-text">Shortcuts · Firmware 6.6</span>
+		<span class="credit">Based on LaurentVitalis/M8Guide</span>
 	</div>
 </div>
 
-<div class="to_hide">
-	<div id="template" class="action">
+<template id="action-template">
+	<div class="action">
 		<div class="action_buttons">
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="21" fill="none" viewBox="0 0 28 21" class="buttons">
        <g class="button_pad">
@@ -89,12 +92,10 @@
 		<div class="action_text">
 			<span class="name"></span> <span class="secondary"></span>
 			<span class="description"></span>
-      <span class="extra"></span>
+			<span class="extra"></span>
 		</div>
-
 	</div>
-</div>
+</template>
 
 </body>
 </html>
-
