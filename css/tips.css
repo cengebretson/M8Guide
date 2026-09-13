@@ -33,17 +33,27 @@
   font-size: 1.02em;
 }
 
-/* Command chip, black like a pressed key */
+/* Command chip: outlined in the section's accent color (the header's
+   underline color; yellow is darkened to gold so the text stays readable) */
 .tip-cmd {
   flex-shrink: 0;
-  padding: 0.15mm 1mm;
+  padding: calc(0.55mm + 1px) 0.9mm; /* even space above and below the caps */
+  text-box: trim-both cap alphabetic; /* all-caps labels: trim the font's extra space so padding is exact */
+  border: 0.25mm solid currentColor;
   border-radius: 0.6mm;
-  background-color: #222;
-  color: #fff;
-  font-weight: 700;
+  background-color: #fff;
+  color: var(--accent, #424242);
+  font-weight: 800;
   font-size: 0.78em;
   white-space: nowrap;
 }
+
+.section_container:has(.h-pink) { --accent: #c2185b; }
+.section_container:has(.h-orange) { --accent: #e65100; }
+.section_container:has(.h-yellow) { --accent: #a66b00; }
+.section_container:has(.h-teal) { --accent: #00796b; }
+.section_container:has(.h-blue) { --accent: #1565c0; }
+.section_container:has(.h-gray) { --accent: #424242; }
 
 .tip-steps {
   margin: 0.4mm 0 0;
