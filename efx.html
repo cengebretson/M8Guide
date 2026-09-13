@@ -48,14 +48,14 @@
                         <tr><td class="col-cmd nowrap">KIL/OFF</td><td class="col-desc">Kill / Note Off <span class="note">XX ticks: KIL cuts, OFF starts ADSR release</span></td></tr>
                         <tr><td class="col-cmd">INS</td><td class="col-desc">Instrument <span class="note">XX: switch to instrument XX</span></td></tr>
                         <tr><td class="col-cmd">NXT</td><td class="col-desc">Next Track <span class="note">XX: instrument (00–7F) on track to the right</span></td></tr>
-                        <tr><td class="col-cmd">RET</td><td class="col-desc">Retrigger <span class="note">X: volume (0–7 down, 8–F up), Y: ticks</span></td></tr>
+                        <tr><td class="col-cmd">RET</td><td class="col-desc">Retrigger <span class="note">X: vol (0–7 down, 8–F up), Y: ticks; Y=0: once after X ticks</span></td></tr>
                         <tr><td class="col-cmd nowrap">REP/RTO</td><td class="col-desc">Repeat / Ramp <span class="note">Steps the previous FX (80–FF down); RTO stops it</span></td></tr>
                         <tr><td class="col-cmd">CHA</td><td class="col-desc">Chance <span class="note">Phrase: X=left, Y=right (0–F). Table: XX (00–FF)</span></td></tr>
                         <tr><td class="col-cmd">NTH</td><td class="col-desc">Nth Trigger <span class="note">Skip left (X) or right (Y) side by loop count</span></td></tr>
                         <tr><td class="col-cmd">RND</td><td class="col-desc">Random <span class="note">Randomize previous FX; X/Y: digit range (0–F)</span></td></tr>
                         <tr><td class="col-cmd">RNL</td><td class="col-desc">Random Left <span class="note">Randomize the FX to its left; in FX1: note and instrument</span></td></tr>
                         <tr><td class="col-cmd">RMX</td><td class="col-desc">Remix <span class="note">X selects tracks to the left; Y sets phrase row</span></td></tr>
-                        <tr><td class="col-cmd">MTT</td><td class="col-desc">Micro Timing <span class="note">Sub-tick shift (1/8 tick); 80–FF = earlier</span></td></tr>
+                        <tr><td class="col-cmd">MTT</td><td class="col-desc">Micro Timing <span class="note">Phrase only, 1/8 tick; 80–FF = early (except row 0)</span></td></tr>
                     </table>
                 </div>
             </div>
