@@ -9,7 +9,7 @@
 }
 
 body {
-  font-size: 0.44em;
+  font-size: 0.435em;
 }
 
 .section_container {
@@ -46,7 +46,7 @@ body {
   align-items: center;
   flex-grow: 1; /* rows share the column's leftover height */
   margin-bottom: 0.2mm;
-  padding: 0.45mm 1.2mm 0.45mm 2.5mm; /* left keeps icons off the border and selection-mode bar */
+  padding: 0.45mm 1.6mm 0.45mm 2.9mm; /* left keeps icons off the border and selection-mode bar */
   break-inside: avoid;
 }
 

@@ -1,7 +1,7 @@
 /* Shared page layout for all guides */
 
 html {
-  font-size: 105%; /* Scale rem/em typography once across every guide. */
+  font-size: 104%; /* Scale rem/em typography once across every guide. */
 }
 
 html,
@@ -41,7 +41,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--section-gap, 1.5mm);
+  gap: calc(var(--section-gap, 1.5mm) + 0.5mm);
   box-sizing: border-box;
   height: 100%;
   padding-bottom: 0.3mm; /* keeps the last bottom border clear of rounding at the page edge */
@@ -136,5 +136,9 @@ body {
 @media print {
   body {
     padding: 0;
+  }
+
+  .section_container {
+    box-shadow: none;
   }
 }

@@ -46,6 +46,14 @@ body {
   vertical-align: middle;
 }
 
+.cmd-table td:first-child {
+  padding-left: calc(6px + 0.4mm);
+}
+
+.cmd-table td:last-child {
+  padding-right: calc(3.5px + 0.4mm);
+}
+
 /* The command-only sheet needs slightly tighter rows at the larger type size. */
 .efx-guide .cmd-table td {
   padding-top: 1.5px;
