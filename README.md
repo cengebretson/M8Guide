@@ -12,10 +12,7 @@ A single-page guide containing navigation, common actions, and context-sensitive
 
 ### 2. M8 EFX & Synthesis Reference (`efx.html` → [`efx.pdf`](efx.pdf))
 
-A single-page reference for common instrument and sequencer EFX commands, per-synth parameters (Macrosynth, FM, Wavsynth, Hypersynth, Sampler), global and table commands, and TIC modes.
-
-- **Design:** Features a vertical sidebar and flex-aligned columns for a professional reference card look.
-- **Alignment:** Sections stack with even gaps, and spare column height is shared across rows so bottom borders line up across the page.
+A single-page reference for common instrument, sequencer, and modulation EFX commands (envelope and LFO commands by mod slot), per-synth parameters (Macrosynth, FM, Wavsynth, Hypersynth, Sampler), global commands including the DJ filter, table commands, and TIC modes. The side header shows how to open the on-device command help and how relative values work.
 
 ### 3. M8 Tips & Tricks (`tips.html` → [`tips.pdf`](tips.pdf))
 
@@ -37,18 +34,20 @@ Sampler parameters and sample editor processes, plus recipes for chopping breaks
 
 Wavsynth shapes, controls, and the wavetable index, plus Hypersynth chord settings, with recipes for chip basses, PWM leads, noise drums, wavetable morphs, lush pads, chord progressions, and supersaw stabs.
 
-All guides are laid out for **US Letter, landscape**.
+All guides are laid out for **US Letter, landscape**, with a vertical side header and three columns. Sections stack with even gaps, and spare column height is shared across rows so bottom borders line up across the page.
 
 ---
 
 ## 🖨️ Building the PDFs
 
-Regenerate both PDFs with headless Chrome:
+Regenerate every guide's PDF with headless Chrome:
 
 ```bash
-bin/build-pdfs.sh            # writes shortcuts.pdf and efx.pdf to the repo root
+bin/build-pdfs.sh            # writes all seven PDFs to the repo root
 bin/build-pdfs.sh /tmp/out   # or to another directory
 ```
+
+To add a guide, create its HTML file and add its name to the `guides` list in `bin/build-pdfs.sh`.
 
 The script defaults to Google Chrome's macOS install path; set `CHROME` to use a different browser binary. The script warns (and exits non-zero) if a guide no longer fits on one page.
 
@@ -85,13 +84,15 @@ bin/merge-audio.sh --force ~/Samples/Drums    # overwrite stereo files that alre
 
 ### Layout
 
-- `css/common.css` — shared page layout (columns, section boxes, side header)
-- `css/shortcuts.css`, `css/efx.css` — per-guide styles
+- `css/common.css` — shared page layout (columns, section boxes, side header, header colors)
+- `css/shortcuts.css`, `css/efx.css` — per-guide styles; `efx.css` also provides the command tables used on the tips and instrument guides
+- `css/tips.css` — step-by-step tip blocks, outlined command chips (colored by section), and parameter/model tables for the tips and instrument guides
+- `js/layout.js` — counts rows in each section so spare column height is shared evenly
 - `fonts/` — Sofia Sans, licensed under the SIL Open Font License (`fonts/OFL.txt`)
 
 ### Shortcuts System
 
-Shortcuts are stored as a JS array in `js/data.js` and rendered via `js/script.js` (no dependencies). Each section has a `column` (1–3) a header `color` (`gray`, `orange`, `blue`, … from `css/common.css`, shared with the EFX guide), and a header `icon` (a key of `ICONS` in `js/script.js`), and sections render in file order within their column. This makes it easy to update descriptions or reorder sections without touching complex HTML.
+Shortcuts are stored as a JS array in `js/data.js` and rendered via `js/script.js` (no dependencies). Each section has a `column` (1–3), a header `color` (`gray`, `orange`, `blue`, … from `css/common.css`, shared with the EFX guide), and a header `icon` (a key of `ICONS` in `js/script.js`), and sections render in file order within their column. This makes it easy to update descriptions or reorder sections without touching complex HTML.
 
 ### Button Icon Syntax
 
