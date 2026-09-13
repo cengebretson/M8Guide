@@ -12,7 +12,7 @@ const data = [
   {
     column: 1,
     section: "Navigation & Editing",
-    color: "gray",
+    color: "purple",
     icon: "navigation",
     actions: [
       {
@@ -43,7 +43,7 @@ const data = [
   {
     column: 1,
     section: "Play",
-    color: "gray",
+    color: "green",
     icon: "play",
     actions: [
       {
@@ -81,7 +81,7 @@ const data = [
   {
     column: 1,
     section: "File Browser",
-    color: "gray",
+    color: "yellow",
     icon: "folder",
     actions: [
       {
@@ -110,7 +110,7 @@ const data = [
   {
     column: 1,
     section: "Mixer Screen",
-    color: "gray",
+    color: "pink",
     icon: "mixer",
     actions: [
       {
@@ -164,7 +164,7 @@ const data = [
   {
     column: 2,
     section: "Copy / Paste / Clone",
-    color: "gray",
+    color: "purple",
     icon: "copy",
     actions: [
       {

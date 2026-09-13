@@ -30,6 +30,17 @@ body {
   border-bottom: 1px solid #a0c4ff;
 }
 
+/* Extra pastel accents for navigation and playback on the shortcuts sheet. */
+.section_header.h-purple {
+  background-color: #e1d5f5;
+  border-bottom: 0.4mm solid #7e57c2;
+}
+
+.section_header.h-green {
+  background-color: #c8e6c9;
+  border-bottom: 0.4mm solid #388e3c;
+}
+
 .action {
   display: flex;
   align-items: center;

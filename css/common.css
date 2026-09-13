@@ -1,5 +1,9 @@
 /* Shared page layout for all guides */
 
+html {
+  font-size: 105%; /* Scale rem/em typography once across every guide. */
+}
+
 html,
 body {
   height: 100%;

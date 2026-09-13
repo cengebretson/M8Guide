@@ -46,6 +46,12 @@ body {
   vertical-align: middle;
 }
 
+/* The command-only sheet needs slightly tighter rows at the larger type size. */
+.efx-guide .cmd-table td {
+  padding-top: 1.5px;
+  padding-bottom: 1.5px;
+}
+
 .cmd-table .col-cmd {
   font-weight: 800;
   width: 28px;
@@ -77,7 +83,7 @@ body {
 .side-header .key {
   font-size: 0.65rem;
   font-weight: 400;
-  margin-top: 5mm;
+  margin-top: 3mm;
   color: #444;
 }
 
