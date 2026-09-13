@@ -54,7 +54,8 @@ body {
   display: flex;
   flex-direction: column;
   flex: var(--rows, 1) 0 auto; /* never shrinks: overflow spills onto a second page */
-  border: 1px solid #ddd;
+  border: 1px solid #aaa;
+  box-shadow: 0.3mm 0.3mm 0.5mm rgb(0 0 0 / 14%);
   overflow: hidden;
 }
 
