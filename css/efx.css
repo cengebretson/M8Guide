@@ -47,11 +47,11 @@ body {
 }
 
 .cmd-table td:first-child {
-  padding-left: calc(6px + 0.4mm);
+  padding-left: calc(6px + 0.7mm);
 }
 
 .cmd-table td:last-child {
-  padding-right: calc(3.5px + 0.4mm);
+  padding-right: calc(3.5px + 0.7mm);
 }
 
 /* The command-only sheet needs slightly tighter rows at the larger type size. */
@@ -95,8 +95,6 @@ body {
   color: #444;
 }
 
-@media print {
-  .side-header {
-    font-size: 1.2rem;
-  }
+.side-header {
+  font-size: 1.2rem;
 }

@@ -2,11 +2,14 @@
 
 html {
   font-size: 104%; /* Scale rem/em typography once across every guide. */
+  --print-margin: 2mm;
+  --page-width: calc(279.4mm - 2 * var(--print-margin));
+  --page-height: calc(215.9mm - 2 * var(--print-margin) - 0.5mm);
+  --canvas-inset: 0.5mm;
 }
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -16,17 +19,31 @@ body {
   padding: var(--screen-padding, 0);
   font-family: "SofiaSans", sans-serif;
   line-height: 1;
-  overflow: hidden;
+  overflow: auto;
   background-color: #fff;
   -webkit-print-color-adjust: exact !important;
   print-color-adjust: exact !important;
 }
 
+.sheet {
+  position: relative;
+  width: var(--page-width);
+  height: var(--page-height);
+}
+
 .page {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 100%;
+  width: var(--page-width);
+  height: var(--canvas-height, calc(var(--page-height) - 2 * var(--canvas-inset)));
+  transform: scale(var(--page-scale, 1));
+  transform-origin: top left;
+}
+
+.sheet > .page {
+  position: absolute;
+  top: var(--canvas-inset);
+  left: 0;
 }
 
 #content {
@@ -53,7 +70,7 @@ body {
 .section_container {
   display: flex;
   flex-direction: column;
-  flex: var(--rows, 1) 0 auto; /* never shrinks: overflow spills onto a second page */
+  flex: var(--rows, 1) 0 auto; /* layout.js fits the canvas around natural row heights */
   border: 1px solid #aaa;
   box-shadow: 0.3mm 0.3mm 0.5mm rgb(0 0 0 / 14%);
   overflow: hidden;
@@ -61,6 +78,16 @@ body {
 
 .section_header {
   flex-shrink: 0;
+}
+
+/* Measure full content at the fixed page width before distributing spare height. */
+.page.measuring .column {
+  height: max-content;
+  align-self: flex-start;
+}
+
+.page.measuring .section_container {
+  flex: 0 0 auto;
 }
 
 /* Section header colors, shared by both guides:
@@ -140,5 +167,10 @@ body {
 
   .section_container {
     box-shadow: none;
+  }
+
+  /* Only the fitted sheet participates in pagination, not the unscaled canvas. */
+  .sheet {
+    overflow: hidden;
   }
 }

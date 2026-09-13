@@ -57,11 +57,19 @@ To add a guide, create its HTML file and add its name to the `guides` list in `b
 
 The script defaults to Google Chrome's macOS install path; set `CHROME` to use a different browser binary. The script warns (and exits non-zero) if a guide no longer fits on one page.
 
+Each guide uses a fixed US Letter landscape canvas in both the browser and PDF.
+After fonts load, `js/layout.js` measures the content at that width, gives the
+canvas enough height for every column, and uniformly scales it to fit the sheet.
+The measurement runs again before printing. A small bottom allowance absorbs
+rounding; panel shadows appear only on screen. Narrow browser windows scroll
+instead of changing the print layout. Large content additions will make the
+whole guide smaller, so check readability when editing.
+
 ### Printing from a browser
 
 If you print the HTML directly instead, use these settings in the Print dialog:
 
-1. **Layout:** Landscape.
+1. **Paper and layout:** US Letter, Landscape.
 2. **Margins:** Default (the CSS sets its own page margins).
 3. **Scale:** **100%** (do not use "Fit to Page").
 4. **Background Graphics:** **ON** (required for icons and header colors).
@@ -93,7 +101,7 @@ bin/merge-audio.sh --force ~/Samples/Drums    # overwrite stereo files that alre
 - `css/common.css` — shared page layout (columns, section boxes, side header, header colors)
 - `css/shortcuts.css`, `css/efx.css` — per-guide styles; `efx.css` also provides the command tables used on the tips and instrument guides
 - `css/tips.css` — step-by-step tip blocks, outlined command chips (colored by section), and parameter/model tables for the tips and instrument guides
-- `js/layout.js` — counts rows in each section so spare column height is shared evenly
+- `js/layout.js` — distributes spare column height and fits the fixed canvas to one printed sheet
 - `fonts/` — Sofia Sans, licensed under the SIL Open Font License (`fonts/OFL.txt`)
 
 ### Shortcuts System
