@@ -10,7 +10,7 @@ A collection of printable, high-density reference guides for the **Dirtywave M8 
 
 A single-page guide containing navigation, common actions, and context-sensitive shortcuts.
 
-### 2. M8 EFX & Synthesis Reference (`efx.html` → [`efx.pdf`](efx.pdf))
+### 2. M8 Common EFX Reference (`efx.html` → [`efx.pdf`](efx.pdf))
 
 A single-page reference for common instrument, sequencer, and modulation EFX commands (envelope and LFO commands by mod slot), per-synth parameters (Macrosynth, FM, Wavsynth, Hypersynth, Sampler), global commands including the DJ filter, table commands, and TIC modes. The side header shows how to open the on-device command help and how relative values work.
 
@@ -37,6 +37,12 @@ Wavsynth shapes, controls, and the wavetable index, plus Hypersynth chord settin
 All guides are laid out for **US Letter, landscape**, with a vertical side header and three columns. Sections stack with even gaps, and spare column height is shared across rows so bottom borders line up across the page.
 
 ---
+
+## Sources and firmware coverage
+
+Content reviewed on September 12, 2026 against the [official operation manual (6.5.2, April 21, 2026)](https://cdn.shopify.com/s/files/1/0455/0485/6229/files/m8_operation_manual_v20260421.pdf?v=1776791699) and the [official firmware changelog through 6.6.3 A](https://github.com/Dirtywave/M8Firmware/blob/main/changelog.txt). The changelog covers additions newer than the manual, including Hypersynth SHAPE in 6.6. Current downloads are on [Dirtywave's resources page](https://dirtywave.com/pages/resources-downloads).
+
+The EFX sheet is a selection of common commands, not an exhaustive command list; mixer and send-effect automation are only partially covered. Use on-device command help for the full list. Recipes are starting points, not device-tested presets. Numeric command values are hexadecimal unless marked otherwise; FM ratios and the labeled chord example are decimal. Timing examples assume the default six-tick groove unless stated otherwise.
 
 ## 🖨️ Building the PDFs
 

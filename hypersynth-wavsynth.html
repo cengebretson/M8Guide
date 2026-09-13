@@ -162,10 +162,11 @@
                         Hypersynth Parameters
                     </div>
                     <table class="cmd-table params">
-                        <tr><td class="col-cmd">CHORD</td><td class="col-desc">16 banks, up to 6 intervals <span class="note">Each note is two saws; SHIFT + OPT copies, SHIFT + EDIT pastes</span></td></tr>
+                        <tr><td class="col-cmd">SHAPE</td><td class="col-desc">12 shapes (6.6) <span class="note">Saw variants, soft square, triangle, sine variants</span></td></tr>
+                        <tr><td class="col-cmd">CHORD</td><td class="col-desc">16 banks, up to 6 intervals <span class="note">SHIFT + OPT copies; SHIFT + EDIT pastes</span></td></tr>
                         <tr><td class="col-cmd">SCALE</td><td class="col-desc">Song scale for the chord <span class="note">00 follows the song or track scale</span></td></tr>
                         <tr><td class="col-cmd">SHIFT</td><td class="col-desc">Crossfade <span class="note">Between intervals 1–3 and 4–6</span></td></tr>
-                        <tr><td class="col-cmd">SWARM</td><td class="col-desc">Detune <span class="note">Spreads each note's pair of saws</span></td></tr>
+                        <tr><td class="col-cmd">SWARM</td><td class="col-desc">Detune <span class="note">Spreads each note's oscillator pair</span></td></tr>
                         <tr><td class="col-cmd">WIDTH</td><td class="col-desc">Stereo spread <span class="note">00 mono to FF full stereo</span></td></tr>
                         <tr><td class="col-cmd">SUBOSC</td><td class="col-desc">Square sub <span class="note">Below 80: two octaves down · above 80: one</span></td></tr>
                         <tr><td class="col-cmd">FX</td><td class="col-desc">CRD · SWM · WID · SUB <span class="note">Change chords and tone per step</span></td></tr>
@@ -180,7 +181,7 @@
                     <div class="tip">
                         <div class="tip-head"><span class="tip-title">Lush Pad</span><span class="tip-cmd">SWARM · WIDTH</span></div>
                         <ul class="tip-steps">
-                            <li>CHORD: a triad or 7th (e.g. 0, 4, 7, 11)</li>
+                            <li>CHORD: major 7th = 0, 4, 7, 11 semitones (decimal)</li>
                             <li>Moderate SWARM, WIDTH toward FF, MFX and REV sends</li>
                             <li>ADSR on volume, slow ATK and long REL; end notes with OFF</li>
                         </ul>
@@ -202,7 +203,7 @@
                     <div class="tip">
                         <div class="tip-head"><span class="tip-title">Supersaw Stab</span><span class="tip-cmd">SWARM · AHD</span></div>
                         <ul class="tip-steps">
-                            <li>High SWARM, WIDTH FF, short AHD on volume</li>
+                            <li>SHAPE SAW, high SWARM, WIDTH FF; short volume AHD</li>
                             <li>A DEL send for trance-style echoes</li>
                         </ul>
                     </div>

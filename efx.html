@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dirtywave M8 EFX Reference (Firmware 6.6)</title>
+    <title>Dirtywave M8 Common EFX Reference (Firmware 6.6)</title>
     <link rel="stylesheet" href="fonts/SofiaSans.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/efx.css">
@@ -22,7 +22,7 @@
                         Common Instrument EFX
                     </div>
                     <table class="cmd-table">
-                        <tr><td class="col-cmd">VOL</td><td class="col-desc">Volume <span class="note">00 (silent) – FF (max)</span></td></tr>
+                        <tr><td class="col-cmd">VOL</td><td class="col-desc">Volume Offset <span class="note">Relative: 01 adds 1; FF subtracts 1</span></td></tr>
                         <tr><td class="col-cmd">PIT</td><td class="col-desc">Pitch <span class="note">Offset in semitones; 80–FF lowers</span></td></tr>
                         <tr><td class="col-cmd">FIN</td><td class="col-desc">Fine Tune <span class="note">−1 to +1 semitone</span></td></tr>
                         <tr><td class="col-cmd">ERR</td><td class="col-desc">Error <span class="note">Randomize pitch and params (not Hypersynth)</span></td></tr>
@@ -54,7 +54,7 @@
                         <tr><td class="col-cmd">NTH</td><td class="col-desc">Nth Trigger <span class="note">Skip left (X) or right (Y) side by loop count</span></td></tr>
                         <tr><td class="col-cmd">RND</td><td class="col-desc">Random <span class="note">Randomize previous FX; X/Y: digit range (0–F)</span></td></tr>
                         <tr><td class="col-cmd">RNL</td><td class="col-desc">Random Left <span class="note">Randomize the FX to its left; in FX1: note and instrument</span></td></tr>
-                        <tr><td class="col-cmd">RMX</td><td class="col-desc">Remix <span class="note">Jump all tracks to the left to a new position</span></td></tr>
+                        <tr><td class="col-cmd">RMX</td><td class="col-desc">Remix <span class="note">X selects tracks to the left; Y sets phrase row</span></td></tr>
                         <tr><td class="col-cmd">MTT</td><td class="col-desc">Micro Timing <span class="note">Sub-tick shift (1/8 tick); 80–FF = earlier</span></td></tr>
                     </table>
                 </div>
@@ -208,7 +208,7 @@
 
         <div class="side-header">
             DIRTYWAVE M8
-            <span class="fw-text">EFX Reference · Firmware 6.6</span>
+            <span class="fw-text">Common EFX Reference · Firmware 6.6</span>
             <span class="key">Help: EDIT + UP/DOWN · relative 80–FF = minus</span>
             <span class="credit">Based on LaurentVitalis/M8Guide</span>
         </div>

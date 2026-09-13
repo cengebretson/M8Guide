@@ -137,7 +137,7 @@
                     <div class="tip">
                         <div class="tip-head"><span class="tip-title">Human Feel</span><span class="tip-cmd">DEL · MTT · RND</span></div>
                         <ul class="tip-steps">
-                            <li>DEL 03 pushes a row half a step late (6 ticks = 1 step)</li>
+                            <li>DEL 03 delays 3 ticks: half a step in the default groove</li>
                             <li>MTT nudges by 1/8 tick; 80–FF is early (not on row 0)</li>
                             <li>VOL, then RND with a small range varies each hit</li>
                         </ul>
@@ -166,7 +166,7 @@
                         </ul>
                     </div>
                     <div class="tip">
-                        <div class="tip-head"><span class="tip-title">Build-Up Sweep</span><span class="tip-cmd">DJF · DJC</span></div>
+                        <div class="tip-head"><span class="tip-title">Build-Up Sweep</span><span class="tip-cmd">DJC · DJT</span></div>
                         <ul class="tip-steps">
                             <li>DJ filter: 80 is off, lower is low-pass, higher is high-pass</li>
                             <li>DJC then REP ramps it each tick; RTO sets where it stops</li>
@@ -237,10 +237,10 @@
                         </ul>
                     </div>
                     <div class="tip">
-                        <div class="tip-head"><span class="tip-title">Custom LFOs &amp; Envelopes</span><span class="tip-cmd">CUT · HOP</span></div>
+                        <div class="tip-head"><span class="tip-title">Custom LFO Shapes</span><span class="tip-cmd">CUT · HOP</span></div>
                         <ul class="tip-steps">
                             <li>Ramp CUT (or any param) up and down the rows</li>
-                            <li>HOP 00 loops it into an LFO; leave it off for a one-shot envelope</li>
+                            <li>HOP 00 loops it; tables also loop at the bottom by default</li>
                         </ul>
                     </div>
                     <div class="tip">
@@ -276,7 +276,7 @@
                         <div class="tip-head"><span class="tip-title">Repeat, Then Move On</span><span class="tip-cmd">HOP 30</span></div>
                         <ul class="tip-steps">
                             <li>HOP XY in a table jumps to row Y, X times, then carries on</li>
-                            <li>Rows 0–3 an arp, HOP 30 on row 4: it plays three times</li>
+                            <li>Rows 0–3 an arp; HOP 30 on row 4 jumps back three times</li>
                             <li>Rows 5 and up can fade it out or switch to a new pattern</li>
                         </ul>
                     </div>
@@ -288,7 +288,7 @@
         <div class="side-header">
             DIRTYWAVE M8
             <span class="fw-text">Tips &amp; Tricks · Firmware 6.6</span>
-            <span class="key">6 ticks = 1 step · XX = hex</span>
+            <span class="key">Default groove: 6 ticks per step · XX = hex</span>
             <span class="credit">Based on LaurentVitalis/M8Guide</span>
         </div>
     </div>
