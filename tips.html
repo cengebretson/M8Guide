@@ -27,7 +27,7 @@
                         <ul class="tip-steps">
                             <li>Each track loops its own chains at the first empty “--”</li>
                             <li>Chains of different lengths drift apart for polymeters</li>
-                            <li>Keep a silent track aligned with an empty chain (00 or FE)</li>
+                            <li>Keep a silent track aligned with a chain of silent phrases</li>
                         </ul>
                     </div>
                     <div class="tip">
@@ -114,9 +114,9 @@
                     <div class="tip">
                         <div class="tip-head"><span class="tip-title">Swing Only the Hats</span><span class="tip-cmd">GRV</span></div>
                         <ul class="tip-steps">
-                            <li>Groove view (SHIFT + UP from a phrase): make groove 01 07 05</li>
+                            <li>Groove 01: alternate rows 07, 05 (SHIFT + UP from Phrase)</li>
                             <li>Put GRV 01 on the hat track; others stay on groove 00</li>
-                            <li>Subtler swing: raise the groove's PPQN to 48–192</li>
+                            <li>Higher PPQN gives finer timing; adjust tick counts to match</li>
                         </ul>
                     </div>
                     <div class="tip">
@@ -170,7 +170,7 @@
                         <div class="tip-head"><span class="tip-title">Build-Up Sweep</span><span class="tip-cmd">DJC · DJT</span></div>
                         <ul class="tip-steps">
                             <li>DJ filter: 80 is off, lower is low-pass, higher is high-pass</li>
-                            <li>DJC then REP ramps it each tick; RTO sets where it stops</li>
+                            <li>DJC then REP ramps it each step; RTO sets where it stops</li>
                             <li>TYPE switches to band-stop modes; DJR adds resonance</li>
                         </ul>
                     </div>
@@ -228,6 +228,7 @@
                         <ul class="tip-steps">
                             <li>TIC FE: the note picks the row (C is row 0, C# row 1, …)</li>
                             <li>INS on each row selects the kick, snare, or hat instrument</li>
+                            <li>HOP 00 on row 0C repeats the 12-note kit across octaves</li>
                         </ul>
                     </div>
                     <div class="tip">
@@ -240,7 +241,8 @@
                     <div class="tip">
                         <div class="tip-head"><span class="tip-title">Custom LFO Shapes</span><span class="tip-cmd">CUT · HOP</span></div>
                         <ul class="tip-steps">
-                            <li>Ramp CUT (or any param) up and down the rows</li>
+                            <li>Relative FX add offsets, not targets: 01 adds 1, FF subtracts 1</li>
+                            <li>For a CUT rise and fall, balance positive and negative offsets</li>
                             <li>HOP 00 loops it; tables also loop at the bottom by default</li>
                         </ul>
                     </div>
@@ -263,7 +265,7 @@
                         <div class="tip-head"><span class="tip-title">Octave &amp; Velocity Maps</span><span class="tip-cmd">TIC FC · FD</span></div>
                         <ul class="tip-steps">
                             <li>TIC FC: the octave picks the row; TIC FD: the velocity does</li>
-                            <li>Put different CUT, INS or PIT values on each row for layers</li>
+                            <li>INS per row switches sounds by octave or velocity</li>
                         </ul>
                     </div>
                     <div class="tip">
